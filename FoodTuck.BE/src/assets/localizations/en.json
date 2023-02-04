@@ -1,0 +1,18 @@
+{
+  "Footer": {
+    "Column": {
+      "AboutUs": {
+        "Title": "About Us"
+      },
+      "UsefulLinks": {
+        "Title": "Useful Links"
+      },
+      "Help": {
+        "Title": "Help?"
+      },
+      "Posts": {
+        "Title": "Recent Posts"
+      }
+    }
+  }
+}
