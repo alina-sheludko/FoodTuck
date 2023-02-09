@@ -4,6 +4,7 @@ const userRoute = require('./user.route');
 const nodeRoute = require('./node.route');
 const navigationRoute = require('./navigation.route');
 const localizationsRoute = require('./localizations.route');
+const siteSettingsRoute = require('./site-settings.route');
 const apiUiRoute = require('./api-ui.route');
 const docsRoute = require('./docs.route');
 const config = require('../config/config');
@@ -30,6 +31,10 @@ const defaultRoutes = [
   {
     path: '/localizations',
     route: localizationsRoute,
+  },
+  {
+    path: '/site-settings',
+    route: siteSettingsRoute,
   },
   {
     path: '/ui',
