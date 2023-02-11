@@ -4,7 +4,7 @@ const { allowedChildNodes } = require('../config/node');
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  const nodeData = await nodeService.getNodeByUrl(req.params.url);
+  const nodeData = await nodeService.getNodeByUrl(req.query.url);
   res.send(nodeData);
 });
 
