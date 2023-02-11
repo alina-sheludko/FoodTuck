@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import NodeManagementForm from "../../shared/components/node-management-form/NodeManagementForm";
+import NodeManagement from "../../shared/components/node-management/NodeManagement";
 import { INodeManagementFormConfig, INodeManagementFormData } from "../../shared/interfaces/node";
 
 function CreatePage() {
@@ -32,7 +32,7 @@ function CreatePage() {
     return <p>loading...</p>
   }
 
-  return <NodeManagementForm formConfig={managementFormConfig!} onSubmit={onSubmit} />
+  return <NodeManagement formConfig={managementFormConfig!} onSubmit={onSubmit} />
 }
 
 export default CreatePage;

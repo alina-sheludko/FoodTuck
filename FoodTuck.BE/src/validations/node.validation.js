@@ -23,6 +23,7 @@ const createNode = {
 
 const updateNode = {
   body: Joi.object().keys({
+    id: Joi.string().required(),
     pageAlias: Joi.string().required(),
     url: Joi.when(Joi.ref('pageAlias'), {
       is: 'homePage',
@@ -32,6 +33,7 @@ const updateNode = {
     addToTopNavigation: true,
     pageTitle: Joi.string().required(),
     parentId: Joi.string().optional(),
+    panels: Joi.array().optional(),
   }),
 };
 
