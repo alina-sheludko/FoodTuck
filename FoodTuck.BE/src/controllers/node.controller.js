@@ -73,28 +73,28 @@ const getUpdateFormData = catchAsync(async (req, res) => {
   res.send(data)
 })
 
-const addAditionalDataByAlias = catchAsync(async (data) => {
+const addAditionalDataByAlias = async (data) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
   }
 
   data.panels = data.panels?.map(async (panel) => {
     if (panel.panelAlias === "ourTeamPanel") {
-      panel = await addOurTeamPanelData();
+      panel = await addOurTeamPanelData(panel);
     }
 
     return panel;
   })
 
   return data;
-})
+}
 
-const addOurTeamPageData = catchAsync(async (data) => {
+const addOurTeamPageData = async (data) => {
   data.teamMembers = await teamMemberService.getAll();
   return data;
-})
+}
 
-const addOurTeamPanelData = catchAsync(async (data) => {
+const addOurTeamPanelData = async (data) => {
   const [teamMembers, seeMoreLink] = await Promise.all([
     teamMemberService.getPaged(ourTeamPanelConfig.pagesize),
     nodeService.getNodeByAlias('ourTeamPage'),
@@ -102,7 +102,7 @@ const addOurTeamPanelData = catchAsync(async (data) => {
   data.teamMembers = teamMembers;
   data.seeMoreLink = seeMoreLink?.url;
   return data;
-})
+}
 
 module.exports = {
   getByUrl,
