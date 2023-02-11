@@ -1,0 +1,58 @@
+.wrapper {
+  background-color: var(--main-bg-color);
+  padding: 120px 20px;
+
+}
+
+.notFound {
+  max-width: 630px;
+  width: 100%;
+  margin: 0 auto;
+
+  &Name {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1.08;
+    color: var( --primary-color);
+    text-align: center;
+  }
+
+  &Title {
+    margin-top: 32px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--text-title-not-found-color);
+  }
+  
+  &Info {
+    margin-top: 24px;
+    font-family: var( --font);
+    font-size: 18px;
+    line-height: 1.44;
+    text-align: center;
+    color: var( --text-info-not-found-color);
+  }
+
+  &Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px auto 0 auto;
+    max-width: 197px;
+    width: 100%;
+    height: 58px;
+    background: var(--primary-color);
+    border-radius: 6px;
+    border: none;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    color: var(--text-reverse-color);
+    text-decoration: none;
+  }
+}
