@@ -21,10 +21,10 @@ function NodeManagementForm({ formConfig, onSubmit, isEditMode = false }: IProps
 	} = useForm();
 
 	return (
-    <Container maxWidth="sm" sx={{mt:2}}>
+    <>
       <H1 style={{marginBottom: '20px'}}>{isEditMode ? 'Update page' : 'Create page'}</H1>
 
-			<form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl fullWidth sx={{ mb: 1 }} size="small">
           <InputLabel>Page alias</InputLabel>
           <Select
@@ -63,9 +63,9 @@ function NodeManagementForm({ formConfig, onSubmit, isEditMode = false }: IProps
           sx={{display: "block", w: "fit-content"}}
         />
 
-				<Button type="submit" variant="contained">{isEditMode ? 'Update' : 'Create'}</Button>
-			</form>
-    </Container>
+        <Button type="submit" variant="contained">{isEditMode ? 'Update' : 'Create'}</Button>
+      </form>
+    </>
 	);
 }
 

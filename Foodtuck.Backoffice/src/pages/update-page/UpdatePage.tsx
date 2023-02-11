@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import NodeManagementForm from "../../shared/components/node-management-form/NodeManagementForm";
+import NodeManagement from "../../shared/components/node-management/NodeManagement";
 import { INodeManagementFormConfig, INodeManagementFormData } from "../../shared/interfaces/node";
 
 function UpdatePage() {
@@ -28,7 +28,7 @@ function UpdatePage() {
   if (isLoading) return <p>loading...</p>
 
   return (
-    <NodeManagementForm isEditMode={true} formConfig={managementFormConfig!} onSubmit={onSubmit} />
+    <NodeManagement isEditMode={true} formConfig={managementFormConfig!} onSubmit={onSubmit} />
   )
 }
 

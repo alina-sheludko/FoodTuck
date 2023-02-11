@@ -82,6 +82,9 @@ function getAugmentedNamespace(n) {
   });
   return a;
 }
+var client = {};
+var reactDom = { exports: {} };
+var reactDom_development = {};
 var react = { exports: {} };
 var react_development = { exports: {} };
 /**
@@ -1888,9 +1891,6 @@ const React$1 = /* @__PURE__ */ _mergeNamespaces({
   __proto__: null,
   default: React
 }, [react.exports]);
-var client = {};
-var reactDom = { exports: {} };
-var reactDom_development = {};
 var scheduler = { exports: {} };
 var scheduler_development = {};
 /**
@@ -24366,7 +24366,7 @@ var reactJsxDevRuntime_development = {};
 })(jsxDevRuntime);
 const Fragment$1 = jsxDevRuntime.exports.Fragment;
 const jsxDEV = jsxDevRuntime.exports.jsxDEV;
-var _jsxFileName$a = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-router\\dist\\index.js";
+var _jsxFileName$h = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-router\\dist\\index.js";
 function _extends$2() {
   _extends$2 = Object.assign ? Object.assign.bind() : function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -24660,7 +24660,7 @@ function useRoutes(routes, locationArg) {
       },
       children: renderedMatches
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 551,
       columnNumber: 25
     }, this);
@@ -24686,7 +24686,7 @@ function DefaultErrorElement() {
       children: [/* @__PURE__ */ jsxDEV("p", {
         children: "\u{1F4BF} Hey developer \u{1F44B}"
       }, void 0, false, {
-        fileName: _jsxFileName$a,
+        fileName: _jsxFileName$h,
         lineNumber: 584,
         columnNumber: 83
       }, this), /* @__PURE__ */ jsxDEV("p", {
@@ -24694,19 +24694,19 @@ function DefaultErrorElement() {
           style: codeStyles,
           children: "errorElement"
         }, void 0, false, {
-          fileName: _jsxFileName$a,
+          fileName: _jsxFileName$h,
           lineNumber: 584,
           columnNumber: 314
         }, this), " props on\xA0", /* @__PURE__ */ jsxDEV("code", {
           style: codeStyles,
           children: "<Route>"
         }, void 0, false, {
-          fileName: _jsxFileName$a,
+          fileName: _jsxFileName$h,
           lineNumber: 586,
           columnNumber: 55
         }, this)]
       }, void 0, true, {
-        fileName: _jsxFileName$a,
+        fileName: _jsxFileName$h,
         lineNumber: 584,
         columnNumber: 171
       }, this)]
@@ -24716,7 +24716,7 @@ function DefaultErrorElement() {
     children: [/* @__PURE__ */ jsxDEV("h2", {
       children: "Unexpected Application Error!"
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 591,
       columnNumber: 78
     }, this), /* @__PURE__ */ jsxDEV("h3", {
@@ -24725,14 +24725,14 @@ function DefaultErrorElement() {
       },
       children: message
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 591,
       columnNumber: 157
     }, this), stack ? /* @__PURE__ */ jsxDEV("pre", {
       style: preStyles,
       children: stack
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 595,
       columnNumber: 37
     }, this) : null, devInfo]
@@ -24773,12 +24773,12 @@ class RenderErrorBoundary extends react.exports.Component {
         value: this.state.error,
         children: this.props.component
       }, void 0, false, {
-        fileName: _jsxFileName$a,
+        fileName: _jsxFileName$h,
         lineNumber: 648,
         columnNumber: 21
       }, this)
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 646,
       columnNumber: 44
     }, this) : this.props.children;
@@ -24798,7 +24798,7 @@ function RenderedRoute(_ref) {
     value: routeContext,
     children
   }, void 0, false, {
-    fileName: _jsxFileName$a,
+    fileName: _jsxFileName$h,
     lineNumber: 669,
     columnNumber: 23
   }, this);
@@ -24824,7 +24824,7 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
   return renderedMatches.reduceRight((outlet, match2, index2) => {
     let error = match2.route.id ? errors == null ? void 0 : errors[match2.route.id] : null;
     let errorElement = dataRouterState ? match2.route.errorElement || /* @__PURE__ */ jsxDEV(DefaultErrorElement, {}, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 702,
       columnNumber: 83
     }, this) : null;
@@ -24837,7 +24837,7 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
       },
       children: error ? errorElement : match2.route.element !== void 0 ? match2.route.element : outlet
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 705,
       columnNumber: 42
     }, this);
@@ -24851,7 +24851,7 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
         matches: matches2
       }
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 716,
       columnNumber: 88
     }, this) : getChildren();
@@ -24989,12 +24989,12 @@ function Router(_ref4) {
         navigationType
       }
     }, void 0, false, {
-      fileName: _jsxFileName$a,
+      fileName: _jsxFileName$h,
       lineNumber: 1136,
       columnNumber: 19
     }, this)
   }, void 0, false, {
-    fileName: _jsxFileName$a,
+    fileName: _jsxFileName$h,
     lineNumber: 1134,
     columnNumber: 23
   }, this);
@@ -25052,7 +25052,7 @@ function createRoutesFromChildren(children, parentPath) {
   });
   return routes;
 }
-var _jsxFileName$9 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-router-dom\\dist\\index.js";
+var _jsxFileName$g = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-router-dom\\dist\\index.js";
 function _extends$1() {
   _extends$1 = Object.assign ? Object.assign.bind() : function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -25160,7 +25160,7 @@ function getFormSubmissionInfo(target, defaultAction, options) {
     formData
   };
 }
-const _excluded$N = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset"], _excluded2$4 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"], _excluded3$1 = ["reloadDocument", "replace", "method", "action", "onSubmit", "fetcherKey", "routeId", "relative", "preventScrollReset"];
+const _excluded$V = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset"], _excluded2$4 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"], _excluded3$1 = ["reloadDocument", "replace", "method", "action", "onSubmit", "fetcherKey", "routeId", "relative", "preventScrollReset"];
 function BrowserRouter(_ref) {
   let {
     basename,
@@ -25187,7 +25187,7 @@ function BrowserRouter(_ref) {
     navigationType: state.action,
     navigator: history
   }, void 0, false, {
-    fileName: _jsxFileName$9,
+    fileName: _jsxFileName$g,
     lineNumber: 280,
     columnNumber: 23
   }, this);
@@ -25203,7 +25203,7 @@ const Link = /* @__PURE__ */ react.exports.forwardRef(function LinkWithRef(_ref4
     target,
     to,
     preventScrollReset
-  } = _ref4, rest = _objectWithoutPropertiesLoose$1(_ref4, _excluded$N);
+  } = _ref4, rest = _objectWithoutPropertiesLoose$1(_ref4, _excluded$V);
   let location = typeof to === "string" ? to : createPath(to);
   let isAbsolute = /^[a-z+]+:\/\//i.test(location) || location.startsWith("//");
   let navigationLocation = location;
@@ -25241,7 +25241,7 @@ const Link = /* @__PURE__ */ react.exports.forwardRef(function LinkWithRef(_ref4
     ref,
     target
   }, void 0, false, {
-    fileName: _jsxFileName$9,
+    fileName: _jsxFileName$g,
     lineNumber: 412,
     columnNumber: 5
   }, this);
@@ -25303,7 +25303,7 @@ const NavLink = /* @__PURE__ */ react.exports.forwardRef(function NavLinkWithRef
       isPending
     }) : children
   }, void 0, false, {
-    fileName: _jsxFileName$9,
+    fileName: _jsxFileName$g,
     lineNumber: 482,
     columnNumber: 23
   }, this);
@@ -25316,7 +25316,7 @@ const Form = /* @__PURE__ */ react.exports.forwardRef((props, ref) => {
     ...props,
     ref
   }, void 0, false, {
-    fileName: _jsxFileName$9,
+    fileName: _jsxFileName$g,
     lineNumber: 506,
     columnNumber: 23
   }, globalThis);
@@ -25362,7 +25362,7 @@ const FormImpl = /* @__PURE__ */ react.exports.forwardRef((_ref6, forwardedRef) 
     onSubmit: reloadDocument ? onSubmit : submitHandler,
     ...props
   }, void 0, false, {
-    fileName: _jsxFileName$9,
+    fileName: _jsxFileName$g,
     lineNumber: 549,
     columnNumber: 23
   }, globalThis);
@@ -26940,6 +26940,51 @@ function useIsFocusVisible() {
 function getScrollbarSize(doc) {
   const documentWidth = doc.documentElement.clientWidth;
   return Math.abs(window.innerWidth - documentWidth);
+}
+let cachedType;
+function detectScrollType() {
+  if (cachedType) {
+    return cachedType;
+  }
+  const dummy = document.createElement("div");
+  const container = document.createElement("div");
+  container.style.width = "10px";
+  container.style.height = "1px";
+  dummy.appendChild(container);
+  dummy.dir = "rtl";
+  dummy.style.fontSize = "14px";
+  dummy.style.width = "4px";
+  dummy.style.height = "1px";
+  dummy.style.position = "absolute";
+  dummy.style.top = "-1000px";
+  dummy.style.overflow = "scroll";
+  document.body.appendChild(dummy);
+  cachedType = "reverse";
+  if (dummy.scrollLeft > 0) {
+    cachedType = "default";
+  } else {
+    dummy.scrollLeft = 1;
+    if (dummy.scrollLeft === 0) {
+      cachedType = "negative";
+    }
+  }
+  document.body.removeChild(dummy);
+  return cachedType;
+}
+function getNormalizedScrollLeft(element, direction) {
+  const scrollLeft = element.scrollLeft;
+  if (direction !== "rtl") {
+    return scrollLeft;
+  }
+  const type = detectScrollType();
+  switch (type) {
+    case "negative":
+      return element.scrollWidth - element.clientWidth + scrollLeft;
+    case "reverse":
+      return element.scrollWidth - element.clientWidth - scrollLeft;
+    default:
+      return scrollLeft;
+  }
 }
 function getTypeByValue(value) {
   const valueType = typeof value;
@@ -30865,7 +30910,7 @@ function unstable_createStyleFunctionSx() {
 const styleFunctionSx = unstable_createStyleFunctionSx();
 styleFunctionSx.filterProps = ["sx"];
 const styleFunctionSx$1 = styleFunctionSx;
-const _excluded$M = ["sx"];
+const _excluded$U = ["sx"];
 const splitProps = (props) => {
   var _props$theme$unstable, _props$theme;
   const result = {
@@ -30885,7 +30930,7 @@ const splitProps = (props) => {
 function extendSxProp(props) {
   const {
     sx: inSx
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$M);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$U);
   const {
     systemProps,
     otherProps
@@ -30926,7 +30971,7 @@ function clsx() {
     (e = arguments[f++]) && (t = r(e)) && (n && (n += " "), n += t);
   return n;
 }
-const _excluded$L = ["values", "unit", "step"];
+const _excluded$T = ["values", "unit", "step"];
 const sortBreakpointsValues = (values2) => {
   const breakpointsAsArray = Object.keys(values2).map((key) => ({
     key,
@@ -30950,7 +30995,7 @@ function createBreakpoints(breakpoints) {
     },
     unit = "px",
     step = 5
-  } = breakpoints, other = _objectWithoutPropertiesLoose(breakpoints, _excluded$L);
+  } = breakpoints, other = _objectWithoutPropertiesLoose(breakpoints, _excluded$T);
   const sortedValues = sortBreakpointsValues(values2);
   const keys = Object.keys(sortedValues);
   function up(key) {
@@ -31018,14 +31063,14 @@ function createSpacing(spacingInput = 8) {
   spacing.mui = true;
   return spacing;
 }
-const _excluded$K = ["breakpoints", "palette", "spacing", "shape"];
+const _excluded$S = ["breakpoints", "palette", "spacing", "shape"];
 function createTheme$1(options = {}, ...args) {
   const {
     breakpoints: breakpointsInput = {},
     palette: paletteInput = {},
     spacing: spacingInput,
     shape: shapeInput = {}
-  } = options, other = _objectWithoutPropertiesLoose(options, _excluded$K);
+  } = options, other = _objectWithoutPropertiesLoose(options, _excluded$S);
   const breakpoints = createBreakpoints(breakpointsInput);
   const spacing = createSpacing(spacingInput);
   let muiTheme = deepmerge({
@@ -31071,14 +31116,39 @@ const systemDefaultTheme$1 = createTheme$1();
 function useTheme$1(defaultTheme2 = systemDefaultTheme$1) {
   return useTheme$2(defaultTheme2);
 }
-const _excluded$J = ["variant"];
+const _excluded$R = ["className", "component"];
+function createBox(options = {}) {
+  const {
+    defaultTheme: defaultTheme2,
+    defaultClassName = "MuiBox-root",
+    generateClassName
+  } = options;
+  const BoxRoot = styled$3("div", {
+    shouldForwardProp: (prop) => prop !== "theme" && prop !== "sx" && prop !== "as"
+  })(styleFunctionSx$1);
+  const Box2 = /* @__PURE__ */ react.exports.forwardRef(function Box3(inProps, ref) {
+    const theme = useTheme$1(defaultTheme2);
+    const _extendSxProp = extendSxProp(inProps), {
+      className,
+      component = "div"
+    } = _extendSxProp, other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$R);
+    return /* @__PURE__ */ jsx(BoxRoot, _extends({
+      as: component,
+      ref,
+      className: clsx(className, generateClassName ? generateClassName(defaultClassName) : defaultClassName),
+      theme
+    }, other));
+  });
+  return Box2;
+}
+const _excluded$Q = ["variant"];
 function isEmpty$3(string) {
   return string.length === 0;
 }
 function propsToClassKey(props) {
   const {
     variant
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$J);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$Q);
   let classKey = variant || "";
   Object.keys(other).sort().forEach((key) => {
     if (key === "color") {
@@ -31089,7 +31159,7 @@ function propsToClassKey(props) {
   });
   return classKey;
 }
-const _excluded$I = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"], _excluded2$3 = ["theme"], _excluded3 = ["theme"];
+const _excluded$P = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"], _excluded2$3 = ["theme"], _excluded3 = ["theme"];
 function isEmpty$2(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -31164,7 +31234,7 @@ function createStyled2(input = {}) {
       skipVariantsResolver: inputSkipVariantsResolver,
       skipSx: inputSkipSx,
       overridesResolver: overridesResolver2
-    } = inputOptions, options = _objectWithoutPropertiesLoose(inputOptions, _excluded$I);
+    } = inputOptions, options = _objectWithoutPropertiesLoose(inputOptions, _excluded$P);
     const skipVariantsResolver = inputSkipVariantsResolver !== void 0 ? inputSkipVariantsResolver : componentSlot && componentSlot !== "Root" || false;
     const skipSx = inputSkipSx || false;
     let label;
@@ -31435,8 +31505,8 @@ function lighten(color2, coefficient) {
   }
   return recomposeColor(color2);
 }
-const _excluded$H = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
-const defaultTheme$2 = createTheme$1();
+const _excluded$O = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
+const defaultTheme$3 = createTheme$1();
 const defaultCreateStyledComponent = systemStyled("div", {
   name: "MuiContainer",
   slot: "Root",
@@ -31450,9 +31520,9 @@ const defaultCreateStyledComponent = systemStyled("div", {
 const useThemePropsDefault = (inProps) => useThemeProps$1({
   props: inProps,
   name: "MuiContainer",
-  defaultTheme: defaultTheme$2
+  defaultTheme: defaultTheme$3
 });
-const useUtilityClasses$v = (ownerState, componentName) => {
+const useUtilityClasses$B = (ownerState, componentName) => {
   const getContainerUtilityClass = (slot) => {
     return generateUtilityClass(componentName, slot);
   };
@@ -31521,14 +31591,14 @@ function createContainer(options = {}) {
       disableGutters = false,
       fixed = false,
       maxWidth: maxWidth2 = "lg"
-    } = props, other = _objectWithoutPropertiesLoose(props, _excluded$H);
+    } = props, other = _objectWithoutPropertiesLoose(props, _excluded$O);
     const ownerState = _extends({}, props, {
       component,
       disableGutters,
       fixed,
       maxWidth: maxWidth2
     });
-    const classes = useUtilityClasses$v(ownerState, componentName);
+    const classes = useUtilityClasses$B(ownerState, componentName);
     return /* @__PURE__ */ jsx(ContainerRoot, _extends({
       as: component,
       ownerState,
@@ -31563,7 +31633,7 @@ function createMixins(breakpoints, mixins) {
     }
   }, mixins);
 }
-const _excluded$G = ["mode", "contrastThreshold", "tonalOffset"];
+const _excluded$N = ["mode", "contrastThreshold", "tonalOffset"];
 const light = {
   text: {
     primary: "rgba(0, 0, 0, 0.87)",
@@ -31717,7 +31787,7 @@ function createPalette(palette) {
     mode = "light",
     contrastThreshold = 3,
     tonalOffset = 0.2
-  } = palette, other = _objectWithoutPropertiesLoose(palette, _excluded$G);
+  } = palette, other = _objectWithoutPropertiesLoose(palette, _excluded$N);
   const primary = palette.primary || getDefaultPrimary(mode);
   const secondary = palette.secondary || getDefaultSecondary(mode);
   const error = palette.error || getDefaultError(mode);
@@ -31819,7 +31889,7 @@ const theme2 = createTheme({ palette: {
   }, modes[mode]), other);
   return paletteOutput;
 }
-const _excluded$F = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
+const _excluded$M = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
 function round(value) {
   return Math.round(value * 1e5) / 1e5;
 }
@@ -31838,7 +31908,7 @@ function createTypography(palette, typography) {
     htmlFontSize = 16,
     allVariants,
     pxToRem: pxToRem2
-  } = _ref, other = _objectWithoutPropertiesLoose(_ref, _excluded$F);
+  } = _ref, other = _objectWithoutPropertiesLoose(_ref, _excluded$M);
   {
     if (typeof fontSize !== "number") {
       console.error("MUI: `fontSize` is required to be a number.");
@@ -31893,7 +31963,7 @@ function createShadow(...px) {
 }
 const shadows = ["none", createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
 const shadows$1 = shadows;
-const _excluded$E = ["duration", "easing", "delay"];
+const _excluded$L = ["duration", "easing", "delay"];
 const easing = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -31927,7 +31997,7 @@ function createTransitions(inputTransitions) {
       duration: durationOption = mergedDuration.standard,
       easing: easingOption = mergedEasing.easeInOut,
       delay = 0
-    } = options, other = _objectWithoutPropertiesLoose(options, _excluded$E);
+    } = options, other = _objectWithoutPropertiesLoose(options, _excluded$L);
     {
       const isString2 = (value) => typeof value === "string";
       const isNumber2 = (value) => !isNaN(parseFloat(value));
@@ -31968,14 +32038,14 @@ const zIndex = {
   tooltip: 1500
 };
 const zIndex$1 = zIndex;
-const _excluded$D = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
+const _excluded$K = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
 function createTheme(options = {}, ...args) {
   const {
     mixins: mixinsInput = {},
     palette: paletteInput = {},
     transitions: transitionsInput = {},
     typography: typographyInput = {}
-  } = options, other = _objectWithoutPropertiesLoose(options, _excluded$D);
+  } = options, other = _objectWithoutPropertiesLoose(options, _excluded$K);
   if (options.vars) {
     throw new Error(`MUI: \`vars\` is a private field used for CSS variables support.
 Please use another name.`);
@@ -32027,10 +32097,10 @@ Please use another name.`);
   };
   return muiTheme;
 }
-const defaultTheme = createTheme();
-const defaultTheme$1 = defaultTheme;
+const defaultTheme$1 = createTheme();
+const defaultTheme$2 = defaultTheme$1;
 function useTheme() {
-  const theme = useTheme$1(defaultTheme$1);
+  const theme = useTheme$1(defaultTheme$2);
   {
     react.exports.useDebugValue(theme);
   }
@@ -32043,13 +32113,13 @@ function useThemeProps({
   return useThemeProps$1({
     props,
     name,
-    defaultTheme: defaultTheme$1
+    defaultTheme: defaultTheme$2
   });
 }
 const rootShouldForwardProp = (prop) => shouldForwardProp(prop) && prop !== "classes";
 const slotShouldForwardProp = shouldForwardProp;
 const styled = createStyled2({
-  defaultTheme: defaultTheme$1,
+  defaultTheme: defaultTheme$2,
   rootShouldForwardProp
 });
 const styled$1 = styled;
@@ -32141,14 +32211,14 @@ function mergeSlotProps(parameters) {
     internalRef: internalSlotProps.ref
   };
 }
-const _excluded$C = ["elementType", "externalSlotProps", "ownerState"];
+const _excluded$J = ["elementType", "externalSlotProps", "ownerState"];
 function useSlotProps(parameters) {
   var _parameters$additiona;
   const {
     elementType,
     externalSlotProps,
     ownerState
-  } = parameters, rest = _objectWithoutPropertiesLoose(parameters, _excluded$C);
+  } = parameters, rest = _objectWithoutPropertiesLoose(parameters, _excluded$J);
   const resolvedComponentsProps = resolveComponentProps(externalSlotProps, ownerState);
   const {
     props: mergedProps,
@@ -32619,8 +32689,8 @@ function getModalUtilityClass(slot) {
   return generateUtilityClass("MuiModal", slot);
 }
 generateUtilityClasses("MuiModal", ["root", "hidden"]);
-const _excluded$B = ["children", "classes", "closeAfterTransition", "component", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
-const useUtilityClasses$u = (ownerState) => {
+const _excluded$I = ["children", "classes", "closeAfterTransition", "component", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
+const useUtilityClasses$A = (ownerState) => {
   const {
     open,
     exited,
@@ -32664,7 +32734,7 @@ const ModalUnstyled = /* @__PURE__ */ react.exports.forwardRef(function ModalUns
     onTransitionExited,
     slotProps = {},
     slots = {}
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$B);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$I);
   const [exited, setExited] = react.exports.useState(!open);
   const modal = react.exports.useRef({});
   const mountNodeRef = react.exports.useRef(null);
@@ -32733,7 +32803,7 @@ const ModalUnstyled = /* @__PURE__ */ react.exports.forwardRef(function ModalUns
     hideBackdrop,
     keepMounted
   });
-  const classes = useUtilityClasses$u(ownerState);
+  const classes = useUtilityClasses$A(ownerState);
   const handleEnter = () => {
     setExited(false);
     if (onTransitionEnter) {
@@ -32857,11 +32927,11 @@ ModalUnstyled.propTypes = {
   })
 };
 const ModalUnstyled$1 = ModalUnstyled;
-const _excluded$A = ["onChange", "maxRows", "minRows", "style", "value"];
+const _excluded$H = ["onChange", "maxRows", "minRows", "style", "value"];
 function getStyleValue(computedStyle, property) {
   return parseInt(computedStyle[property], 10) || 0;
 }
-const styles$2 = {
+const styles$3 = {
   shadow: {
     visibility: "hidden",
     position: "absolute",
@@ -32882,7 +32952,7 @@ const TextareaAutosize = /* @__PURE__ */ react.exports.forwardRef(function Texta
     minRows = 1,
     style: style2,
     value
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$A);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$H);
   const {
     current: isControlled
   } = react.exports.useRef(value != null);
@@ -33017,7 +33087,7 @@ const TextareaAutosize = /* @__PURE__ */ react.exports.forwardRef(function Texta
       readOnly: true,
       ref: shadowRef,
       tabIndex: -1,
-      style: _extends({}, styles$2.shadow, style2, {
+      style: _extends({}, styles$3.shadow, style2, {
         padding: 0
       })
     })]
@@ -33037,8 +33107,8 @@ function getSvgIconUtilityClass(slot) {
   return generateUtilityClass("MuiSvgIcon", slot);
 }
 generateUtilityClasses("MuiSvgIcon", ["root", "colorPrimary", "colorSecondary", "colorAction", "colorError", "colorDisabled", "fontSizeInherit", "fontSizeSmall", "fontSizeMedium", "fontSizeLarge"]);
-const _excluded$z = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-const useUtilityClasses$t = (ownerState) => {
+const _excluded$G = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+const useUtilityClasses$z = (ownerState) => {
   const {
     color: color2,
     fontSize,
@@ -33101,7 +33171,7 @@ const SvgIcon = /* @__PURE__ */ react.exports.forwardRef(function SvgIcon2(inPro
     inheritViewBox = false,
     titleAccess,
     viewBox = "0 0 24 24"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$z);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$G);
   const ownerState = _extends({}, props, {
     color: color2,
     component,
@@ -33114,7 +33184,7 @@ const SvgIcon = /* @__PURE__ */ react.exports.forwardRef(function SvgIcon2(inPro
   if (!inheritViewBox) {
     more.viewBox = viewBox;
   }
-  const classes = useUtilityClasses$t(ownerState);
+  const classes = useUtilityClasses$z(ownerState);
   return /* @__PURE__ */ jsxs(SvgIconRoot, _extends({
     as: component,
     className: clsx(classes.root, className),
@@ -33226,7 +33296,7 @@ const TransitionGroupContext = React.createContext(null);
 var forceReflow = function forceReflow2(node2) {
   return node2.scrollTop;
 };
-var _jsxFileName$8 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-transition-group\\esm\\Transition.js";
+var _jsxFileName$f = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-transition-group\\esm\\Transition.js";
 var UNMOUNTED = "unmounted";
 var EXITED = "exited";
 var ENTERING = "entering";
@@ -33453,7 +33523,7 @@ var Transition = /* @__PURE__ */ function(_React$Component) {
       value: null,
       children: typeof children === "function" ? children(status, childProps) : React.cloneElement(React.Children.only(children), childProps)
     }, void 0, false, {
-      fileName: _jsxFileName$8,
+      fileName: _jsxFileName$f,
       lineNumber: 406,
       columnNumber: 7
     }, this);
@@ -33614,7 +33684,7 @@ function getNextChildMapping(nextProps, prevChildMapping, onExited) {
   });
   return children;
 }
-var _jsxFileName$7 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-transition-group\\esm\\TransitionGroup.js";
+var _jsxFileName$e = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\node_modules\\react-transition-group\\esm\\TransitionGroup.js";
 var values = Object.values || function(obj) {
   return Object.keys(obj).map(function(k) {
     return obj[k];
@@ -33689,7 +33759,7 @@ var TransitionGroup = /* @__PURE__ */ function(_React$Component) {
         value: contextValue,
         children
       }, void 0, false, {
-        fileName: _jsxFileName$7,
+        fileName: _jsxFileName$e,
         lineNumber: 117,
         columnNumber: 27
       }, this);
@@ -33700,12 +33770,12 @@ var TransitionGroup = /* @__PURE__ */ function(_React$Component) {
         ...props,
         children
       }, void 0, false, {
-        fileName: _jsxFileName$7,
+        fileName: _jsxFileName$e,
         lineNumber: 124,
         columnNumber: 21
       }, this)
     }, void 0, false, {
-      fileName: _jsxFileName$7,
+      fileName: _jsxFileName$e,
       lineNumber: 122,
       columnNumber: 25
     }, this);
@@ -33740,8 +33810,8 @@ function getCollapseUtilityClass(slot) {
   return generateUtilityClass("MuiCollapse", slot);
 }
 generateUtilityClasses("MuiCollapse", ["root", "horizontal", "vertical", "entered", "hidden", "wrapper", "wrapperInner"]);
-const _excluded$y = ["addEndListener", "children", "className", "collapsedSize", "component", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "orientation", "style", "timeout", "TransitionComponent"];
-const useUtilityClasses$s = (ownerState) => {
+const _excluded$F = ["addEndListener", "children", "className", "collapsedSize", "component", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "orientation", "style", "timeout", "TransitionComponent"];
+const useUtilityClasses$y = (ownerState) => {
   const {
     orientation,
     classes
@@ -33831,12 +33901,12 @@ const Collapse = /* @__PURE__ */ react.exports.forwardRef(function Collapse2(inP
     style: style2,
     timeout: timeout2 = duration.standard,
     TransitionComponent = Transition$1
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$y);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$F);
   const ownerState = _extends({}, props, {
     orientation,
     collapsedSize: collapsedSizeProp
   });
-  const classes = useUtilityClasses$s(ownerState);
+  const classes = useUtilityClasses$y(ownerState);
   const theme = useTheme();
   const timer = react.exports.useRef();
   const wrapperRef = react.exports.useRef(null);
@@ -34021,8 +34091,8 @@ function getPaperUtilityClass(slot) {
   return generateUtilityClass("MuiPaper", slot);
 }
 generateUtilityClasses("MuiPaper", ["root", "rounded", "outlined", "elevation", "elevation0", "elevation1", "elevation2", "elevation3", "elevation4", "elevation5", "elevation6", "elevation7", "elevation8", "elevation9", "elevation10", "elevation11", "elevation12", "elevation13", "elevation14", "elevation15", "elevation16", "elevation17", "elevation18", "elevation19", "elevation20", "elevation21", "elevation22", "elevation23", "elevation24"]);
-const _excluded$x = ["className", "component", "elevation", "square", "variant"];
-const useUtilityClasses$r = (ownerState) => {
+const _excluded$E = ["className", "component", "elevation", "square", "variant"];
+const useUtilityClasses$x = (ownerState) => {
   const {
     square,
     elevation,
@@ -34075,14 +34145,14 @@ const Paper = /* @__PURE__ */ react.exports.forwardRef(function Paper2(inProps, 
     elevation = 1,
     square = false,
     variant = "elevation"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$x);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$E);
   const ownerState = _extends({}, props, {
     component,
     elevation,
     square,
     variant
   });
-  const classes = useUtilityClasses$r(ownerState);
+  const classes = useUtilityClasses$x(ownerState);
   {
     const theme = useTheme();
     if (theme.shadows[elevation] === void 0) {
@@ -34116,6 +34186,246 @@ Paper.propTypes = {
   variant: propTypes.exports.oneOfType([propTypes.exports.oneOf(["elevation", "outlined"]), propTypes.exports.string])
 };
 const Paper$1 = Paper;
+const AccordionContext = /* @__PURE__ */ react.exports.createContext({});
+{
+  AccordionContext.displayName = "AccordionContext";
+}
+const AccordionContext$1 = AccordionContext;
+function getAccordionUtilityClass(slot) {
+  return generateUtilityClass("MuiAccordion", slot);
+}
+const accordionClasses = generateUtilityClasses("MuiAccordion", ["root", "rounded", "expanded", "disabled", "gutters", "region"]);
+const accordionClasses$1 = accordionClasses;
+const _excluded$D = ["children", "className", "defaultExpanded", "disabled", "disableGutters", "expanded", "onChange", "square", "TransitionComponent", "TransitionProps"];
+const useUtilityClasses$w = (ownerState) => {
+  const {
+    classes,
+    square,
+    expanded,
+    disabled,
+    disableGutters
+  } = ownerState;
+  const slots = {
+    root: ["root", !square && "rounded", expanded && "expanded", disabled && "disabled", !disableGutters && "gutters"],
+    region: ["region"]
+  };
+  return composeClasses(slots, getAccordionUtilityClass, classes);
+};
+const AccordionRoot = styled$1(Paper$1, {
+  name: "MuiAccordion",
+  slot: "Root",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [{
+      [`& .${accordionClasses$1.region}`]: styles2.region
+    }, styles2.root, !ownerState.square && styles2.rounded, !ownerState.disableGutters && styles2.gutters];
+  }
+})(({
+  theme
+}) => {
+  const transition = {
+    duration: theme.transitions.duration.shortest
+  };
+  return {
+    position: "relative",
+    transition: theme.transitions.create(["margin"], transition),
+    overflowAnchor: "none",
+    "&:before": {
+      position: "absolute",
+      left: 0,
+      top: -1,
+      right: 0,
+      height: 1,
+      content: '""',
+      opacity: 1,
+      backgroundColor: (theme.vars || theme).palette.divider,
+      transition: theme.transitions.create(["opacity", "background-color"], transition)
+    },
+    "&:first-of-type": {
+      "&:before": {
+        display: "none"
+      }
+    },
+    [`&.${accordionClasses$1.expanded}`]: {
+      "&:before": {
+        opacity: 0
+      },
+      "&:first-of-type": {
+        marginTop: 0
+      },
+      "&:last-of-type": {
+        marginBottom: 0
+      },
+      "& + &": {
+        "&:before": {
+          display: "none"
+        }
+      }
+    },
+    [`&.${accordionClasses$1.disabled}`]: {
+      backgroundColor: (theme.vars || theme).palette.action.disabledBackground
+    }
+  };
+}, ({
+  theme,
+  ownerState
+}) => _extends({}, !ownerState.square && {
+  borderRadius: 0,
+  "&:first-of-type": {
+    borderTopLeftRadius: (theme.vars || theme).shape.borderRadius,
+    borderTopRightRadius: (theme.vars || theme).shape.borderRadius
+  },
+  "&:last-of-type": {
+    borderBottomLeftRadius: (theme.vars || theme).shape.borderRadius,
+    borderBottomRightRadius: (theme.vars || theme).shape.borderRadius,
+    "@supports (-ms-ime-align: auto)": {
+      borderBottomLeftRadius: 0,
+      borderBottomRightRadius: 0
+    }
+  }
+}, !ownerState.disableGutters && {
+  [`&.${accordionClasses$1.expanded}`]: {
+    margin: "16px 0"
+  }
+}));
+const Accordion = /* @__PURE__ */ react.exports.forwardRef(function Accordion2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiAccordion"
+  });
+  const {
+    children: childrenProp,
+    className,
+    defaultExpanded = false,
+    disabled = false,
+    disableGutters = false,
+    expanded: expandedProp,
+    onChange,
+    square = false,
+    TransitionComponent = Collapse$1,
+    TransitionProps
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$D);
+  const [expanded, setExpandedState] = useControlled({
+    controlled: expandedProp,
+    default: defaultExpanded,
+    name: "Accordion",
+    state: "expanded"
+  });
+  const handleChange = react.exports.useCallback((event) => {
+    setExpandedState(!expanded);
+    if (onChange) {
+      onChange(event, !expanded);
+    }
+  }, [expanded, onChange, setExpandedState]);
+  const [summary, ...children] = react.exports.Children.toArray(childrenProp);
+  const contextValue = react.exports.useMemo(() => ({
+    expanded,
+    disabled,
+    disableGutters,
+    toggle: handleChange
+  }), [expanded, disabled, disableGutters, handleChange]);
+  const ownerState = _extends({}, props, {
+    square,
+    disabled,
+    disableGutters,
+    expanded
+  });
+  const classes = useUtilityClasses$w(ownerState);
+  return /* @__PURE__ */ jsxs(AccordionRoot, _extends({
+    className: clsx(classes.root, className),
+    ref,
+    ownerState,
+    square
+  }, other, {
+    children: [/* @__PURE__ */ jsx(AccordionContext$1.Provider, {
+      value: contextValue,
+      children: summary
+    }), /* @__PURE__ */ jsx(TransitionComponent, _extends({
+      in: expanded,
+      timeout: "auto"
+    }, TransitionProps, {
+      children: /* @__PURE__ */ jsx("div", {
+        "aria-labelledby": summary.props.id,
+        id: summary.props["aria-controls"],
+        role: "region",
+        className: classes.region,
+        children
+      })
+    }))]
+  }));
+});
+Accordion.propTypes = {
+  children: chainPropTypes(propTypes.exports.node.isRequired, (props) => {
+    const summary = react.exports.Children.toArray(props.children)[0];
+    if (reactIs$2.exports.isFragment(summary)) {
+      return new Error("MUI: The Accordion doesn't accept a Fragment as a child. Consider providing an array instead.");
+    }
+    if (!/* @__PURE__ */ react.exports.isValidElement(summary)) {
+      return new Error("MUI: Expected the first child of Accordion to be a valid element.");
+    }
+    return null;
+  }),
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  defaultExpanded: propTypes.exports.bool,
+  disabled: propTypes.exports.bool,
+  disableGutters: propTypes.exports.bool,
+  expanded: propTypes.exports.bool,
+  onChange: propTypes.exports.func,
+  square: propTypes.exports.bool,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object]),
+  TransitionComponent: propTypes.exports.elementType,
+  TransitionProps: propTypes.exports.object
+};
+const Accordion$1 = Accordion;
+function getAccordionDetailsUtilityClass(slot) {
+  return generateUtilityClass("MuiAccordionDetails", slot);
+}
+generateUtilityClasses("MuiAccordionDetails", ["root"]);
+const _excluded$C = ["className"];
+const useUtilityClasses$v = (ownerState) => {
+  const {
+    classes
+  } = ownerState;
+  const slots = {
+    root: ["root"]
+  };
+  return composeClasses(slots, getAccordionDetailsUtilityClass, classes);
+};
+const AccordionDetailsRoot = styled$1("div", {
+  name: "MuiAccordionDetails",
+  slot: "Root",
+  overridesResolver: (props, styles2) => styles2.root
+})(({
+  theme
+}) => ({
+  padding: theme.spacing(1, 2, 2)
+}));
+const AccordionDetails = /* @__PURE__ */ react.exports.forwardRef(function AccordionDetails2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiAccordionDetails"
+  });
+  const {
+    className
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$C);
+  const ownerState = props;
+  const classes = useUtilityClasses$v(ownerState);
+  return /* @__PURE__ */ jsx(AccordionDetailsRoot, _extends({
+    className: clsx(classes.root, className),
+    ref,
+    ownerState
+  }, other));
+});
+AccordionDetails.propTypes = {
+  children: propTypes.exports.node,
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
+};
+const AccordionDetails$1 = AccordionDetails;
 function Ripple(props) {
   const {
     className,
@@ -34170,7 +34480,7 @@ Ripple.propTypes = {
 };
 const touchRippleClasses = generateUtilityClasses("MuiTouchRipple", ["root", "ripple", "rippleVisible", "ripplePulsate", "child", "childLeaving", "childPulsate"]);
 const touchRippleClasses$1 = touchRippleClasses;
-const _excluded$w = ["center", "classes", "className"];
+const _excluded$B = ["center", "classes", "className"];
 let _ = (t) => t, _t, _t2, _t3, _t4;
 const DURATION = 550;
 const DELAY_RIPPLE = 80;
@@ -34285,7 +34595,7 @@ const TouchRipple = /* @__PURE__ */ react.exports.forwardRef(function TouchRippl
     center: centerProp = false,
     classes = {},
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$w);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$B);
   const [ripples, setRipples] = react.exports.useState([]);
   const nextKey = react.exports.useRef(0);
   const rippleCallback = react.exports.useRef(null);
@@ -34454,8 +34764,8 @@ function getButtonBaseUtilityClass(slot) {
 }
 const buttonBaseClasses = generateUtilityClasses("MuiButtonBase", ["root", "disabled", "focusVisible"]);
 const buttonBaseClasses$1 = buttonBaseClasses;
-const _excluded$v = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
-const useUtilityClasses$q = (ownerState) => {
+const _excluded$A = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
+const useUtilityClasses$u = (ownerState) => {
   const {
     disabled,
     focusVisible,
@@ -34540,7 +34850,7 @@ const ButtonBase = /* @__PURE__ */ react.exports.forwardRef(function ButtonBase2
     TouchRippleProps,
     touchRippleRef,
     type
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$v);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$A);
   const buttonRef = react.exports.useRef(null);
   const rippleRef = react.exports.useRef(null);
   const handleRippleRef = useForkRef(rippleRef, touchRippleRef);
@@ -34694,7 +35004,7 @@ const ButtonBase = /* @__PURE__ */ react.exports.forwardRef(function ButtonBase2
     tabIndex,
     focusVisible
   });
-  const classes = useUtilityClasses$q(ownerState);
+  const classes = useUtilityClasses$u(ownerState);
   return /* @__PURE__ */ jsxs(ButtonBaseRoot, _extends({
     as: ComponentProp,
     className: clsx(classes.root, className),
@@ -34763,12 +35073,165 @@ ButtonBase.propTypes = {
   type: propTypes.exports.oneOfType([propTypes.exports.oneOf(["button", "reset", "submit"]), propTypes.exports.string])
 };
 const ButtonBase$1 = ButtonBase;
+function getAccordionSummaryUtilityClass(slot) {
+  return generateUtilityClass("MuiAccordionSummary", slot);
+}
+const accordionSummaryClasses = generateUtilityClasses("MuiAccordionSummary", ["root", "expanded", "focusVisible", "disabled", "gutters", "contentGutters", "content", "expandIconWrapper"]);
+const accordionSummaryClasses$1 = accordionSummaryClasses;
+const _excluded$z = ["children", "className", "expandIcon", "focusVisibleClassName", "onClick"];
+const useUtilityClasses$t = (ownerState) => {
+  const {
+    classes,
+    expanded,
+    disabled,
+    disableGutters
+  } = ownerState;
+  const slots = {
+    root: ["root", expanded && "expanded", disabled && "disabled", !disableGutters && "gutters"],
+    focusVisible: ["focusVisible"],
+    content: ["content", expanded && "expanded", !disableGutters && "contentGutters"],
+    expandIconWrapper: ["expandIconWrapper", expanded && "expanded"]
+  };
+  return composeClasses(slots, getAccordionSummaryUtilityClass, classes);
+};
+const AccordionSummaryRoot = styled$1(ButtonBase$1, {
+  name: "MuiAccordionSummary",
+  slot: "Root",
+  overridesResolver: (props, styles2) => styles2.root
+})(({
+  theme,
+  ownerState
+}) => {
+  const transition = {
+    duration: theme.transitions.duration.shortest
+  };
+  return _extends({
+    display: "flex",
+    minHeight: 48,
+    padding: theme.spacing(0, 2),
+    transition: theme.transitions.create(["min-height", "background-color"], transition),
+    [`&.${accordionSummaryClasses$1.focusVisible}`]: {
+      backgroundColor: (theme.vars || theme).palette.action.focus
+    },
+    [`&.${accordionSummaryClasses$1.disabled}`]: {
+      opacity: (theme.vars || theme).palette.action.disabledOpacity
+    },
+    [`&:hover:not(.${accordionSummaryClasses$1.disabled})`]: {
+      cursor: "pointer"
+    }
+  }, !ownerState.disableGutters && {
+    [`&.${accordionSummaryClasses$1.expanded}`]: {
+      minHeight: 64
+    }
+  });
+});
+const AccordionSummaryContent = styled$1("div", {
+  name: "MuiAccordionSummary",
+  slot: "Content",
+  overridesResolver: (props, styles2) => styles2.content
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  display: "flex",
+  flexGrow: 1,
+  margin: "12px 0"
+}, !ownerState.disableGutters && {
+  transition: theme.transitions.create(["margin"], {
+    duration: theme.transitions.duration.shortest
+  }),
+  [`&.${accordionSummaryClasses$1.expanded}`]: {
+    margin: "20px 0"
+  }
+}));
+const AccordionSummaryExpandIconWrapper = styled$1("div", {
+  name: "MuiAccordionSummary",
+  slot: "ExpandIconWrapper",
+  overridesResolver: (props, styles2) => styles2.expandIconWrapper
+})(({
+  theme
+}) => ({
+  display: "flex",
+  color: (theme.vars || theme).palette.action.active,
+  transform: "rotate(0deg)",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest
+  }),
+  [`&.${accordionSummaryClasses$1.expanded}`]: {
+    transform: "rotate(180deg)"
+  }
+}));
+const AccordionSummary = /* @__PURE__ */ react.exports.forwardRef(function AccordionSummary2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiAccordionSummary"
+  });
+  const {
+    children,
+    className,
+    expandIcon,
+    focusVisibleClassName,
+    onClick
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$z);
+  const {
+    disabled = false,
+    disableGutters,
+    expanded,
+    toggle
+  } = react.exports.useContext(AccordionContext$1);
+  const handleChange = (event) => {
+    if (toggle) {
+      toggle(event);
+    }
+    if (onClick) {
+      onClick(event);
+    }
+  };
+  const ownerState = _extends({}, props, {
+    expanded,
+    disabled,
+    disableGutters
+  });
+  const classes = useUtilityClasses$t(ownerState);
+  return /* @__PURE__ */ jsxs(AccordionSummaryRoot, _extends({
+    focusRipple: false,
+    disableRipple: true,
+    disabled,
+    component: "div",
+    "aria-expanded": expanded,
+    className: clsx(classes.root, className),
+    focusVisibleClassName: clsx(classes.focusVisible, focusVisibleClassName),
+    onClick: handleChange,
+    ref,
+    ownerState
+  }, other, {
+    children: [/* @__PURE__ */ jsx(AccordionSummaryContent, {
+      className: classes.content,
+      ownerState,
+      children
+    }), expandIcon && /* @__PURE__ */ jsx(AccordionSummaryExpandIconWrapper, {
+      className: classes.expandIconWrapper,
+      ownerState,
+      children: expandIcon
+    })]
+  }));
+});
+AccordionSummary.propTypes = {
+  children: propTypes.exports.node,
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  expandIcon: propTypes.exports.node,
+  focusVisibleClassName: propTypes.exports.string,
+  onClick: propTypes.exports.func,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
+};
+const AccordionSummary$1 = AccordionSummary;
 function getTypographyUtilityClass(slot) {
   return generateUtilityClass("MuiTypography", slot);
 }
 generateUtilityClasses("MuiTypography", ["root", "h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "inherit", "button", "caption", "overline", "alignLeft", "alignRight", "alignCenter", "alignJustify", "noWrap", "gutterBottom", "paragraph"]);
-const _excluded$u = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
-const useUtilityClasses$p = (ownerState) => {
+const _excluded$y = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
+const useUtilityClasses$s = (ownerState) => {
   const {
     align,
     gutterBottom,
@@ -34848,7 +35311,7 @@ const Typography = /* @__PURE__ */ react.exports.forwardRef(function Typography2
     paragraph = false,
     variant = "body1",
     variantMapping = defaultVariantMapping
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$u);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$y);
   const ownerState = _extends({}, props, {
     align,
     color: color2,
@@ -34861,7 +35324,7 @@ const Typography = /* @__PURE__ */ react.exports.forwardRef(function Typography2
     variantMapping
   });
   const Component = component || (paragraph ? "p" : variantMapping[variant] || defaultVariantMapping[variant]) || "span";
-  const classes = useUtilityClasses$p(ownerState);
+  const classes = useUtilityClasses$s(ownerState);
   return /* @__PURE__ */ jsx(TypographyRoot, _extends({
     as: Component,
     ref,
@@ -34908,7 +35371,7 @@ function useFormControl() {
 }
 function GlobalStyles(props) {
   return /* @__PURE__ */ jsx(GlobalStyles$1, _extends({}, props, {
-    defaultTheme: defaultTheme$1
+    defaultTheme: defaultTheme$2
   }));
 }
 GlobalStyles.propTypes = {
@@ -34930,7 +35393,7 @@ function getInputBaseUtilityClass(slot) {
 }
 const inputBaseClasses = generateUtilityClasses("MuiInputBase", ["root", "formControl", "focused", "disabled", "adornedStart", "adornedEnd", "error", "sizeSmall", "multiline", "colorSecondary", "fullWidth", "hiddenLabel", "readOnly", "input", "inputSizeSmall", "inputMultiline", "inputTypeSearch", "inputAdornedStart", "inputAdornedEnd", "inputHiddenLabel"]);
 const inputBaseClasses$1 = inputBaseClasses;
-const _excluded$t = ["aria-describedby", "autoComplete", "autoFocus", "className", "color", "components", "componentsProps", "defaultValue", "disabled", "disableInjectingGlobalStyles", "endAdornment", "error", "fullWidth", "id", "inputComponent", "inputProps", "inputRef", "margin", "maxRows", "minRows", "multiline", "name", "onBlur", "onChange", "onClick", "onFocus", "onKeyDown", "onKeyUp", "placeholder", "readOnly", "renderSuffix", "rows", "size", "slotProps", "slots", "startAdornment", "type", "value"];
+const _excluded$x = ["aria-describedby", "autoComplete", "autoFocus", "className", "color", "components", "componentsProps", "defaultValue", "disabled", "disableInjectingGlobalStyles", "endAdornment", "error", "fullWidth", "id", "inputComponent", "inputProps", "inputRef", "margin", "maxRows", "minRows", "multiline", "name", "onBlur", "onChange", "onClick", "onFocus", "onKeyDown", "onKeyUp", "placeholder", "readOnly", "renderSuffix", "rows", "size", "slotProps", "slots", "startAdornment", "type", "value"];
 const rootOverridesResolver = (props, styles2) => {
   const {
     ownerState
@@ -34943,7 +35406,7 @@ const inputOverridesResolver = (props, styles2) => {
   } = props;
   return [styles2.input, ownerState.size === "small" && styles2.inputSizeSmall, ownerState.multiline && styles2.inputMultiline, ownerState.type === "search" && styles2.inputTypeSearch, ownerState.startAdornment && styles2.inputAdornedStart, ownerState.endAdornment && styles2.inputAdornedEnd, ownerState.hiddenLabel && styles2.inputHiddenLabel];
 };
-const useUtilityClasses$o = (ownerState) => {
+const useUtilityClasses$r = (ownerState) => {
   const {
     classes,
     color: color2,
@@ -35133,7 +35596,7 @@ const InputBase = /* @__PURE__ */ react.exports.forwardRef(function InputBase2(i
     startAdornment,
     type = "text",
     value: valueProp
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$t);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$x);
   const value = inputPropsProp.value != null ? inputPropsProp.value : valueProp;
   const {
     current: isControlled
@@ -35294,7 +35757,7 @@ const InputBase = /* @__PURE__ */ react.exports.forwardRef(function InputBase2(i
     startAdornment,
     type
   });
-  const classes = useUtilityClasses$o(ownerState);
+  const classes = useUtilityClasses$r(ownerState);
   const Root = slots.root || components.Root || InputBaseRoot;
   const rootProps = slotProps.root || componentsProps.root || {};
   const Input3 = slots.input || components.Input || InputBaseComponent;
@@ -35419,8 +35882,8 @@ const filledInputClasses$1 = filledInputClasses;
 const ArrowDropDownIcon = createSvgIcon$1(/* @__PURE__ */ jsx("path", {
   d: "M7 10l5 5 5-5z"
 }), "ArrowDropDown");
-const _excluded$s = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
-const styles$1 = {
+const _excluded$w = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+const styles$2 = {
   entering: {
     opacity: 1
   },
@@ -35449,7 +35912,7 @@ const Fade = /* @__PURE__ */ react.exports.forwardRef(function Fade2(props, ref)
     style: style2,
     timeout: timeout2 = defaultTimeout,
     TransitionComponent = Transition$1
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$s);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$w);
   const nodeRef = react.exports.useRef(null);
   const handleRef = useForkRef(nodeRef, children.ref, ref);
   const normalizedTransitionCallback = (callback) => (maybeIsAppearing) => {
@@ -35518,7 +35981,7 @@ const Fade = /* @__PURE__ */ react.exports.forwardRef(function Fade2(props, ref)
         style: _extends({
           opacity: 0,
           visibility: state === "exited" && !inProp ? "hidden" : void 0
-        }, styles$1[state], style2, children.props.style),
+        }, styles$2[state], style2, children.props.style),
         ref: handleRef
       }, childProps));
     }
@@ -35551,8 +36014,8 @@ function getBackdropUtilityClass(slot) {
   return generateUtilityClass("MuiBackdrop", slot);
 }
 generateUtilityClasses("MuiBackdrop", ["root", "invisible"]);
-const _excluded$r = ["children", "component", "components", "componentsProps", "className", "invisible", "open", "slotProps", "slots", "transitionDuration", "TransitionComponent"];
-const useUtilityClasses$n = (ownerState) => {
+const _excluded$v = ["children", "component", "components", "componentsProps", "className", "invisible", "open", "slotProps", "slots", "transitionDuration", "TransitionComponent"];
+const useUtilityClasses$q = (ownerState) => {
   const {
     classes,
     invisible
@@ -35605,12 +36068,12 @@ const Backdrop = /* @__PURE__ */ react.exports.forwardRef(function Backdrop2(inP
     slots = {},
     transitionDuration,
     TransitionComponent = Fade$1
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$r);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$v);
   const ownerState = _extends({}, props, {
     component,
     invisible
   });
-  const classes = useUtilityClasses$n(ownerState);
+  const classes = useUtilityClasses$q(ownerState);
   const rootSlotProps = (_slotProps$root = slotProps.root) != null ? _slotProps$root : componentsProps.root;
   return /* @__PURE__ */ jsx(TransitionComponent, _extends({
     in: open,
@@ -35655,6 +36118,18 @@ Backdrop.propTypes = {
   })])
 };
 const Backdrop$1 = Backdrop;
+const defaultTheme = createTheme();
+const Box = createBox({
+  defaultTheme,
+  defaultClassName: "MuiBox-root",
+  generateClassName: ClassNameGenerator$1.generate
+});
+Box.propTypes = {
+  children: propTypes.exports.node,
+  component: propTypes.exports.elementType,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
+};
+const Box$1 = Box;
 function getButtonUtilityClass(slot) {
   return generateUtilityClass("MuiButton", slot);
 }
@@ -35665,8 +36140,8 @@ const ButtonGroupContext = /* @__PURE__ */ react.exports.createContext({});
   ButtonGroupContext.displayName = "ButtonGroupContext";
 }
 const ButtonGroupContext$1 = ButtonGroupContext;
-const _excluded$q = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
-const useUtilityClasses$m = (ownerState) => {
+const _excluded$u = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
+const useUtilityClasses$p = (ownerState) => {
   const {
     color: color2,
     disableElevation,
@@ -35880,7 +36355,7 @@ const Button = /* @__PURE__ */ react.exports.forwardRef(function Button2(inProps
     startIcon: startIconProp,
     type,
     variant = "text"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$q);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$u);
   const ownerState = _extends({}, props, {
     color: color2,
     component,
@@ -35892,7 +36367,7 @@ const Button = /* @__PURE__ */ react.exports.forwardRef(function Button2(inProps
     type,
     variant
   });
-  const classes = useUtilityClasses$m(ownerState);
+  const classes = useUtilityClasses$p(ownerState);
   const startIcon = startIconProp && /* @__PURE__ */ jsx(ButtonStartIcon, {
     className: classes.startIcon,
     ownerState,
@@ -35942,8 +36417,8 @@ function getSwitchBaseUtilityClass(slot) {
   return generateUtilityClass("PrivateSwitchBase", slot);
 }
 generateUtilityClasses("PrivateSwitchBase", ["root", "checked", "disabled", "input", "edgeStart", "edgeEnd"]);
-const _excluded$p = ["autoFocus", "checked", "checkedIcon", "className", "defaultChecked", "disabled", "disableFocusRipple", "edge", "icon", "id", "inputProps", "inputRef", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"];
-const useUtilityClasses$l = (ownerState) => {
+const _excluded$t = ["autoFocus", "checked", "checkedIcon", "className", "defaultChecked", "disabled", "disableFocusRipple", "edge", "icon", "id", "inputProps", "inputRef", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"];
+const useUtilityClasses$o = (ownerState) => {
   const {
     classes,
     checked,
@@ -36001,7 +36476,7 @@ const SwitchBase = /* @__PURE__ */ react.exports.forwardRef(function SwitchBase2
     tabIndex,
     type,
     value
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$p);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$t);
   const [checked, setCheckedState] = useControlled({
     controlled: checkedProp,
     default: Boolean(defaultChecked),
@@ -36048,7 +36523,7 @@ const SwitchBase = /* @__PURE__ */ react.exports.forwardRef(function SwitchBase2
     disableFocusRipple,
     edge
   });
-  const classes = useUtilityClasses$l(ownerState);
+  const classes = useUtilityClasses$o(ownerState);
   return /* @__PURE__ */ jsxs(SwitchBaseRoot, _extends({
     component: "span",
     className: clsx(classes.root, className),
@@ -36122,8 +36597,8 @@ function getCheckboxUtilityClass(slot) {
 }
 const checkboxClasses = generateUtilityClasses("MuiCheckbox", ["root", "checked", "disabled", "indeterminate", "colorPrimary", "colorSecondary"]);
 const checkboxClasses$1 = checkboxClasses;
-const _excluded$o = ["checkedIcon", "color", "icon", "indeterminate", "indeterminateIcon", "inputProps", "size", "className"];
-const useUtilityClasses$k = (ownerState) => {
+const _excluded$s = ["checkedIcon", "color", "icon", "indeterminate", "indeterminateIcon", "inputProps", "size", "className"];
+const useUtilityClasses$n = (ownerState) => {
   const {
     classes,
     indeterminate,
@@ -36183,7 +36658,7 @@ const Checkbox = /* @__PURE__ */ react.exports.forwardRef(function Checkbox2(inP
     inputProps,
     size = "medium",
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$o);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$s);
   const icon = indeterminate ? indeterminateIconProp : iconProp;
   const indeterminateIcon = indeterminate ? indeterminateIconProp : checkedIcon;
   const ownerState = _extends({}, props, {
@@ -36191,7 +36666,7 @@ const Checkbox = /* @__PURE__ */ react.exports.forwardRef(function Checkbox2(inP
     indeterminate,
     size
   });
-  const classes = useUtilityClasses$k(ownerState);
+  const classes = useUtilityClasses$n(ownerState);
   return /* @__PURE__ */ jsx(CheckboxRoot, _extends({
     type: "checkbox",
     inputProps: _extends({
@@ -36258,7 +36733,7 @@ Container.propTypes = {
   sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
 };
 const Container$1 = Container;
-const _excluded$n = ["BackdropComponent", "BackdropProps", "closeAfterTransition", "children", "component", "components", "componentsProps", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "slotProps", "slots", "theme"];
+const _excluded$r = ["BackdropComponent", "BackdropProps", "closeAfterTransition", "children", "component", "components", "componentsProps", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "slotProps", "slots", "theme"];
 const extendUtilityClasses = (ownerState) => {
   return ownerState.classes;
 };
@@ -36318,7 +36793,7 @@ const Modal = /* @__PURE__ */ react.exports.forwardRef(function Modal2(inProps, 
     slotProps,
     slots,
     theme
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$n);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$r);
   const [exited, setExited] = react.exports.useState(true);
   const commonProps = {
     closeAfterTransition,
@@ -36400,8 +36875,8 @@ Modal.propTypes = {
 const Modal$1 = Modal;
 const dividerClasses = generateUtilityClasses("MuiDivider", ["root", "absolute", "fullWidth", "inset", "middle", "flexItem", "light", "vertical", "withChildren", "withChildrenVertical", "textAlignRight", "textAlignLeft", "wrapper", "wrapperVertical"]);
 const dividerClasses$1 = dividerClasses;
-const _excluded$m = ["disableUnderline", "components", "componentsProps", "fullWidth", "hiddenLabel", "inputComponent", "multiline", "slotProps", "slots", "type"];
-const useUtilityClasses$j = (ownerState) => {
+const _excluded$q = ["disableUnderline", "components", "componentsProps", "fullWidth", "hiddenLabel", "inputComponent", "multiline", "slotProps", "slots", "type"];
+const useUtilityClasses$m = (ownerState) => {
   const {
     classes,
     disableUnderline
@@ -36575,14 +37050,14 @@ const FilledInput = /* @__PURE__ */ react.exports.forwardRef(function FilledInpu
     slotProps,
     slots = {},
     type = "text"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$m);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$q);
   const ownerState = _extends({}, props, {
     fullWidth,
     inputComponent,
     multiline,
     type
   });
-  const classes = useUtilityClasses$j(props);
+  const classes = useUtilityClasses$m(props);
   const filledInputComponentsProps = {
     root: {
       ownerState
@@ -36662,8 +37137,8 @@ function getFormControlUtilityClasses(slot) {
   return generateUtilityClass("MuiFormControl", slot);
 }
 generateUtilityClasses("MuiFormControl", ["root", "marginNone", "marginNormal", "marginDense", "fullWidth", "disabled"]);
-const _excluded$l = ["children", "className", "color", "component", "disabled", "error", "focused", "fullWidth", "hiddenLabel", "margin", "required", "size", "variant"];
-const useUtilityClasses$i = (ownerState) => {
+const _excluded$p = ["children", "className", "color", "component", "disabled", "error", "focused", "fullWidth", "hiddenLabel", "margin", "required", "size", "variant"];
+const useUtilityClasses$l = (ownerState) => {
   const {
     classes,
     margin: margin2,
@@ -36721,7 +37196,7 @@ const FormControl = /* @__PURE__ */ react.exports.forwardRef(function FormContro
     required = false,
     size = "medium",
     variant = "outlined"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$l);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$p);
   const ownerState = _extends({}, props, {
     color: color2,
     component,
@@ -36734,7 +37209,7 @@ const FormControl = /* @__PURE__ */ react.exports.forwardRef(function FormContro
     size,
     variant
   });
-  const classes = useUtilityClasses$i(ownerState);
+  const classes = useUtilityClasses$l(ownerState);
   const [adornedStart, setAdornedStart] = react.exports.useState(() => {
     let initialAdornedStart = false;
     if (children) {
@@ -36846,8 +37321,8 @@ function getFormControlLabelUtilityClasses(slot) {
 }
 const formControlLabelClasses = generateUtilityClasses("MuiFormControlLabel", ["root", "labelPlacementStart", "labelPlacementTop", "labelPlacementBottom", "disabled", "label", "error"]);
 const formControlLabelClasses$1 = formControlLabelClasses;
-const _excluded$k = ["checked", "className", "componentsProps", "control", "disabled", "disableTypography", "inputRef", "label", "labelPlacement", "name", "onChange", "slotProps", "value"];
-const useUtilityClasses$h = (ownerState) => {
+const _excluded$o = ["checked", "className", "componentsProps", "control", "disabled", "disableTypography", "inputRef", "label", "labelPlacement", "name", "onChange", "slotProps", "value"];
+const useUtilityClasses$k = (ownerState) => {
   const {
     classes,
     disabled,
@@ -36917,7 +37392,7 @@ const FormControlLabel = /* @__PURE__ */ react.exports.forwardRef(function FormC
     label: labelProp,
     labelPlacement = "end",
     slotProps = {}
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$k);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$o);
   const muiFormControl = useFormControl();
   let disabled = disabledProp;
   if (typeof disabled === "undefined" && typeof control.props.disabled !== "undefined") {
@@ -36944,7 +37419,7 @@ const FormControlLabel = /* @__PURE__ */ react.exports.forwardRef(function FormC
     labelPlacement,
     error: fcs.error
   });
-  const classes = useUtilityClasses$h(ownerState);
+  const classes = useUtilityClasses$k(ownerState);
   const typographySlotProps = (_slotProps$typography = slotProps.typography) != null ? _slotProps$typography : componentsProps.typography;
   let label = labelProp;
   if (label != null && label.type !== Typography$1 && !disableTypography) {
@@ -36991,8 +37466,8 @@ function getFormHelperTextUtilityClasses(slot) {
 const formHelperTextClasses = generateUtilityClasses("MuiFormHelperText", ["root", "error", "disabled", "sizeSmall", "sizeMedium", "contained", "focused", "filled", "required"]);
 const formHelperTextClasses$1 = formHelperTextClasses;
 var _span$2;
-const _excluded$j = ["children", "className", "component", "disabled", "error", "filled", "focused", "margin", "required", "variant"];
-const useUtilityClasses$g = (ownerState) => {
+const _excluded$n = ["children", "className", "component", "disabled", "error", "filled", "focused", "margin", "required", "variant"];
+const useUtilityClasses$j = (ownerState) => {
   const {
     classes,
     contained,
@@ -37049,7 +37524,7 @@ const FormHelperText = /* @__PURE__ */ react.exports.forwardRef(function FormHel
     children,
     className,
     component = "p"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$j);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$n);
   const muiFormControl = useFormControl();
   const fcs = formControlState({
     props,
@@ -37067,7 +37542,7 @@ const FormHelperText = /* @__PURE__ */ react.exports.forwardRef(function FormHel
     focused: fcs.focused,
     required: fcs.required
   });
-  const classes = useUtilityClasses$g(ownerState);
+  const classes = useUtilityClasses$j(ownerState);
   return /* @__PURE__ */ jsx(FormHelperTextRoot, _extends({
     as: component,
     ownerState,
@@ -37100,8 +37575,8 @@ function getFormLabelUtilityClasses(slot) {
 }
 const formLabelClasses = generateUtilityClasses("MuiFormLabel", ["root", "colorSecondary", "focused", "disabled", "error", "filled", "required", "asterisk"]);
 const formLabelClasses$1 = formLabelClasses;
-const _excluded$i = ["children", "className", "color", "component", "disabled", "error", "filled", "focused", "required"];
-const useUtilityClasses$f = (ownerState) => {
+const _excluded$m = ["children", "className", "color", "component", "disabled", "error", "filled", "focused", "required"];
+const useUtilityClasses$i = (ownerState) => {
   const {
     classes,
     color: color2,
@@ -37164,7 +37639,7 @@ const FormLabel = /* @__PURE__ */ react.exports.forwardRef(function FormLabel2(i
     children,
     className,
     component = "label"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$i);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$m);
   const muiFormControl = useFormControl();
   const fcs = formControlState({
     props,
@@ -37180,7 +37655,7 @@ const FormLabel = /* @__PURE__ */ react.exports.forwardRef(function FormLabel2(i
     focused: fcs.focused,
     required: fcs.required
   });
-  const classes = useUtilityClasses$f(ownerState);
+  const classes = useUtilityClasses$i(ownerState);
   return /* @__PURE__ */ jsxs(FormLabelRoot, _extends({
     as: component,
     ownerState,
@@ -37209,11 +37684,11 @@ FormLabel.propTypes = {
   sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
 };
 const FormLabel$1 = FormLabel;
-const _excluded$h = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+const _excluded$l = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
 function getScale(value) {
   return `scale(${value}, ${value ** 2})`;
 }
-const styles = {
+const styles$1 = {
   entering: {
     opacity: 1,
     transform: getScale(1)
@@ -37240,7 +37715,7 @@ const Grow = /* @__PURE__ */ react.exports.forwardRef(function Grow2(props, ref)
     style: style2,
     timeout: timeout2 = "auto",
     TransitionComponent = Transition$1
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$h);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$l);
   const timer = react.exports.useRef();
   const autoTimeout = react.exports.useRef();
   const theme = useTheme();
@@ -37357,7 +37832,7 @@ const Grow = /* @__PURE__ */ react.exports.forwardRef(function Grow2(props, ref)
           opacity: 0,
           transform: getScale(0.75),
           visibility: state === "exited" && !inProp ? "hidden" : void 0
-        }, styles[state], style2, children.props.style),
+        }, styles$1[state], style2, children.props.style),
         ref: handleRef
       }, childProps));
     }
@@ -37387,8 +37862,8 @@ Grow.propTypes = {
 };
 Grow.muiSupportAuto = true;
 const Grow$1 = Grow;
-const _excluded$g = ["disableUnderline", "components", "componentsProps", "fullWidth", "inputComponent", "multiline", "slotProps", "slots", "type"];
-const useUtilityClasses$e = (ownerState) => {
+const _excluded$k = ["disableUnderline", "components", "componentsProps", "fullWidth", "inputComponent", "multiline", "slotProps", "slots", "type"];
+const useUtilityClasses$h = (ownerState) => {
   const {
     classes,
     disableUnderline
@@ -37492,8 +37967,8 @@ const Input = /* @__PURE__ */ react.exports.forwardRef(function Input2(inProps, 
     slotProps,
     slots = {},
     type = "text"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$g);
-  const classes = useUtilityClasses$e(props);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$k);
+  const classes = useUtilityClasses$h(props);
   const ownerState = {
     disableUnderline
   };
@@ -37572,8 +38047,8 @@ function getInputLabelUtilityClasses(slot) {
   return generateUtilityClass("MuiInputLabel", slot);
 }
 generateUtilityClasses("MuiInputLabel", ["root", "focused", "disabled", "error", "required", "asterisk", "formControl", "sizeSmall", "shrink", "animated", "standard", "filled", "outlined"]);
-const _excluded$f = ["disableAnimation", "margin", "shrink", "variant", "className"];
-const useUtilityClasses$d = (ownerState) => {
+const _excluded$j = ["disableAnimation", "margin", "shrink", "variant", "className"];
+const useUtilityClasses$g = (ownerState) => {
   const {
     classes,
     formControl,
@@ -37664,7 +38139,7 @@ const InputLabel = /* @__PURE__ */ react.exports.forwardRef(function InputLabel2
     disableAnimation = false,
     shrink: shrinkProp,
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$f);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$j);
   const muiFormControl = useFormControl();
   let shrink = shrinkProp;
   if (typeof shrink === "undefined" && muiFormControl) {
@@ -37683,7 +38158,7 @@ const InputLabel = /* @__PURE__ */ react.exports.forwardRef(function InputLabel2
     variant: fcs.variant,
     required: fcs.required
   });
-  const classes = useUtilityClasses$d(ownerState);
+  const classes = useUtilityClasses$g(ownerState);
   return /* @__PURE__ */ jsx(InputLabelRoot, _extends({
     "data-shrink": shrink,
     ownerState,
@@ -37719,8 +38194,8 @@ function getListUtilityClass(slot) {
   return generateUtilityClass("MuiList", slot);
 }
 generateUtilityClasses("MuiList", ["root", "padding", "dense", "subheader"]);
-const _excluded$e = ["children", "className", "component", "dense", "disablePadding", "subheader"];
-const useUtilityClasses$c = (ownerState) => {
+const _excluded$i = ["children", "className", "component", "dense", "disablePadding", "subheader"];
+const useUtilityClasses$f = (ownerState) => {
   const {
     classes,
     disablePadding,
@@ -37766,7 +38241,7 @@ const List = /* @__PURE__ */ react.exports.forwardRef(function List2(inProps, re
     dense = false,
     disablePadding = false,
     subheader
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$e);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$i);
   const context = react.exports.useMemo(() => ({
     dense
   }), [dense]);
@@ -37775,7 +38250,7 @@ const List = /* @__PURE__ */ react.exports.forwardRef(function List2(inProps, re
     dense,
     disablePadding
   });
-  const classes = useUtilityClasses$c(ownerState);
+  const classes = useUtilityClasses$f(ownerState);
   return /* @__PURE__ */ jsx(ListContext$1.Provider, {
     value: context,
     children: /* @__PURE__ */ jsxs(ListRoot, _extends({
@@ -37810,8 +38285,8 @@ function getListItemSecondaryActionClassesUtilityClass(slot) {
   return generateUtilityClass("MuiListItemSecondaryAction", slot);
 }
 generateUtilityClasses("MuiListItemSecondaryAction", ["root", "disableGutters"]);
-const _excluded$d = ["className"];
-const useUtilityClasses$b = (ownerState) => {
+const _excluded$h = ["className"];
+const useUtilityClasses$e = (ownerState) => {
   const {
     disableGutters,
     classes
@@ -37847,12 +38322,12 @@ const ListItemSecondaryAction = /* @__PURE__ */ react.exports.forwardRef(functio
   });
   const {
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$d);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$h);
   const context = react.exports.useContext(ListContext$1);
   const ownerState = _extends({}, props, {
     disableGutters: context.disableGutters
   });
-  const classes = useUtilityClasses$b(ownerState);
+  const classes = useUtilityClasses$e(ownerState);
   return /* @__PURE__ */ jsx(ListItemSecondaryActionRoot, _extends({
     className: clsx(classes.root, className),
     ownerState,
@@ -37867,14 +38342,14 @@ ListItemSecondaryAction.propTypes = {
 };
 ListItemSecondaryAction.muiName = "ListItemSecondaryAction";
 const ListItemSecondaryAction$1 = ListItemSecondaryAction;
-const _excluded$c = ["className"], _excluded2$2 = ["alignItems", "autoFocus", "button", "children", "className", "component", "components", "componentsProps", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "disablePadding", "divider", "focusVisibleClassName", "secondaryAction", "selected", "slotProps", "slots"];
+const _excluded$g = ["className"], _excluded2$2 = ["alignItems", "autoFocus", "button", "children", "className", "component", "components", "componentsProps", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "disablePadding", "divider", "focusVisibleClassName", "secondaryAction", "selected", "slotProps", "slots"];
 const overridesResolver$1 = (props, styles2) => {
   const {
     ownerState
   } = props;
   return [styles2.root, ownerState.dense && styles2.dense, ownerState.alignItems === "flex-start" && styles2.alignItemsFlexStart, ownerState.divider && styles2.divider, !ownerState.disableGutters && styles2.gutters, !ownerState.disablePadding && styles2.padding, ownerState.button && styles2.button, ownerState.hasSecondaryAction && styles2.secondaryAction];
 };
-const useUtilityClasses$a = (ownerState) => {
+const useUtilityClasses$d = (ownerState) => {
   const {
     alignItems,
     button,
@@ -37997,7 +38472,7 @@ const ListItem = /* @__PURE__ */ react.exports.forwardRef(function ListItem2(inP
     selected = false,
     slotProps = {},
     slots = {}
-  } = props, ContainerProps = _objectWithoutPropertiesLoose(props.ContainerProps, _excluded$c), other = _objectWithoutPropertiesLoose(props, _excluded2$2);
+  } = props, ContainerProps = _objectWithoutPropertiesLoose(props.ContainerProps, _excluded$g), other = _objectWithoutPropertiesLoose(props, _excluded2$2);
   const context = react.exports.useContext(ListContext$1);
   const childContext = react.exports.useMemo(() => ({
     dense: dense || context.dense || false,
@@ -38028,7 +38503,7 @@ const ListItem = /* @__PURE__ */ react.exports.forwardRef(function ListItem2(inP
     hasSecondaryAction,
     selected
   });
-  const classes = useUtilityClasses$a(ownerState);
+  const classes = useUtilityClasses$d(ownerState);
   const handleRef = useForkRef(listItemRef, ref);
   const Root = slots.root || components.Root || ListItemRoot;
   const rootProps = slotProps.root || componentsProps.root || {};
@@ -38134,8 +38609,8 @@ function getListItemIconUtilityClass(slot) {
 }
 const listItemIconClasses = generateUtilityClasses("MuiListItemIcon", ["root", "alignItemsFlexStart"]);
 const listItemIconClasses$1 = listItemIconClasses;
-const _excluded$b = ["className"];
-const useUtilityClasses$9 = (ownerState) => {
+const _excluded$f = ["className"];
+const useUtilityClasses$c = (ownerState) => {
   const {
     alignItems,
     classes
@@ -38172,12 +38647,12 @@ const ListItemIcon = /* @__PURE__ */ react.exports.forwardRef(function ListItemI
   });
   const {
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$b);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$f);
   const context = react.exports.useContext(ListContext$1);
   const ownerState = _extends({}, props, {
     alignItems: context.alignItems
   });
-  const classes = useUtilityClasses$9(ownerState);
+  const classes = useUtilityClasses$c(ownerState);
   return /* @__PURE__ */ jsx(ListItemIconRoot, _extends({
     className: clsx(classes.root, className),
     ownerState,
@@ -38196,8 +38671,8 @@ function getListItemTextUtilityClass(slot) {
 }
 const listItemTextClasses = generateUtilityClasses("MuiListItemText", ["root", "multiline", "dense", "inset", "primary", "secondary"]);
 const listItemTextClasses$1 = listItemTextClasses;
-const _excluded$a = ["children", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"];
-const useUtilityClasses$8 = (ownerState) => {
+const _excluded$e = ["children", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"];
+const useUtilityClasses$b = (ownerState) => {
   const {
     classes,
     inset,
@@ -38252,7 +38727,7 @@ const ListItemText = /* @__PURE__ */ react.exports.forwardRef(function ListItemT
     primaryTypographyProps,
     secondary: secondaryProp,
     secondaryTypographyProps
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$a);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$e);
   const {
     dense
   } = react.exports.useContext(ListContext$1);
@@ -38265,7 +38740,7 @@ const ListItemText = /* @__PURE__ */ react.exports.forwardRef(function ListItemT
     secondary: !!secondary,
     dense
   });
-  const classes = useUtilityClasses$8(ownerState);
+  const classes = useUtilityClasses$b(ownerState);
   if (primary != null && primary.type !== Typography$1 && !disableTypography) {
     primary = /* @__PURE__ */ jsx(Typography$1, _extends({
       variant: dense ? "body2" : "body1",
@@ -38307,8 +38782,8 @@ ListItemText.propTypes = {
   sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
 };
 const ListItemText$1 = ListItemText;
-const _excluded$9 = ["actions", "autoFocus", "autoFocusItem", "children", "className", "disabledItemsFocusable", "disableListWrap", "onKeyDown", "variant"];
-function nextItem(list, item, disableListWrap) {
+const _excluded$d = ["actions", "autoFocus", "autoFocusItem", "children", "className", "disabledItemsFocusable", "disableListWrap", "onKeyDown", "variant"];
+function nextItem$1(list, item, disableListWrap) {
   if (list === item) {
     return list.firstChild;
   }
@@ -38317,7 +38792,7 @@ function nextItem(list, item, disableListWrap) {
   }
   return disableListWrap ? null : list.firstChild;
 }
-function previousItem(list, item, disableListWrap) {
+function previousItem$1(list, item, disableListWrap) {
   if (list === item) {
     return disableListWrap ? list.firstChild : list.lastChild;
   }
@@ -38343,7 +38818,7 @@ function textCriteriaMatches(nextFocus, textCriteria) {
   }
   return text.indexOf(textCriteria.keys.join("")) === 0;
 }
-function moveFocus(list, currentFocus, disableListWrap, disabledItemsFocusable, traversalFunction, textCriteria) {
+function moveFocus$1(list, currentFocus, disableListWrap, disabledItemsFocusable, traversalFunction, textCriteria) {
   let wrappedOnce = false;
   let nextFocus = traversalFunction(list, currentFocus, currentFocus ? disableListWrap : false);
   while (nextFocus) {
@@ -38374,7 +38849,7 @@ const MenuList = /* @__PURE__ */ react.exports.forwardRef(function MenuList2(pro
     disableListWrap = false,
     onKeyDown,
     variant = "selectedMenu"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$9);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$d);
   const listRef = react.exports.useRef(null);
   const textCriteriaRef = react.exports.useRef({
     keys: [],
@@ -38404,16 +38879,16 @@ const MenuList = /* @__PURE__ */ react.exports.forwardRef(function MenuList2(pro
     const currentFocus = ownerDocument(list).activeElement;
     if (key === "ArrowDown") {
       event.preventDefault();
-      moveFocus(list, currentFocus, disableListWrap, disabledItemsFocusable, nextItem);
+      moveFocus$1(list, currentFocus, disableListWrap, disabledItemsFocusable, nextItem$1);
     } else if (key === "ArrowUp") {
       event.preventDefault();
-      moveFocus(list, currentFocus, disableListWrap, disabledItemsFocusable, previousItem);
+      moveFocus$1(list, currentFocus, disableListWrap, disabledItemsFocusable, previousItem$1);
     } else if (key === "Home") {
       event.preventDefault();
-      moveFocus(list, null, disableListWrap, disabledItemsFocusable, nextItem);
+      moveFocus$1(list, null, disableListWrap, disabledItemsFocusable, nextItem$1);
     } else if (key === "End") {
       event.preventDefault();
-      moveFocus(list, null, disableListWrap, disabledItemsFocusable, previousItem);
+      moveFocus$1(list, null, disableListWrap, disabledItemsFocusable, previousItem$1);
     } else if (key.length === 1) {
       const criteria = textCriteriaRef.current;
       const lowerKey = key.toLowerCase();
@@ -38430,7 +38905,7 @@ const MenuList = /* @__PURE__ */ react.exports.forwardRef(function MenuList2(pro
       criteria.lastTime = currTime;
       criteria.keys.push(lowerKey);
       const keepFocusOnCurrent = currentFocus && !criteria.repeating && textCriteriaMatches(currentFocus, criteria);
-      if (criteria.previousKeyMatched && (keepFocusOnCurrent || moveFocus(list, currentFocus, false, disabledItemsFocusable, nextItem, criteria))) {
+      if (criteria.previousKeyMatched && (keepFocusOnCurrent || moveFocus$1(list, currentFocus, false, disabledItemsFocusable, nextItem$1, criteria))) {
         event.preventDefault();
       } else {
         criteria.previousKeyMatched = false;
@@ -38497,7 +38972,7 @@ function getPopoverUtilityClass(slot) {
   return generateUtilityClass("MuiPopover", slot);
 }
 generateUtilityClasses("MuiPopover", ["root", "paper"]);
-const _excluded$8 = ["onEntering"], _excluded2$1 = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"];
+const _excluded$c = ["onEntering"], _excluded2$1 = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"];
 function getOffsetTop(rect, vertical) {
   let offset = 0;
   if (typeof vertical === "number") {
@@ -38526,7 +39001,7 @@ function getTransformOriginValue(transformOrigin) {
 function resolveAnchorEl(anchorEl) {
   return typeof anchorEl === "function" ? anchorEl() : anchorEl;
 }
-const useUtilityClasses$7 = (ownerState) => {
+const useUtilityClasses$a = (ownerState) => {
   const {
     classes
   } = ownerState;
@@ -38585,7 +39060,7 @@ const Popover = /* @__PURE__ */ react.exports.forwardRef(function Popover2(inPro
     TransitionProps: {
       onEntering
     } = {}
-  } = props, TransitionProps = _objectWithoutPropertiesLoose(props.TransitionProps, _excluded$8), other = _objectWithoutPropertiesLoose(props, _excluded2$1);
+  } = props, TransitionProps = _objectWithoutPropertiesLoose(props.TransitionProps, _excluded$c), other = _objectWithoutPropertiesLoose(props, _excluded2$1);
   const paperRef = react.exports.useRef();
   const handlePaperRef = useForkRef(paperRef, PaperProps.ref);
   const ownerState = _extends({}, props, {
@@ -38599,7 +39074,7 @@ const Popover = /* @__PURE__ */ react.exports.forwardRef(function Popover2(inPro
     transitionDuration: transitionDurationProp,
     TransitionProps
   });
-  const classes = useUtilityClasses$7(ownerState);
+  const classes = useUtilityClasses$a(ownerState);
   const getAnchorOffset = react.exports.useCallback(() => {
     if (anchorReference === "anchorPosition") {
       {
@@ -38820,7 +39295,7 @@ function getMenuUtilityClass(slot) {
   return generateUtilityClass("MuiMenu", slot);
 }
 generateUtilityClasses("MuiMenu", ["root", "paper", "list"]);
-const _excluded$7 = ["onEntering"], _excluded2 = ["autoFocus", "children", "disableAutoFocusItem", "MenuListProps", "onClose", "open", "PaperProps", "PopoverClasses", "transitionDuration", "TransitionProps", "variant"];
+const _excluded$b = ["onEntering"], _excluded2 = ["autoFocus", "children", "disableAutoFocusItem", "MenuListProps", "onClose", "open", "PaperProps", "PopoverClasses", "transitionDuration", "TransitionProps", "variant"];
 const RTL_ORIGIN = {
   vertical: "top",
   horizontal: "right"
@@ -38829,7 +39304,7 @@ const LTR_ORIGIN = {
   vertical: "top",
   horizontal: "left"
 };
-const useUtilityClasses$6 = (ownerState) => {
+const useUtilityClasses$9 = (ownerState) => {
   const {
     classes
   } = ownerState;
@@ -38880,7 +39355,7 @@ const Menu = /* @__PURE__ */ react.exports.forwardRef(function Menu2(inProps, re
       onEntering
     } = {},
     variant = "selectedMenu"
-  } = props, TransitionProps = _objectWithoutPropertiesLoose(props.TransitionProps, _excluded$7), other = _objectWithoutPropertiesLoose(props, _excluded2);
+  } = props, TransitionProps = _objectWithoutPropertiesLoose(props.TransitionProps, _excluded$b), other = _objectWithoutPropertiesLoose(props, _excluded2);
   const theme = useTheme();
   const isRtl = theme.direction === "rtl";
   const ownerState = _extends({}, props, {
@@ -38893,7 +39368,7 @@ const Menu = /* @__PURE__ */ react.exports.forwardRef(function Menu2(inProps, re
     TransitionProps,
     variant
   });
-  const classes = useUtilityClasses$6(ownerState);
+  const classes = useUtilityClasses$9(ownerState);
   const autoFocusItem = autoFocus && !disableAutoFocusItem && open;
   const menuListActionsRef = react.exports.useRef(null);
   const handleEntering = (element, isAppearing) => {
@@ -38992,14 +39467,14 @@ function getMenuItemUtilityClass(slot) {
 }
 const menuItemClasses = generateUtilityClasses("MuiMenuItem", ["root", "focusVisible", "dense", "disabled", "divider", "gutters", "selected"]);
 const menuItemClasses$1 = menuItemClasses;
-const _excluded$6 = ["autoFocus", "component", "dense", "divider", "disableGutters", "focusVisibleClassName", "role", "tabIndex", "className"];
+const _excluded$a = ["autoFocus", "component", "dense", "divider", "disableGutters", "focusVisibleClassName", "role", "tabIndex", "className"];
 const overridesResolver = (props, styles2) => {
   const {
     ownerState
   } = props;
   return [styles2.root, ownerState.dense && styles2.dense, ownerState.divider && styles2.divider, !ownerState.disableGutters && styles2.gutters];
 };
-const useUtilityClasses$5 = (ownerState) => {
+const useUtilityClasses$8 = (ownerState) => {
   const {
     disabled,
     dense,
@@ -39110,7 +39585,7 @@ const MenuItem = /* @__PURE__ */ react.exports.forwardRef(function MenuItem2(inP
     role = "menuitem",
     tabIndex: tabIndexProp,
     className
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$6);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$a);
   const context = react.exports.useContext(ListContext$1);
   const childContext = react.exports.useMemo(() => ({
     dense: dense || context.dense || false,
@@ -39131,7 +39606,7 @@ const MenuItem = /* @__PURE__ */ react.exports.forwardRef(function MenuItem2(inP
     divider,
     disableGutters
   });
-  const classes = useUtilityClasses$5(props);
+  const classes = useUtilityClasses$8(props);
   const handleRef = useForkRef(menuItemRef, ref);
   let tabIndex;
   if (!props.disabled) {
@@ -39174,8 +39649,8 @@ function getNativeSelectUtilityClasses(slot) {
 }
 const nativeSelectClasses = generateUtilityClasses("MuiNativeSelect", ["root", "select", "multiple", "filled", "outlined", "standard", "disabled", "icon", "iconOpen", "iconFilled", "iconOutlined", "iconStandard", "nativeInput"]);
 const nativeSelectClasses$1 = nativeSelectClasses;
-const _excluded$5 = ["className", "disabled", "IconComponent", "inputRef", "variant"];
-const useUtilityClasses$4 = (ownerState) => {
+const _excluded$9 = ["className", "disabled", "IconComponent", "inputRef", "variant"];
+const useUtilityClasses$7 = (ownerState) => {
   const {
     classes,
     variant,
@@ -39283,12 +39758,12 @@ const NativeSelectInput = /* @__PURE__ */ react.exports.forwardRef(function Nati
     IconComponent,
     inputRef,
     variant = "standard"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$5);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$9);
   const ownerState = _extends({}, props, {
     disabled,
     variant
   });
-  const classes = useUtilityClasses$4(ownerState);
+  const classes = useUtilityClasses$7(ownerState);
   return /* @__PURE__ */ jsxs(react.exports.Fragment, {
     children: [/* @__PURE__ */ jsx(NativeSelectSelect, _extends({
       ownerState,
@@ -39317,7 +39792,7 @@ NativeSelectInput.propTypes = {
 };
 const NativeSelectInput$1 = NativeSelectInput;
 var _span$1;
-const _excluded$4 = ["children", "classes", "className", "label", "notched"];
+const _excluded$8 = ["children", "classes", "className", "label", "notched"];
 const NotchedOutlineRoot$1 = styled$1("fieldset")({
   textAlign: "left",
   position: "absolute",
@@ -39380,7 +39855,7 @@ function NotchedOutline(props) {
     className,
     label,
     notched
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$4);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$8);
   const withLabel = label != null && label !== "";
   const ownerState = _extends({}, props, {
     notched,
@@ -39410,8 +39885,8 @@ NotchedOutline.propTypes = {
   notched: propTypes.exports.bool.isRequired,
   style: propTypes.exports.object
 };
-const _excluded$3 = ["components", "fullWidth", "inputComponent", "label", "multiline", "notched", "slots", "type"];
-const useUtilityClasses$3 = (ownerState) => {
+const _excluded$7 = ["components", "fullWidth", "inputComponent", "label", "multiline", "notched", "slots", "type"];
+const useUtilityClasses$6 = (ownerState) => {
   const {
     classes
   } = ownerState;
@@ -39527,8 +40002,8 @@ const OutlinedInput = /* @__PURE__ */ react.exports.forwardRef(function Outlined
     notched,
     slots = {},
     type = "text"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$3);
-  const classes = useUtilityClasses$3(props);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$7);
+  const classes = useUtilityClasses$6(props);
   const muiFormControl = useFormControl();
   const fcs = formControlState({
     props,
@@ -39620,7 +40095,7 @@ function getSelectUtilityClasses(slot) {
 const selectClasses = generateUtilityClasses("MuiSelect", ["select", "multiple", "filled", "outlined", "standard", "disabled", "focused", "icon", "iconOpen", "iconFilled", "iconOutlined", "iconStandard", "nativeInput"]);
 const selectClasses$1 = selectClasses;
 var _span;
-const _excluded$2 = ["aria-describedby", "aria-label", "autoFocus", "autoWidth", "children", "className", "defaultOpen", "defaultValue", "disabled", "displayEmpty", "IconComponent", "inputRef", "labelId", "MenuProps", "multiple", "name", "onBlur", "onChange", "onClose", "onFocus", "onOpen", "open", "readOnly", "renderValue", "SelectDisplayProps", "tabIndex", "type", "value", "variant"];
+const _excluded$6 = ["aria-describedby", "aria-label", "autoFocus", "autoWidth", "children", "className", "defaultOpen", "defaultValue", "disabled", "displayEmpty", "IconComponent", "inputRef", "labelId", "MenuProps", "multiple", "name", "onBlur", "onChange", "onClose", "onFocus", "onOpen", "open", "readOnly", "renderValue", "SelectDisplayProps", "tabIndex", "type", "value", "variant"];
 const SelectSelect = styled$1("div", {
   name: "MuiSelect",
   slot: "Select",
@@ -39682,7 +40157,7 @@ function areEqualValues(a, b) {
 function isEmpty(display) {
   return display == null || typeof display === "string" && !display.trim();
 }
-const useUtilityClasses$2 = (ownerState) => {
+const useUtilityClasses$5 = (ownerState) => {
   const {
     classes,
     variant,
@@ -39727,7 +40202,7 @@ const SelectInput = /* @__PURE__ */ react.exports.forwardRef(function SelectInpu
     tabIndex: tabIndexProp,
     value: valueProp,
     variant = "standard"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$2);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$6);
   const [value, setValueState] = useControlled({
     controlled: valueProp,
     default: defaultValue,
@@ -40010,7 +40485,7 @@ const SelectInput = /* @__PURE__ */ react.exports.forwardRef(function SelectInpu
     value,
     open
   });
-  const classes = useUtilityClasses$2(ownerState);
+  const classes = useUtilityClasses$5(ownerState);
   return /* @__PURE__ */ jsxs(react.exports.Fragment, {
     children: [/* @__PURE__ */ jsx(SelectSelect, _extends({
       ref: handleDisplayRef,
@@ -40111,8 +40586,8 @@ SelectInput.propTypes = {
 };
 const SelectInput$1 = SelectInput;
 var _StyledInput, _StyledFilledInput;
-const _excluded$1 = ["autoWidth", "children", "classes", "className", "defaultOpen", "displayEmpty", "IconComponent", "id", "input", "inputProps", "label", "labelId", "MenuProps", "multiple", "native", "onClose", "onOpen", "open", "renderValue", "SelectDisplayProps", "variant"];
-const useUtilityClasses$1 = (ownerState) => {
+const _excluded$5 = ["autoWidth", "children", "classes", "className", "defaultOpen", "displayEmpty", "IconComponent", "id", "input", "inputProps", "label", "labelId", "MenuProps", "multiple", "native", "onClose", "onOpen", "open", "renderValue", "SelectDisplayProps", "variant"];
+const useUtilityClasses$4 = (ownerState) => {
   const {
     classes
   } = ownerState;
@@ -40154,7 +40629,7 @@ const Select = /* @__PURE__ */ react.exports.forwardRef(function Select2(inProps
     renderValue,
     SelectDisplayProps,
     variant: variantProp = "outlined"
-  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$1);
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$5);
   const inputComponent = native ? NativeSelectInput$1 : SelectInput$1;
   const muiFormControl = useFormControl();
   const fcs = formControlState({
@@ -40174,7 +40649,7 @@ const Select = /* @__PURE__ */ react.exports.forwardRef(function Select2(inProps
     variant,
     classes: classesProp
   });
-  const classes = useUtilityClasses$1(ownerState);
+  const classes = useUtilityClasses$4(ownerState);
   const inputComponentRef = useForkRef(ref, InputComponent.ref);
   return /* @__PURE__ */ jsx(react.exports.Fragment, {
     children: /* @__PURE__ */ react.exports.cloneElement(InputComponent, _extends({
@@ -40242,6 +40717,977 @@ Select.propTypes = {
 };
 Select.muiName = "Select";
 const Select$1 = Select;
+function getTabUtilityClass(slot) {
+  return generateUtilityClass("MuiTab", slot);
+}
+const tabClasses = generateUtilityClasses("MuiTab", ["root", "labelIcon", "textColorInherit", "textColorPrimary", "textColorSecondary", "selected", "disabled", "fullWidth", "wrapped", "iconWrapper"]);
+const tabClasses$1 = tabClasses;
+const _excluded$4 = ["className", "disabled", "disableFocusRipple", "fullWidth", "icon", "iconPosition", "indicator", "label", "onChange", "onClick", "onFocus", "selected", "selectionFollowsFocus", "textColor", "value", "wrapped"];
+const useUtilityClasses$3 = (ownerState) => {
+  const {
+    classes,
+    textColor,
+    fullWidth,
+    wrapped,
+    icon,
+    label,
+    selected,
+    disabled
+  } = ownerState;
+  const slots = {
+    root: ["root", icon && label && "labelIcon", `textColor${capitalize(textColor)}`, fullWidth && "fullWidth", wrapped && "wrapped", selected && "selected", disabled && "disabled"],
+    iconWrapper: ["iconWrapper"]
+  };
+  return composeClasses(slots, getTabUtilityClass, classes);
+};
+const TabRoot = styled$1(ButtonBase$1, {
+  name: "MuiTab",
+  slot: "Root",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [styles2.root, ownerState.label && ownerState.icon && styles2.labelIcon, styles2[`textColor${capitalize(ownerState.textColor)}`], ownerState.fullWidth && styles2.fullWidth, ownerState.wrapped && styles2.wrapped];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({}, theme.typography.button, {
+  maxWidth: 360,
+  minWidth: 90,
+  position: "relative",
+  minHeight: 48,
+  flexShrink: 0,
+  padding: "12px 16px",
+  overflow: "hidden",
+  whiteSpace: "normal",
+  textAlign: "center"
+}, ownerState.label && {
+  flexDirection: ownerState.iconPosition === "top" || ownerState.iconPosition === "bottom" ? "column" : "row"
+}, {
+  lineHeight: 1.25
+}, ownerState.icon && ownerState.label && {
+  minHeight: 72,
+  paddingTop: 9,
+  paddingBottom: 9,
+  [`& > .${tabClasses$1.iconWrapper}`]: _extends({}, ownerState.iconPosition === "top" && {
+    marginBottom: 6
+  }, ownerState.iconPosition === "bottom" && {
+    marginTop: 6
+  }, ownerState.iconPosition === "start" && {
+    marginRight: theme.spacing(1)
+  }, ownerState.iconPosition === "end" && {
+    marginLeft: theme.spacing(1)
+  })
+}, ownerState.textColor === "inherit" && {
+  color: "inherit",
+  opacity: 0.6,
+  [`&.${tabClasses$1.selected}`]: {
+    opacity: 1
+  },
+  [`&.${tabClasses$1.disabled}`]: {
+    opacity: (theme.vars || theme).palette.action.disabledOpacity
+  }
+}, ownerState.textColor === "primary" && {
+  color: (theme.vars || theme).palette.text.secondary,
+  [`&.${tabClasses$1.selected}`]: {
+    color: (theme.vars || theme).palette.primary.main
+  },
+  [`&.${tabClasses$1.disabled}`]: {
+    color: (theme.vars || theme).palette.text.disabled
+  }
+}, ownerState.textColor === "secondary" && {
+  color: (theme.vars || theme).palette.text.secondary,
+  [`&.${tabClasses$1.selected}`]: {
+    color: (theme.vars || theme).palette.secondary.main
+  },
+  [`&.${tabClasses$1.disabled}`]: {
+    color: (theme.vars || theme).palette.text.disabled
+  }
+}, ownerState.fullWidth && {
+  flexShrink: 1,
+  flexGrow: 1,
+  flexBasis: 0,
+  maxWidth: "none"
+}, ownerState.wrapped && {
+  fontSize: theme.typography.pxToRem(12)
+}));
+const Tab = /* @__PURE__ */ react.exports.forwardRef(function Tab2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiTab"
+  });
+  const {
+    className,
+    disabled = false,
+    disableFocusRipple = false,
+    fullWidth,
+    icon: iconProp,
+    iconPosition = "top",
+    indicator,
+    label,
+    onChange,
+    onClick,
+    onFocus,
+    selected,
+    selectionFollowsFocus,
+    textColor = "inherit",
+    value,
+    wrapped = false
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$4);
+  const ownerState = _extends({}, props, {
+    disabled,
+    disableFocusRipple,
+    selected,
+    icon: !!iconProp,
+    iconPosition,
+    label: !!label,
+    fullWidth,
+    textColor,
+    wrapped
+  });
+  const classes = useUtilityClasses$3(ownerState);
+  const icon = iconProp && label && /* @__PURE__ */ react.exports.isValidElement(iconProp) ? /* @__PURE__ */ react.exports.cloneElement(iconProp, {
+    className: clsx(classes.iconWrapper, iconProp.props.className)
+  }) : iconProp;
+  const handleClick = (event) => {
+    if (!selected && onChange) {
+      onChange(event, value);
+    }
+    if (onClick) {
+      onClick(event);
+    }
+  };
+  const handleFocus = (event) => {
+    if (selectionFollowsFocus && !selected && onChange) {
+      onChange(event, value);
+    }
+    if (onFocus) {
+      onFocus(event);
+    }
+  };
+  return /* @__PURE__ */ jsxs(TabRoot, _extends({
+    focusRipple: !disableFocusRipple,
+    className: clsx(classes.root, className),
+    ref,
+    role: "tab",
+    "aria-selected": selected,
+    disabled,
+    onClick: handleClick,
+    onFocus: handleFocus,
+    ownerState,
+    tabIndex: selected ? 0 : -1
+  }, other, {
+    children: [iconPosition === "top" || iconPosition === "start" ? /* @__PURE__ */ jsxs(react.exports.Fragment, {
+      children: [icon, label]
+    }) : /* @__PURE__ */ jsxs(react.exports.Fragment, {
+      children: [label, icon]
+    }), indicator]
+  }));
+});
+Tab.propTypes = {
+  children: unsupportedProp,
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  disabled: propTypes.exports.bool,
+  disableFocusRipple: propTypes.exports.bool,
+  disableRipple: propTypes.exports.bool,
+  icon: propTypes.exports.oneOfType([propTypes.exports.element, propTypes.exports.string]),
+  iconPosition: propTypes.exports.oneOf(["bottom", "end", "start", "top"]),
+  label: propTypes.exports.node,
+  onChange: propTypes.exports.func,
+  onClick: propTypes.exports.func,
+  onFocus: propTypes.exports.func,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object]),
+  value: propTypes.exports.any,
+  wrapped: propTypes.exports.bool
+};
+const Tab$1 = Tab;
+const KeyboardArrowLeft = createSvgIcon$1(/* @__PURE__ */ jsx("path", {
+  d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+}), "KeyboardArrowLeft");
+const KeyboardArrowRight = createSvgIcon$1(/* @__PURE__ */ jsx("path", {
+  d: "M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+}), "KeyboardArrowRight");
+function easeInOutSin(time) {
+  return (1 + Math.sin(Math.PI * time - Math.PI / 2)) / 2;
+}
+function animate(property, element, to, options = {}, cb = () => {
+}) {
+  const {
+    ease = easeInOutSin,
+    duration: duration2 = 300
+  } = options;
+  let start = null;
+  const from2 = element[property];
+  let cancelled = false;
+  const cancel = () => {
+    cancelled = true;
+  };
+  const step = (timestamp) => {
+    if (cancelled) {
+      cb(new Error("Animation cancelled"));
+      return;
+    }
+    if (start === null) {
+      start = timestamp;
+    }
+    const time = Math.min(1, (timestamp - start) / duration2);
+    element[property] = ease(time) * (to - from2) + from2;
+    if (time >= 1) {
+      requestAnimationFrame(() => {
+        cb(null);
+      });
+      return;
+    }
+    requestAnimationFrame(step);
+  };
+  if (from2 === to) {
+    cb(new Error("Element already at target position"));
+    return cancel;
+  }
+  requestAnimationFrame(step);
+  return cancel;
+}
+const _excluded$3 = ["onChange"];
+const styles = {
+  width: 99,
+  height: 99,
+  position: "absolute",
+  top: -9999,
+  overflow: "scroll"
+};
+function ScrollbarSize(props) {
+  const {
+    onChange
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$3);
+  const scrollbarHeight = react.exports.useRef();
+  const nodeRef = react.exports.useRef(null);
+  const setMeasurements = () => {
+    scrollbarHeight.current = nodeRef.current.offsetHeight - nodeRef.current.clientHeight;
+  };
+  react.exports.useEffect(() => {
+    const handleResize = debounce(() => {
+      const prevHeight = scrollbarHeight.current;
+      setMeasurements();
+      if (prevHeight !== scrollbarHeight.current) {
+        onChange(scrollbarHeight.current);
+      }
+    });
+    const containerWindow = ownerWindow(nodeRef.current);
+    containerWindow.addEventListener("resize", handleResize);
+    return () => {
+      handleResize.clear();
+      containerWindow.removeEventListener("resize", handleResize);
+    };
+  }, [onChange]);
+  react.exports.useEffect(() => {
+    setMeasurements();
+    onChange(scrollbarHeight.current);
+  }, [onChange]);
+  return /* @__PURE__ */ jsx("div", _extends({
+    style: styles,
+    ref: nodeRef
+  }, other));
+}
+ScrollbarSize.propTypes = {
+  onChange: propTypes.exports.func.isRequired
+};
+function getTabScrollButtonUtilityClass(slot) {
+  return generateUtilityClass("MuiTabScrollButton", slot);
+}
+const tabScrollButtonClasses = generateUtilityClasses("MuiTabScrollButton", ["root", "vertical", "horizontal", "disabled"]);
+const tabScrollButtonClasses$1 = tabScrollButtonClasses;
+var _KeyboardArrowLeft, _KeyboardArrowRight;
+const _excluded$2 = ["className", "direction", "orientation", "disabled"];
+const useUtilityClasses$2 = (ownerState) => {
+  const {
+    classes,
+    orientation,
+    disabled
+  } = ownerState;
+  const slots = {
+    root: ["root", orientation, disabled && "disabled"]
+  };
+  return composeClasses(slots, getTabScrollButtonUtilityClass, classes);
+};
+const TabScrollButtonRoot = styled$1(ButtonBase$1, {
+  name: "MuiTabScrollButton",
+  slot: "Root",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [styles2.root, ownerState.orientation && styles2[ownerState.orientation]];
+  }
+})(({
+  ownerState
+}) => _extends({
+  width: 40,
+  flexShrink: 0,
+  opacity: 0.8,
+  [`&.${tabScrollButtonClasses$1.disabled}`]: {
+    opacity: 0
+  }
+}, ownerState.orientation === "vertical" && {
+  width: "100%",
+  height: 40,
+  "& svg": {
+    transform: `rotate(${ownerState.isRtl ? -90 : 90}deg)`
+  }
+}));
+const TabScrollButton = /* @__PURE__ */ react.exports.forwardRef(function TabScrollButton2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiTabScrollButton"
+  });
+  const {
+    className,
+    direction
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$2);
+  const theme = useTheme();
+  const isRtl = theme.direction === "rtl";
+  const ownerState = _extends({
+    isRtl
+  }, props);
+  const classes = useUtilityClasses$2(ownerState);
+  return /* @__PURE__ */ jsx(TabScrollButtonRoot, _extends({
+    component: "div",
+    className: clsx(classes.root, className),
+    ref,
+    role: null,
+    ownerState,
+    tabIndex: null
+  }, other, {
+    children: direction === "left" ? _KeyboardArrowLeft || (_KeyboardArrowLeft = /* @__PURE__ */ jsx(KeyboardArrowLeft, {
+      fontSize: "small"
+    })) : _KeyboardArrowRight || (_KeyboardArrowRight = /* @__PURE__ */ jsx(KeyboardArrowRight, {
+      fontSize: "small"
+    }))
+  }));
+});
+TabScrollButton.propTypes = {
+  children: propTypes.exports.node,
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  direction: propTypes.exports.oneOf(["left", "right"]).isRequired,
+  disabled: propTypes.exports.bool,
+  orientation: propTypes.exports.oneOf(["horizontal", "vertical"]).isRequired,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object])
+};
+const TabScrollButton$1 = TabScrollButton;
+function getTabsUtilityClass(slot) {
+  return generateUtilityClass("MuiTabs", slot);
+}
+const tabsClasses = generateUtilityClasses("MuiTabs", ["root", "vertical", "flexContainer", "flexContainerVertical", "centered", "scroller", "fixed", "scrollableX", "scrollableY", "hideScrollbar", "scrollButtons", "scrollButtonsHideMobile", "indicator"]);
+const tabsClasses$1 = tabsClasses;
+const _excluded$1 = ["aria-label", "aria-labelledby", "action", "centered", "children", "className", "component", "allowScrollButtonsMobile", "indicatorColor", "onChange", "orientation", "ScrollButtonComponent", "scrollButtons", "selectionFollowsFocus", "TabIndicatorProps", "TabScrollButtonProps", "textColor", "value", "variant", "visibleScrollbar"];
+const nextItem = (list, item) => {
+  if (list === item) {
+    return list.firstChild;
+  }
+  if (item && item.nextElementSibling) {
+    return item.nextElementSibling;
+  }
+  return list.firstChild;
+};
+const previousItem = (list, item) => {
+  if (list === item) {
+    return list.lastChild;
+  }
+  if (item && item.previousElementSibling) {
+    return item.previousElementSibling;
+  }
+  return list.lastChild;
+};
+const moveFocus = (list, currentFocus, traversalFunction) => {
+  let wrappedOnce = false;
+  let nextFocus = traversalFunction(list, currentFocus);
+  while (nextFocus) {
+    if (nextFocus === list.firstChild) {
+      if (wrappedOnce) {
+        return;
+      }
+      wrappedOnce = true;
+    }
+    const nextFocusDisabled = nextFocus.disabled || nextFocus.getAttribute("aria-disabled") === "true";
+    if (!nextFocus.hasAttribute("tabindex") || nextFocusDisabled) {
+      nextFocus = traversalFunction(list, nextFocus);
+    } else {
+      nextFocus.focus();
+      return;
+    }
+  }
+};
+const useUtilityClasses$1 = (ownerState) => {
+  const {
+    vertical,
+    fixed,
+    hideScrollbar,
+    scrollableX,
+    scrollableY,
+    centered,
+    scrollButtonsHideMobile,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ["root", vertical && "vertical"],
+    scroller: ["scroller", fixed && "fixed", hideScrollbar && "hideScrollbar", scrollableX && "scrollableX", scrollableY && "scrollableY"],
+    flexContainer: ["flexContainer", vertical && "flexContainerVertical", centered && "centered"],
+    indicator: ["indicator"],
+    scrollButtons: ["scrollButtons", scrollButtonsHideMobile && "scrollButtonsHideMobile"],
+    scrollableX: [scrollableX && "scrollableX"],
+    hideScrollbar: [hideScrollbar && "hideScrollbar"]
+  };
+  return composeClasses(slots, getTabsUtilityClass, classes);
+};
+const TabsRoot = styled$1("div", {
+  name: "MuiTabs",
+  slot: "Root",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [{
+      [`& .${tabsClasses$1.scrollButtons}`]: styles2.scrollButtons
+    }, {
+      [`& .${tabsClasses$1.scrollButtons}`]: ownerState.scrollButtonsHideMobile && styles2.scrollButtonsHideMobile
+    }, styles2.root, ownerState.vertical && styles2.vertical];
+  }
+})(({
+  ownerState,
+  theme
+}) => _extends({
+  overflow: "hidden",
+  minHeight: 48,
+  WebkitOverflowScrolling: "touch",
+  display: "flex"
+}, ownerState.vertical && {
+  flexDirection: "column"
+}, ownerState.scrollButtonsHideMobile && {
+  [`& .${tabsClasses$1.scrollButtons}`]: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  }
+}));
+const TabsScroller = styled$1("div", {
+  name: "MuiTabs",
+  slot: "Scroller",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [styles2.scroller, ownerState.fixed && styles2.fixed, ownerState.hideScrollbar && styles2.hideScrollbar, ownerState.scrollableX && styles2.scrollableX, ownerState.scrollableY && styles2.scrollableY];
+  }
+})(({
+  ownerState
+}) => _extends({
+  position: "relative",
+  display: "inline-block",
+  flex: "1 1 auto",
+  whiteSpace: "nowrap"
+}, ownerState.fixed && {
+  overflowX: "hidden",
+  width: "100%"
+}, ownerState.hideScrollbar && {
+  scrollbarWidth: "none",
+  "&::-webkit-scrollbar": {
+    display: "none"
+  }
+}, ownerState.scrollableX && {
+  overflowX: "auto",
+  overflowY: "hidden"
+}, ownerState.scrollableY && {
+  overflowY: "auto",
+  overflowX: "hidden"
+}));
+const FlexContainer = styled$1("div", {
+  name: "MuiTabs",
+  slot: "FlexContainer",
+  overridesResolver: (props, styles2) => {
+    const {
+      ownerState
+    } = props;
+    return [styles2.flexContainer, ownerState.vertical && styles2.flexContainerVertical, ownerState.centered && styles2.centered];
+  }
+})(({
+  ownerState
+}) => _extends({
+  display: "flex"
+}, ownerState.vertical && {
+  flexDirection: "column"
+}, ownerState.centered && {
+  justifyContent: "center"
+}));
+const TabsIndicator = styled$1("span", {
+  name: "MuiTabs",
+  slot: "Indicator",
+  overridesResolver: (props, styles2) => styles2.indicator
+})(({
+  ownerState,
+  theme
+}) => _extends({
+  position: "absolute",
+  height: 2,
+  bottom: 0,
+  width: "100%",
+  transition: theme.transitions.create()
+}, ownerState.indicatorColor === "primary" && {
+  backgroundColor: (theme.vars || theme).palette.primary.main
+}, ownerState.indicatorColor === "secondary" && {
+  backgroundColor: (theme.vars || theme).palette.secondary.main
+}, ownerState.vertical && {
+  height: "100%",
+  width: 2,
+  right: 0
+}));
+const TabsScrollbarSize = styled$1(ScrollbarSize, {
+  name: "MuiTabs",
+  slot: "ScrollbarSize"
+})({
+  overflowX: "auto",
+  overflowY: "hidden",
+  scrollbarWidth: "none",
+  "&::-webkit-scrollbar": {
+    display: "none"
+  }
+});
+const defaultIndicatorStyle = {};
+let warnedOnceTabPresent = false;
+const Tabs = /* @__PURE__ */ react.exports.forwardRef(function Tabs2(inProps, ref) {
+  const props = useThemeProps({
+    props: inProps,
+    name: "MuiTabs"
+  });
+  const theme = useTheme();
+  const isRtl = theme.direction === "rtl";
+  const {
+    "aria-label": ariaLabel,
+    "aria-labelledby": ariaLabelledBy,
+    action,
+    centered = false,
+    children: childrenProp,
+    className,
+    component = "div",
+    allowScrollButtonsMobile = false,
+    indicatorColor = "primary",
+    onChange,
+    orientation = "horizontal",
+    ScrollButtonComponent = TabScrollButton$1,
+    scrollButtons = "auto",
+    selectionFollowsFocus,
+    TabIndicatorProps = {},
+    TabScrollButtonProps = {},
+    textColor = "primary",
+    value,
+    variant = "standard",
+    visibleScrollbar = false
+  } = props, other = _objectWithoutPropertiesLoose(props, _excluded$1);
+  const scrollable = variant === "scrollable";
+  const vertical = orientation === "vertical";
+  const scrollStart = vertical ? "scrollTop" : "scrollLeft";
+  const start = vertical ? "top" : "left";
+  const end = vertical ? "bottom" : "right";
+  const clientSize = vertical ? "clientHeight" : "clientWidth";
+  const size = vertical ? "height" : "width";
+  const ownerState = _extends({}, props, {
+    component,
+    allowScrollButtonsMobile,
+    indicatorColor,
+    orientation,
+    vertical,
+    scrollButtons,
+    textColor,
+    variant,
+    visibleScrollbar,
+    fixed: !scrollable,
+    hideScrollbar: scrollable && !visibleScrollbar,
+    scrollableX: scrollable && !vertical,
+    scrollableY: scrollable && vertical,
+    centered: centered && !scrollable,
+    scrollButtonsHideMobile: !allowScrollButtonsMobile
+  });
+  const classes = useUtilityClasses$1(ownerState);
+  {
+    if (centered && scrollable) {
+      console.error('MUI: You can not use the `centered={true}` and `variant="scrollable"` properties at the same time on a `Tabs` component.');
+    }
+  }
+  const [mounted, setMounted] = react.exports.useState(false);
+  const [indicatorStyle, setIndicatorStyle] = react.exports.useState(defaultIndicatorStyle);
+  const [displayScroll, setDisplayScroll] = react.exports.useState({
+    start: false,
+    end: false
+  });
+  const [scrollerStyle, setScrollerStyle] = react.exports.useState({
+    overflow: "hidden",
+    scrollbarWidth: 0
+  });
+  const valueToIndex = /* @__PURE__ */ new Map();
+  const tabsRef = react.exports.useRef(null);
+  const tabListRef = react.exports.useRef(null);
+  const getTabsMeta = () => {
+    const tabsNode = tabsRef.current;
+    let tabsMeta;
+    if (tabsNode) {
+      const rect = tabsNode.getBoundingClientRect();
+      tabsMeta = {
+        clientWidth: tabsNode.clientWidth,
+        scrollLeft: tabsNode.scrollLeft,
+        scrollTop: tabsNode.scrollTop,
+        scrollLeftNormalized: getNormalizedScrollLeft(tabsNode, theme.direction),
+        scrollWidth: tabsNode.scrollWidth,
+        top: rect.top,
+        bottom: rect.bottom,
+        left: rect.left,
+        right: rect.right
+      };
+    }
+    let tabMeta;
+    if (tabsNode && value !== false) {
+      const children2 = tabListRef.current.children;
+      if (children2.length > 0) {
+        const tab = children2[valueToIndex.get(value)];
+        {
+          if (!tab) {
+            console.error([`MUI: The \`value\` provided to the Tabs component is invalid.`, `None of the Tabs' children match with "${value}".`, valueToIndex.keys ? `You can provide one of the following values: ${Array.from(valueToIndex.keys()).join(", ")}.` : null].join("\n"));
+          }
+        }
+        tabMeta = tab ? tab.getBoundingClientRect() : null;
+        {
+          if (!warnedOnceTabPresent && tabMeta && tabMeta.width === 0 && tabMeta.height === 0 && tabsMeta.clientWidth !== 0) {
+            tabsMeta = null;
+            console.error(["MUI: The `value` provided to the Tabs component is invalid.", `The Tab with this \`value\` ("${value}") is not part of the document layout.`, "Make sure the tab item is present in the document or that it's not `display: none`."].join("\n"));
+            warnedOnceTabPresent = true;
+          }
+        }
+      }
+    }
+    return {
+      tabsMeta,
+      tabMeta
+    };
+  };
+  const updateIndicatorState = useEventCallback(() => {
+    const {
+      tabsMeta,
+      tabMeta
+    } = getTabsMeta();
+    let startValue = 0;
+    let startIndicator;
+    if (vertical) {
+      startIndicator = "top";
+      if (tabMeta && tabsMeta) {
+        startValue = tabMeta.top - tabsMeta.top + tabsMeta.scrollTop;
+      }
+    } else {
+      startIndicator = isRtl ? "right" : "left";
+      if (tabMeta && tabsMeta) {
+        const correction = isRtl ? tabsMeta.scrollLeftNormalized + tabsMeta.clientWidth - tabsMeta.scrollWidth : tabsMeta.scrollLeft;
+        startValue = (isRtl ? -1 : 1) * (tabMeta[startIndicator] - tabsMeta[startIndicator] + correction);
+      }
+    }
+    const newIndicatorStyle = {
+      [startIndicator]: startValue,
+      [size]: tabMeta ? tabMeta[size] : 0
+    };
+    if (isNaN(indicatorStyle[startIndicator]) || isNaN(indicatorStyle[size])) {
+      setIndicatorStyle(newIndicatorStyle);
+    } else {
+      const dStart = Math.abs(indicatorStyle[startIndicator] - newIndicatorStyle[startIndicator]);
+      const dSize = Math.abs(indicatorStyle[size] - newIndicatorStyle[size]);
+      if (dStart >= 1 || dSize >= 1) {
+        setIndicatorStyle(newIndicatorStyle);
+      }
+    }
+  });
+  const scroll = (scrollValue, {
+    animation = true
+  } = {}) => {
+    if (animation) {
+      animate(scrollStart, tabsRef.current, scrollValue, {
+        duration: theme.transitions.duration.standard
+      });
+    } else {
+      tabsRef.current[scrollStart] = scrollValue;
+    }
+  };
+  const moveTabsScroll = (delta) => {
+    let scrollValue = tabsRef.current[scrollStart];
+    if (vertical) {
+      scrollValue += delta;
+    } else {
+      scrollValue += delta * (isRtl ? -1 : 1);
+      scrollValue *= isRtl && detectScrollType() === "reverse" ? -1 : 1;
+    }
+    scroll(scrollValue);
+  };
+  const getScrollSize = () => {
+    const containerSize = tabsRef.current[clientSize];
+    let totalSize = 0;
+    const children2 = Array.from(tabListRef.current.children);
+    for (let i = 0; i < children2.length; i += 1) {
+      const tab = children2[i];
+      if (totalSize + tab[clientSize] > containerSize) {
+        if (i === 0) {
+          totalSize = containerSize;
+        }
+        break;
+      }
+      totalSize += tab[clientSize];
+    }
+    return totalSize;
+  };
+  const handleStartScrollClick = () => {
+    moveTabsScroll(-1 * getScrollSize());
+  };
+  const handleEndScrollClick = () => {
+    moveTabsScroll(getScrollSize());
+  };
+  const handleScrollbarSizeChange = react.exports.useCallback((scrollbarWidth) => {
+    setScrollerStyle({
+      overflow: null,
+      scrollbarWidth
+    });
+  }, []);
+  const getConditionalElements = () => {
+    const conditionalElements2 = {};
+    conditionalElements2.scrollbarSizeListener = scrollable ? /* @__PURE__ */ jsx(TabsScrollbarSize, {
+      onChange: handleScrollbarSizeChange,
+      className: clsx(classes.scrollableX, classes.hideScrollbar)
+    }) : null;
+    const scrollButtonsActive = displayScroll.start || displayScroll.end;
+    const showScrollButtons = scrollable && (scrollButtons === "auto" && scrollButtonsActive || scrollButtons === true);
+    conditionalElements2.scrollButtonStart = showScrollButtons ? /* @__PURE__ */ jsx(ScrollButtonComponent, _extends({
+      orientation,
+      direction: isRtl ? "right" : "left",
+      onClick: handleStartScrollClick,
+      disabled: !displayScroll.start
+    }, TabScrollButtonProps, {
+      className: clsx(classes.scrollButtons, TabScrollButtonProps.className)
+    })) : null;
+    conditionalElements2.scrollButtonEnd = showScrollButtons ? /* @__PURE__ */ jsx(ScrollButtonComponent, _extends({
+      orientation,
+      direction: isRtl ? "left" : "right",
+      onClick: handleEndScrollClick,
+      disabled: !displayScroll.end
+    }, TabScrollButtonProps, {
+      className: clsx(classes.scrollButtons, TabScrollButtonProps.className)
+    })) : null;
+    return conditionalElements2;
+  };
+  const scrollSelectedIntoView = useEventCallback((animation) => {
+    const {
+      tabsMeta,
+      tabMeta
+    } = getTabsMeta();
+    if (!tabMeta || !tabsMeta) {
+      return;
+    }
+    if (tabMeta[start] < tabsMeta[start]) {
+      const nextScrollStart = tabsMeta[scrollStart] + (tabMeta[start] - tabsMeta[start]);
+      scroll(nextScrollStart, {
+        animation
+      });
+    } else if (tabMeta[end] > tabsMeta[end]) {
+      const nextScrollStart = tabsMeta[scrollStart] + (tabMeta[end] - tabsMeta[end]);
+      scroll(nextScrollStart, {
+        animation
+      });
+    }
+  });
+  const updateScrollButtonState = useEventCallback(() => {
+    if (scrollable && scrollButtons !== false) {
+      const {
+        scrollTop,
+        scrollHeight,
+        clientHeight,
+        scrollWidth,
+        clientWidth
+      } = tabsRef.current;
+      let showStartScroll;
+      let showEndScroll;
+      if (vertical) {
+        showStartScroll = scrollTop > 1;
+        showEndScroll = scrollTop < scrollHeight - clientHeight - 1;
+      } else {
+        const scrollLeft = getNormalizedScrollLeft(tabsRef.current, theme.direction);
+        showStartScroll = isRtl ? scrollLeft < scrollWidth - clientWidth - 1 : scrollLeft > 1;
+        showEndScroll = !isRtl ? scrollLeft < scrollWidth - clientWidth - 1 : scrollLeft > 1;
+      }
+      if (showStartScroll !== displayScroll.start || showEndScroll !== displayScroll.end) {
+        setDisplayScroll({
+          start: showStartScroll,
+          end: showEndScroll
+        });
+      }
+    }
+  });
+  react.exports.useEffect(() => {
+    const handleResize = debounce(() => {
+      if (tabsRef.current) {
+        updateIndicatorState();
+        updateScrollButtonState();
+      }
+    });
+    const win = ownerWindow(tabsRef.current);
+    win.addEventListener("resize", handleResize);
+    let resizeObserver;
+    if (typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(handleResize);
+      Array.from(tabListRef.current.children).forEach((child) => {
+        resizeObserver.observe(child);
+      });
+    }
+    return () => {
+      handleResize.clear();
+      win.removeEventListener("resize", handleResize);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+    };
+  }, [updateIndicatorState, updateScrollButtonState]);
+  const handleTabsScroll = react.exports.useMemo(() => debounce(() => {
+    updateScrollButtonState();
+  }), [updateScrollButtonState]);
+  react.exports.useEffect(() => {
+    return () => {
+      handleTabsScroll.clear();
+    };
+  }, [handleTabsScroll]);
+  react.exports.useEffect(() => {
+    setMounted(true);
+  }, []);
+  react.exports.useEffect(() => {
+    updateIndicatorState();
+    updateScrollButtonState();
+  });
+  react.exports.useEffect(() => {
+    scrollSelectedIntoView(defaultIndicatorStyle !== indicatorStyle);
+  }, [scrollSelectedIntoView, indicatorStyle]);
+  react.exports.useImperativeHandle(action, () => ({
+    updateIndicator: updateIndicatorState,
+    updateScrollButtons: updateScrollButtonState
+  }), [updateIndicatorState, updateScrollButtonState]);
+  const indicator = /* @__PURE__ */ jsx(TabsIndicator, _extends({}, TabIndicatorProps, {
+    className: clsx(classes.indicator, TabIndicatorProps.className),
+    ownerState,
+    style: _extends({}, indicatorStyle, TabIndicatorProps.style)
+  }));
+  let childIndex = 0;
+  const children = react.exports.Children.map(childrenProp, (child) => {
+    if (!/* @__PURE__ */ react.exports.isValidElement(child)) {
+      return null;
+    }
+    {
+      if (reactIs$2.exports.isFragment(child)) {
+        console.error(["MUI: The Tabs component doesn't accept a Fragment as a child.", "Consider providing an array instead."].join("\n"));
+      }
+    }
+    const childValue = child.props.value === void 0 ? childIndex : child.props.value;
+    valueToIndex.set(childValue, childIndex);
+    const selected = childValue === value;
+    childIndex += 1;
+    return /* @__PURE__ */ react.exports.cloneElement(child, _extends({
+      fullWidth: variant === "fullWidth",
+      indicator: selected && !mounted && indicator,
+      selected,
+      selectionFollowsFocus,
+      onChange,
+      textColor,
+      value: childValue
+    }, childIndex === 1 && value === false && !child.props.tabIndex ? {
+      tabIndex: 0
+    } : {}));
+  });
+  const handleKeyDown2 = (event) => {
+    const list = tabListRef.current;
+    const currentFocus = ownerDocument(list).activeElement;
+    const role = currentFocus.getAttribute("role");
+    if (role !== "tab") {
+      return;
+    }
+    let previousItemKey = orientation === "horizontal" ? "ArrowLeft" : "ArrowUp";
+    let nextItemKey = orientation === "horizontal" ? "ArrowRight" : "ArrowDown";
+    if (orientation === "horizontal" && isRtl) {
+      previousItemKey = "ArrowRight";
+      nextItemKey = "ArrowLeft";
+    }
+    switch (event.key) {
+      case previousItemKey:
+        event.preventDefault();
+        moveFocus(list, currentFocus, previousItem);
+        break;
+      case nextItemKey:
+        event.preventDefault();
+        moveFocus(list, currentFocus, nextItem);
+        break;
+      case "Home":
+        event.preventDefault();
+        moveFocus(list, null, nextItem);
+        break;
+      case "End":
+        event.preventDefault();
+        moveFocus(list, null, previousItem);
+        break;
+    }
+  };
+  const conditionalElements = getConditionalElements();
+  return /* @__PURE__ */ jsxs(TabsRoot, _extends({
+    className: clsx(classes.root, className),
+    ownerState,
+    ref,
+    as: component
+  }, other, {
+    children: [conditionalElements.scrollButtonStart, conditionalElements.scrollbarSizeListener, /* @__PURE__ */ jsxs(TabsScroller, {
+      className: classes.scroller,
+      ownerState,
+      style: {
+        overflow: scrollerStyle.overflow,
+        [vertical ? `margin${isRtl ? "Left" : "Right"}` : "marginBottom"]: visibleScrollbar ? void 0 : -scrollerStyle.scrollbarWidth
+      },
+      ref: tabsRef,
+      onScroll: handleTabsScroll,
+      children: [/* @__PURE__ */ jsx(FlexContainer, {
+        "aria-label": ariaLabel,
+        "aria-labelledby": ariaLabelledBy,
+        "aria-orientation": orientation === "vertical" ? "vertical" : null,
+        className: classes.flexContainer,
+        ownerState,
+        onKeyDown: handleKeyDown2,
+        ref: tabListRef,
+        role: "tablist",
+        children
+      }), mounted && indicator]
+    }), conditionalElements.scrollButtonEnd]
+  }));
+});
+Tabs.propTypes = {
+  action: refType$1,
+  allowScrollButtonsMobile: propTypes.exports.bool,
+  "aria-label": propTypes.exports.string,
+  "aria-labelledby": propTypes.exports.string,
+  centered: propTypes.exports.bool,
+  children: propTypes.exports.node,
+  classes: propTypes.exports.object,
+  className: propTypes.exports.string,
+  component: propTypes.exports.elementType,
+  indicatorColor: propTypes.exports.oneOfType([propTypes.exports.oneOf(["primary", "secondary"]), propTypes.exports.string]),
+  onChange: propTypes.exports.func,
+  orientation: propTypes.exports.oneOf(["horizontal", "vertical"]),
+  ScrollButtonComponent: propTypes.exports.elementType,
+  scrollButtons: propTypes.exports.oneOf(["auto", false, true]),
+  selectionFollowsFocus: propTypes.exports.bool,
+  sx: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.oneOfType([propTypes.exports.func, propTypes.exports.object, propTypes.exports.bool])), propTypes.exports.func, propTypes.exports.object]),
+  TabIndicatorProps: propTypes.exports.object,
+  TabScrollButtonProps: propTypes.exports.object,
+  textColor: propTypes.exports.oneOf(["inherit", "primary", "secondary"]),
+  value: propTypes.exports.any,
+  variant: propTypes.exports.oneOf(["fullWidth", "scrollable", "standard"]),
+  visibleScrollbar: propTypes.exports.bool
+};
+const Tabs$1 = Tabs;
 function getTextFieldUtilityClass(slot) {
   return generateUtilityClass("MuiTextField", slot);
 }
@@ -42389,7 +43835,7 @@ var _default = (0, _createSvgIcon.default)(/* @__PURE__ */ (0, _jsxRuntime.jsx)(
   d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
 }), "Delete");
 default_1 = Delete.default = _default;
-var _jsxFileName$6 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\nodes-list\\NodesList.tsx";
+var _jsxFileName$d = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\nodes-list\\NodesList.tsx";
 function NodesList({
   nodes
 }) {
@@ -42419,7 +43865,7 @@ function NodesList({
     },
     component: "nav",
     children: nodes.map((node2) => {
-      var _a, _b;
+      var _a, _b, _c;
       return /* @__PURE__ */ jsxDEV("div", {
         children: [/* @__PURE__ */ jsxDEV(ListItem$1, {
           onClick: () => goToUpdateForm(node2.id),
@@ -42429,7 +43875,7 @@ function NodesList({
               cursor: "pointer"
             }
           }, void 0, false, {
-            fileName: _jsxFileName$6,
+            fileName: _jsxFileName$d,
             lineNumber: 48,
             columnNumber: 13
           }, this), /* @__PURE__ */ jsxDEV(ListItemIcon$1, {
@@ -42438,12 +43884,12 @@ function NodesList({
             },
             onClick: (e) => goToCreate(e, node2.id),
             children: /* @__PURE__ */ jsxDEV(default_1$1, {}, void 0, false, {
-              fileName: _jsxFileName$6,
+              fileName: _jsxFileName$d,
               lineNumber: 50,
               columnNumber: 15
             }, this)
           }, void 0, false, {
-            fileName: _jsxFileName$6,
+            fileName: _jsxFileName$d,
             lineNumber: 49,
             columnNumber: 13
           }, this), /* @__PURE__ */ jsxDEV(ListItemIcon$1, {
@@ -42452,40 +43898,40 @@ function NodesList({
             },
             onClick: (e) => deleteNode(e, node2.id),
             children: /* @__PURE__ */ jsxDEV(default_1, {}, void 0, false, {
-              fileName: _jsxFileName$6,
+              fileName: _jsxFileName$d,
               lineNumber: 53,
               columnNumber: 15
             }, this)
           }, void 0, false, {
-            fileName: _jsxFileName$6,
+            fileName: _jsxFileName$d,
             lineNumber: 52,
             columnNumber: 13
-          }, this), ((_a = node2.childNodes) == null ? void 0 : _a.length) && /* @__PURE__ */ jsxDEV(Fragment$1, {
-            children: node2.isOpened ? /* @__PURE__ */ jsxDEV(default_1$2, {
-              sx: {
-                cursor: "pointer"
-              },
-              onClick: (e) => toggleItem(e, node2)
-            }, void 0, false, {
-              fileName: _jsxFileName$6,
-              lineNumber: 58,
-              columnNumber: 21
-            }, this) : /* @__PURE__ */ jsxDEV(default_1$3, {
-              sx: {
-                cursor: "pointer"
-              },
-              onClick: (e) => toggleItem(e, node2)
-            }, void 0, false, {
-              fileName: _jsxFileName$6,
-              lineNumber: 59,
-              columnNumber: 21
-            }, this)
-          }, void 0, false)]
+          }, this), node2.isOpened ? /* @__PURE__ */ jsxDEV(default_1$2, {
+            sx: {
+              cursor: "pointer",
+              visibility: ((_a = node2.childNodes) == null ? void 0 : _a.length) ? "visible" : "hidden"
+            },
+            onClick: (e) => toggleItem(e, node2)
+          }, void 0, false, {
+            fileName: _jsxFileName$d,
+            lineNumber: 57,
+            columnNumber: 17
+          }, this) : /* @__PURE__ */ jsxDEV(default_1$3, {
+            sx: {
+              cursor: "pointer",
+              visibility: ((_b = node2.childNodes) == null ? void 0 : _b.length) ? "visible" : "hidden"
+            },
+            onClick: (e) => toggleItem(e, node2)
+          }, void 0, false, {
+            fileName: _jsxFileName$d,
+            lineNumber: 58,
+            columnNumber: 17
+          }, this)]
         }, void 0, true, {
-          fileName: _jsxFileName$6,
+          fileName: _jsxFileName$d,
           lineNumber: 47,
           columnNumber: 11
-        }, this), ((_b = node2.childNodes) == null ? void 0 : _b.length) && /* @__PURE__ */ jsxDEV(Collapse$1, {
+        }, this), ((_c = node2.childNodes) == null ? void 0 : _c.length) && /* @__PURE__ */ jsxDEV(Collapse$1, {
           in: node2.isOpened,
           timeout: "auto",
           unmountOnExit: true,
@@ -42495,23 +43941,23 @@ function NodesList({
           children: /* @__PURE__ */ jsxDEV(NodesList, {
             nodes: node2.childNodes
           }, void 0, false, {
-            fileName: _jsxFileName$6,
-            lineNumber: 66,
+            fileName: _jsxFileName$d,
+            lineNumber: 63,
             columnNumber: 16
           }, this)
         }, void 0, false, {
-          fileName: _jsxFileName$6,
-          lineNumber: 65,
+          fileName: _jsxFileName$d,
+          lineNumber: 62,
           columnNumber: 13
         }, this)]
       }, node2.url, true, {
-        fileName: _jsxFileName$6,
+        fileName: _jsxFileName$d,
         lineNumber: 46,
         columnNumber: 9
       }, this);
     })
   }, void 0, false, {
-    fileName: _jsxFileName$6,
+    fileName: _jsxFileName$d,
     lineNumber: 41,
     columnNumber: 5
   }, this);
@@ -42528,10 +43974,163 @@ function mapNodesIntoTree(array) {
   });
   return hashMap[array.find((el) => !el.parentId).id];
 }
-var _jsxFileName$5 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\pages\\home\\Home.tsx";
+var _jsxFileName$c = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\team-member-management-form\\TeamMemberManagementForm.tsx";
+function TeamMemberManagementForm({
+  member,
+  onMemberUpdate
+}) {
+  return /* @__PURE__ */ jsxDEV("p", {
+    children: "TeamMemberManagementForm"
+  }, void 0, false, {
+    fileName: _jsxFileName$c,
+    lineNumber: 10,
+    columnNumber: 5
+  }, this);
+}
+var _jsxFileName$b = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\team-management\\TeamManagement.tsx";
+function TeamManagement() {
+  const [teamMembers, setTeamMembers] = react.exports.useState([]);
+  const [error, setError] = react.exports.useState("");
+  react.exports.useEffect(() => {
+    setError("");
+  }, [teamMembers]);
+  react.exports.useEffect(() => {
+    axios$1.get("/api/team-member/getAll").then(({
+      data
+    }) => {
+      setTeamMembers(data);
+    });
+  }, []);
+  function submit() {
+    if (validate()) {
+      axios$1.post("/team-member/update", {
+        teamMembers
+      });
+    }
+  }
+  function validate() {
+    const hasInvalidMembers = !teamMembers.every((member) => member.name && member.surname && member.jobTitle);
+    if (hasInvalidMembers)
+      setError("There are invalid members");
+    return !hasInvalidMembers;
+  }
+  function addMember() {
+    setTeamMembers([...teamMembers, {
+      name: "",
+      surname: "",
+      jobTitle: "",
+      id: crypto.randomUUID()
+    }]);
+  }
+  function onMemberUpdate(memberData) {
+    const newTeamMembers = [...teamMembers];
+    const memberIndex = newTeamMembers.findIndex(({
+      id
+    }) => id === memberData.id);
+    newTeamMembers.splice(memberIndex, 1, memberData);
+    setTeamMembers(newTeamMembers);
+  }
+  function onMemberDelete(e, memberId) {
+    e.preventDefault();
+    e.stopPropagation();
+    const newTeamMembers = [...teamMembers];
+    const memberIndex = newTeamMembers.findIndex(({
+      id
+    }) => id === memberId);
+    newTeamMembers.splice(memberIndex, 1);
+    setTeamMembers(newTeamMembers);
+  }
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: [teamMembers == null ? void 0 : teamMembers.map((teamMember) => /* @__PURE__ */ jsxDEV(Accordion$1, {
+      children: [/* @__PURE__ */ jsxDEV(AccordionSummary$1, {
+        expandIcon: /* @__PURE__ */ jsxDEV(default_1$3, {}, void 0, false, {
+          fileName: _jsxFileName$b,
+          lineNumber: 66,
+          columnNumber: 41
+        }, this),
+        children: [/* @__PURE__ */ jsxDEV(Typography$1, {
+          children: teamMember.surname && teamMember.name ? `${teamMember.surname} ${teamMember.name}` : "New team member"
+        }, void 0, false, {
+          fileName: _jsxFileName$b,
+          lineNumber: 67,
+          columnNumber: 13
+        }, this), /* @__PURE__ */ jsxDEV(default_1, {
+          sx: {
+            ml: "auto"
+          },
+          onClick: (e) => onMemberDelete(e, teamMember.id)
+        }, void 0, false, {
+          fileName: _jsxFileName$b,
+          lineNumber: 71,
+          columnNumber: 13
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName$b,
+        lineNumber: 66,
+        columnNumber: 11
+      }, this), /* @__PURE__ */ jsxDEV(AccordionDetails$1, {
+        children: /* @__PURE__ */ jsxDEV(TeamMemberManagementForm, {
+          member: teamMember,
+          onMemberUpdate
+        }, void 0, false, {
+          fileName: _jsxFileName$b,
+          lineNumber: 74,
+          columnNumber: 13
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName$b,
+        lineNumber: 73,
+        columnNumber: 11
+      }, this)]
+    }, teamMember.id, true, {
+      fileName: _jsxFileName$b,
+      lineNumber: 65,
+      columnNumber: 9
+    }, this)), /* @__PURE__ */ jsxDEV(Box$1, {
+      sx: {
+        mt: 2
+      },
+      children: [/* @__PURE__ */ jsxDEV(Button$1, {
+        variant: "contained",
+        onClick: submit,
+        children: "Update"
+      }, void 0, false, {
+        fileName: _jsxFileName$b,
+        lineNumber: 80,
+        columnNumber: 9
+      }, this), /* @__PURE__ */ jsxDEV(Button$1, {
+        variant: "outlined",
+        sx: {
+          ml: 2
+        },
+        onClick: addMember,
+        children: "+ Add Team Member"
+      }, void 0, false, {
+        fileName: _jsxFileName$b,
+        lineNumber: 81,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName$b,
+      lineNumber: 79,
+      columnNumber: 7
+    }, this), error && /* @__PURE__ */ jsxDEV(Typography$1, {
+      sx: {
+        mt: 1
+      },
+      children: error
+    }, void 0, false, {
+      fileName: _jsxFileName$b,
+      lineNumber: 84,
+      columnNumber: 17
+    }, this)]
+  }, void 0, true);
+}
+var _jsxFileName$a = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\pages\\home\\Home.tsx";
 function HomePage() {
   const [nodes, setNodes] = react.exports.useState([]);
   const [isLoading, setIsLoading] = react.exports.useState(true);
+  const [tab, setTab] = react.exports.useState(0);
   react.exports.useEffect(() => {
     axios$1.get("/api/node/getAll").then(({
       data
@@ -42544,36 +44143,82 @@ function HomePage() {
     return /* @__PURE__ */ jsxDEV("p", {
       children: "loading..."
     }, void 0, false, {
-      fileName: _jsxFileName$5,
-      lineNumber: 20,
+      fileName: _jsxFileName$a,
+      lineNumber: 22,
       columnNumber: 25
     }, this);
   if (!(nodes == null ? void 0 : nodes.length)) {
     return /* @__PURE__ */ jsxDEV(Navigate, {
       to: "/api/ui/create"
     }, void 0, false, {
-      fileName: _jsxFileName$5,
-      lineNumber: 23,
+      fileName: _jsxFileName$a,
+      lineNumber: 25,
       columnNumber: 12
     }, this);
   }
-  return /* @__PURE__ */ jsxDEV(Container$1, {
-    maxWidth: "sm",
-    sx: {
-      mt: 2
-    },
-    children: /* @__PURE__ */ jsxDEV(NodesList, {
-      nodes
-    }, void 0, false, {
-      fileName: _jsxFileName$5,
-      lineNumber: 28,
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: [/* @__PURE__ */ jsxDEV(Tabs$1, {
+      value: tab,
+      onChange: (e, val) => setTab(val),
+      sx: {
+        borderBottom: 1,
+        borderColor: "divider"
+      },
+      children: [/* @__PURE__ */ jsxDEV(Tab$1, {
+        label: "Pages list",
+        sx: {
+          ml: "auto"
+        }
+      }, void 0, false, {
+        fileName: _jsxFileName$a,
+        lineNumber: 31,
+        columnNumber: 9
+      }, this), /* @__PURE__ */ jsxDEV(Tab$1, {
+        label: "Team members",
+        sx: {
+          mr: "auto"
+        }
+      }, void 0, false, {
+        fileName: _jsxFileName$a,
+        lineNumber: 32,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName$a,
+      lineNumber: 30,
       columnNumber: 7
-    }, this)
-  }, void 0, false, {
-    fileName: _jsxFileName$5,
-    lineNumber: 27,
-    columnNumber: 5
-  }, this);
+    }, this), tab === 0 && /* @__PURE__ */ jsxDEV(Container$1, {
+      maxWidth: "sm",
+      sx: {
+        mt: 2
+      },
+      children: /* @__PURE__ */ jsxDEV(NodesList, {
+        nodes
+      }, void 0, false, {
+        fileName: _jsxFileName$a,
+        lineNumber: 37,
+        columnNumber: 11
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName$a,
+      lineNumber: 36,
+      columnNumber: 9
+    }, this), tab === 1 && /* @__PURE__ */ jsxDEV(Container$1, {
+      maxWidth: "sm",
+      sx: {
+        mt: 2
+      },
+      children: /* @__PURE__ */ jsxDEV(TeamManagement, {}, void 0, false, {
+        fileName: _jsxFileName$a,
+        lineNumber: 43,
+        columnNumber: 11
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName$a,
+      lineNumber: 42,
+      columnNumber: 9
+    }, this)]
+  }, void 0, true);
 }
 var isCheckBoxInput = (element) => element.type === "checkbox";
 var isDateObject = (value) => value instanceof Date;
@@ -43992,7 +45637,7 @@ const H1 = newStyled.h1`
   font-size: 32px;
   margin-bottom: 30px;
 `;
-var _jsxFileName$4 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\node-management-form\\NodeManagementForm.tsx";
+var _jsxFileName$9 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\node-management-form\\NodeManagementForm.tsx";
 function NodeManagementForm({
   formConfig,
   onSubmit,
@@ -44006,18 +45651,14 @@ function NodeManagementForm({
     watch,
     formState
   } = useForm();
-  return /* @__PURE__ */ jsxDEV(Container$1, {
-    maxWidth: "sm",
-    sx: {
-      mt: 2
-    },
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
     children: [/* @__PURE__ */ jsxDEV(H1, {
       style: {
         marginBottom: "20px"
       },
       children: isEditMode ? "Update page" : "Create page"
     }, void 0, false, {
-      fileName: _jsxFileName$4,
+      fileName: _jsxFileName$9,
       lineNumber: 25,
       columnNumber: 7
     }, this), /* @__PURE__ */ jsxDEV("form", {
@@ -44031,7 +45672,7 @@ function NodeManagementForm({
         children: [/* @__PURE__ */ jsxDEV(InputLabel$1, {
           children: "Page alias"
         }, void 0, false, {
-          fileName: _jsxFileName$4,
+          fileName: _jsxFileName$9,
           lineNumber: 29,
           columnNumber: 11
         }, this), /* @__PURE__ */ jsxDEV(Select$1, {
@@ -44045,17 +45686,17 @@ function NodeManagementForm({
             value: type,
             children: type
           }, type, false, {
-            fileName: _jsxFileName$4,
+            fileName: _jsxFileName$9,
             lineNumber: 37,
             columnNumber: 15
           }, this))
         }, void 0, false, {
-          fileName: _jsxFileName$4,
+          fileName: _jsxFileName$9,
           lineNumber: 30,
           columnNumber: 11
         }, this)]
       }, void 0, true, {
-        fileName: _jsxFileName$4,
+        fileName: _jsxFileName$9,
         lineNumber: 28,
         columnNumber: 9
       }, this), /* @__PURE__ */ jsxDEV(TextField$1, {
@@ -44070,7 +45711,7 @@ function NodeManagementForm({
         }),
         fullWidth: true
       }, void 0, false, {
-        fileName: _jsxFileName$4,
+        fileName: _jsxFileName$9,
         lineNumber: 42,
         columnNumber: 9
       }, this), /* @__PURE__ */ jsxDEV(TextField$1, {
@@ -44085,7 +45726,7 @@ function NodeManagementForm({
         }),
         fullWidth: true
       }, void 0, false, {
-        fileName: _jsxFileName$4,
+        fileName: _jsxFileName$9,
         lineNumber: 51,
         columnNumber: 9
       }, this), /* @__PURE__ */ jsxDEV(FormControlLabel$1, {
@@ -44093,7 +45734,7 @@ function NodeManagementForm({
           defaultChecked: (_i = (_h = formConfig == null ? void 0 : formConfig.formData) == null ? void 0 : _h.addToTopNavigation) != null ? _i : false,
           ...register("addToTopNavigation")
         }, void 0, false, {
-          fileName: _jsxFileName$4,
+          fileName: _jsxFileName$9,
           lineNumber: 61,
           columnNumber: 20
         }, this),
@@ -44103,7 +45744,7 @@ function NodeManagementForm({
           w: "fit-content"
         }
       }, void 0, false, {
-        fileName: _jsxFileName$4,
+        fileName: _jsxFileName$9,
         lineNumber: 60,
         columnNumber: 9
       }, this), /* @__PURE__ */ jsxDEV(Button$1, {
@@ -44111,18 +45752,461 @@ function NodeManagementForm({
         variant: "contained",
         children: isEditMode ? "Update" : "Create"
       }, void 0, false, {
-        fileName: _jsxFileName$4,
+        fileName: _jsxFileName$9,
         lineNumber: 66,
-        columnNumber: 5
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName$9,
+      lineNumber: 27,
+      columnNumber: 7
+    }, this)]
+  }, void 0, true);
+}
+var PanelAlias = /* @__PURE__ */ ((PanelAlias2) => {
+  PanelAlias2["SpotPanel"] = "spotPanel";
+  PanelAlias2["ProductsGalleryPanel"] = "productsGalleryPanel";
+  PanelAlias2["OurTeamPanel"] = "ourTeamPanel";
+  return PanelAlias2;
+})(PanelAlias || {});
+var _jsxFileName$8 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\panels\\our-team-panel\\OurTeamPanel.tsx";
+function OurTeamPanel({
+  formData,
+  registerControl
+}) {
+  var _a, _b;
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: [/* @__PURE__ */ jsxDEV(TextField$1, {
+      label: "Panel title",
+      variant: "outlined",
+      size: "small",
+      sx: {
+        mb: 1
+      },
+      ...registerControl("title", {
+        value: (_a = formData == null ? void 0 : formData.title) != null ? _a : ""
+      }),
+      fullWidth: true
+    }, void 0, false, {
+      fileName: _jsxFileName$8,
+      lineNumber: 18,
+      columnNumber: 7
+    }, this), /* @__PURE__ */ jsxDEV(TextField$1, {
+      label: "Panel subtitle",
+      variant: "outlined",
+      size: "small",
+      sx: {
+        mb: 1
+      },
+      ...registerControl("subtitle", {
+        value: (_b = formData == null ? void 0 : formData.subtitle) != null ? _b : ""
+      }),
+      fullWidth: true
+    }, void 0, false, {
+      fileName: _jsxFileName$8,
+      lineNumber: 27,
+      columnNumber: 7
+    }, this)]
+  }, void 0, true);
+}
+var _jsxFileName$7 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\panels\\PanelFormsResolver.tsx";
+function PanelFormsResolver({
+  formData,
+  registerControl
+}) {
+  switch (formData.panelAlias) {
+    case PanelAlias.OurTeamPanel:
+      return /* @__PURE__ */ jsxDEV(OurTeamPanel, {
+        formData,
+        registerControl
+      }, void 0, false, {
+        fileName: _jsxFileName$7,
+        lineNumber: 16,
+        columnNumber: 14
+      }, this);
+    default:
+      return /* @__PURE__ */ jsxDEV("p", {
+        children: "this panel is not avalialable yet"
+      }, void 0, false, {
+        fileName: _jsxFileName$7,
+        lineNumber: 18,
+        columnNumber: 14
+      }, this);
+  }
+}
+var _jsxFileName$6 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\panel-management-form\\PanelManagementForm.tsx";
+function PanelManagementForm({
+  data,
+  onPanelUpdate
+}) {
+  var _a, _b;
+  const [panelAlias, setPanelAlias] = react.exports.useState((_a = data == null ? void 0 : data.panelAlias) != null ? _a : "");
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState
+  } = useForm();
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: /* @__PURE__ */ jsxDEV("form", {
+      onSubmit: handleSubmit((formData) => onPanelUpdate({
+        ...formData,
+        id: data.id,
+        panelAlias
+      })),
+      children: [data.availablePanelTypes && /* @__PURE__ */ jsxDEV(FormControl$1, {
+        fullWidth: true,
+        sx: {
+          mb: 1
+        },
+        size: "small",
+        children: [/* @__PURE__ */ jsxDEV(InputLabel$1, {
+          children: "Panel alias"
+        }, void 0, false, {
+          fileName: _jsxFileName$6,
+          lineNumber: 31,
+          columnNumber: 13
+        }, this), /* @__PURE__ */ jsxDEV(Select$1, {
+          ...register("panelAlias", {
+            required: true
+          }),
+          value: panelAlias,
+          onChange: (e) => setPanelAlias(e.target.value),
+          label: "Panel alias",
+          children: (_b = data == null ? void 0 : data.availablePanelTypes) == null ? void 0 : _b.map((type) => /* @__PURE__ */ jsxDEV(MenuItem$1, {
+            value: type,
+            children: type
+          }, type, false, {
+            fileName: _jsxFileName$6,
+            lineNumber: 39,
+            columnNumber: 17
+          }, this))
+        }, void 0, false, {
+          fileName: _jsxFileName$6,
+          lineNumber: 32,
+          columnNumber: 13
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName$6,
+        lineNumber: 30,
+        columnNumber: 11
+      }, this), panelAlias && /* @__PURE__ */ jsxDEV(PanelFormsResolver, {
+        formData: {
+          ...data,
+          panelAlias
+        },
+        registerControl: register
+      }, void 0, false, {
+        fileName: _jsxFileName$6,
+        lineNumber: 45,
+        columnNumber: 24
+      }, this), /* @__PURE__ */ jsxDEV(Button$1, {
+        type: "submit",
+        variant: "contained",
+        children: "Save"
+      }, void 0, false, {
+        fileName: _jsxFileName$6,
+        lineNumber: 47,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName$6,
+      lineNumber: 28,
+      columnNumber: 7
+    }, this)
+  }, void 0, false);
+}
+var _jsxFileName$5 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\panels-management\\PanelsManagement.tsx";
+const availablePanelAliases = Object.values(PanelAlias);
+function PanelsManagement({
+  panels: panelsInitial,
+  onSubmit
+}) {
+  const [panels, setPanels] = react.exports.useState(panelsInitial != null ? panelsInitial : []);
+  const [error, setError] = react.exports.useState("");
+  react.exports.useEffect(() => {
+    setError("");
+  }, [panels]);
+  function submit() {
+    if (validate()) {
+      onSubmit({
+        panels
+      });
+    }
+  }
+  function validate() {
+    const hasEmptyPanels = !!panels.find((panel) => !panel.panelAlias);
+    if (hasEmptyPanels)
+      setError("There shouldn't be any empty panel");
+    return !hasEmptyPanels;
+  }
+  function addPanel() {
+    setPanels([...panels, {
+      availablePanelTypes: availablePanelAliases,
+      id: crypto.randomUUID()
+    }]);
+  }
+  function onPanelUpdate(panelData) {
+    const newPanels = [...panels];
+    const panelIndex = panels.findIndex(({
+      id
+    }) => id === panelData.id);
+    newPanels.splice(panelIndex, 1, panelData);
+    setPanels(newPanels);
+  }
+  function onPanelDelete(panelId) {
+    const newPanels = [...panels];
+    const panelIndex = panels.findIndex(({
+      id
+    }) => id === panelId);
+    newPanels.splice(panelIndex, 1);
+    setPanels(newPanels);
+  }
+  function changeOrder(e, panelId, diffWithCurrentIndex) {
+    e.preventDefault();
+    e.stopPropagation();
+    const newPanels = [...panels];
+    const panelIndex = panels.findIndex(({
+      id
+    }) => id === panelId);
+    if (panelIndex + diffWithCurrentIndex < 0 || panelIndex + diffWithCurrentIndex > panels.length - 1)
+      return;
+    const [currentPanel] = newPanels.splice(panelIndex, 1);
+    newPanels.splice(panelIndex + diffWithCurrentIndex, 0, currentPanel);
+    setPanels(newPanels);
+  }
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: [panels == null ? void 0 : panels.map((panel) => {
+      var _a;
+      return /* @__PURE__ */ jsxDEV(Accordion$1, {
+        children: [/* @__PURE__ */ jsxDEV(AccordionSummary$1, {
+          expandIcon: /* @__PURE__ */ jsxDEV(default_1$3, {}, void 0, false, {
+            fileName: _jsxFileName$5,
+            lineNumber: 72,
+            columnNumber: 41
+          }, this),
+          children: [/* @__PURE__ */ jsxDEV(Typography$1, {
+            children: (_a = panel.panelAlias) != null ? _a : "New panel"
+          }, void 0, false, {
+            fileName: _jsxFileName$5,
+            lineNumber: 73,
+            columnNumber: 13
+          }, this), /* @__PURE__ */ jsxDEV(default_1, {
+            sx: {
+              ml: "auto"
+            },
+            onClick: onPanelDelete
+          }, void 0, false, {
+            fileName: _jsxFileName$5,
+            lineNumber: 75,
+            columnNumber: 13
+          }, this), /* @__PURE__ */ jsxDEV("div", {
+            style: {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "24px",
+              height: "24px"
+            },
+            children: [/* @__PURE__ */ jsxDEV("button", {
+              style: {
+                width: "12px",
+                height: "12px",
+                padding: 0,
+                fontSize: "12px",
+                lineHeight: 0,
+                transform: "rotate(-90deg)"
+              },
+              onClick: (e) => changeOrder(e, panel.id, -1),
+              children: "\u27A4"
+            }, void 0, false, {
+              fileName: _jsxFileName$5,
+              lineNumber: 78,
+              columnNumber: 15
+            }, this), /* @__PURE__ */ jsxDEV("button", {
+              style: {
+                width: "12px",
+                height: "12px",
+                padding: 0,
+                fontSize: "12px",
+                lineHeight: 0,
+                transform: "rotate(90deg)"
+              },
+              onClick: (e) => changeOrder(e, panel.id, 1),
+              children: "\u27A4"
+            }, void 0, false, {
+              fileName: _jsxFileName$5,
+              lineNumber: 82,
+              columnNumber: 15
+            }, this)]
+          }, void 0, true, {
+            fileName: _jsxFileName$5,
+            lineNumber: 77,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName$5,
+          lineNumber: 72,
+          columnNumber: 11
+        }, this), /* @__PURE__ */ jsxDEV(AccordionDetails$1, {
+          children: /* @__PURE__ */ jsxDEV(PanelManagementForm, {
+            data: panel,
+            onPanelUpdate
+          }, void 0, false, {
+            fileName: _jsxFileName$5,
+            lineNumber: 89,
+            columnNumber: 13
+          }, this)
+        }, void 0, false, {
+          fileName: _jsxFileName$5,
+          lineNumber: 88,
+          columnNumber: 11
+        }, this)]
+      }, panel.id, true, {
+        fileName: _jsxFileName$5,
+        lineNumber: 71,
+        columnNumber: 9
+      }, this);
+    }), /* @__PURE__ */ jsxDEV(Box$1, {
+      sx: {
+        mt: 2
+      },
+      children: [/* @__PURE__ */ jsxDEV(Button$1, {
+        variant: "contained",
+        onClick: submit,
+        children: "Update"
+      }, void 0, false, {
+        fileName: _jsxFileName$5,
+        lineNumber: 95,
+        columnNumber: 9
+      }, this), /* @__PURE__ */ jsxDEV(Button$1, {
+        variant: "outlined",
+        sx: {
+          ml: 2
+        },
+        onClick: addPanel,
+        children: "+ Add Panel"
+      }, void 0, false, {
+        fileName: _jsxFileName$5,
+        lineNumber: 96,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName$5,
+      lineNumber: 94,
+      columnNumber: 7
+    }, this), error && /* @__PURE__ */ jsxDEV(Typography$1, {
+      sx: {
+        mt: 1
+      },
+      children: error
+    }, void 0, false, {
+      fileName: _jsxFileName$5,
+      lineNumber: 99,
+      columnNumber: 17
+    }, this)]
+  }, void 0, true);
+}
+var _jsxFileName$4 = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\shared\\components\\node-management\\NodeManagement.tsx";
+function NodeManagement({
+  formConfig,
+  onSubmit,
+  isEditMode = false
+}) {
+  var _a, _b;
+  const [tab, setTab] = react.exports.useState(0);
+  return /* @__PURE__ */ jsxDEV(Fragment$1, {
+    children: [/* @__PURE__ */ jsxDEV(Tabs$1, {
+      value: tab,
+      onChange: (e, val) => setTab(val),
+      sx: {
+        borderBottom: 1,
+        borderColor: "divider"
+      },
+      children: [/* @__PURE__ */ jsxDEV(Tab$1, {
+        label: "Page data",
+        sx: {
+          ml: "auto"
+        }
+      }, void 0, false, {
+        fileName: _jsxFileName$4,
+        lineNumber: 22,
+        columnNumber: 9
+      }, this), /* @__PURE__ */ jsxDEV(Tab$1, {
+        label: "Panels",
+        sx: {
+          mr: "auto"
+        }
+      }, void 0, false, {
+        fileName: _jsxFileName$4,
+        lineNumber: 23,
+        columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName$4,
-      lineNumber: 27,
-      columnNumber: 4
+      lineNumber: 21,
+      columnNumber: 7
+    }, this), /* @__PURE__ */ jsxDEV(TabPanel, {
+      value: tab,
+      index: 0,
+      children: /* @__PURE__ */ jsxDEV(NodeManagementForm, {
+        isEditMode,
+        formConfig,
+        onSubmit
+      }, void 0, false, {
+        fileName: _jsxFileName$4,
+        lineNumber: 26,
+        columnNumber: 9
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName$4,
+      lineNumber: 25,
+      columnNumber: 7
+    }, this), /* @__PURE__ */ jsxDEV(TabPanel, {
+      value: tab,
+      index: 1,
+      children: /* @__PURE__ */ jsxDEV(PanelsManagement, {
+        panels: (_b = (_a = formConfig.formData) == null ? void 0 : _a.panels) != null ? _b : [],
+        onSubmit
+      }, void 0, false, {
+        fileName: _jsxFileName$4,
+        lineNumber: 29,
+        columnNumber: 9
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName$4,
+      lineNumber: 28,
+      columnNumber: 7
     }, this)]
-  }, void 0, true, {
+  }, void 0, true);
+}
+function TabPanel(props) {
+  const {
+    children,
+    value,
+    index: index2,
+    ...other
+  } = props;
+  return /* @__PURE__ */ jsxDEV("div", {
+    role: "tabpanel",
+    hidden: value !== index2,
+    id: `simple-tabpanel-${index2}`,
+    "aria-labelledby": `simple-tab-${index2}`,
+    ...other,
+    children: value === index2 && /* @__PURE__ */ jsxDEV(Container$1, {
+      maxWidth: "sm",
+      sx: {
+        mt: 2
+      },
+      children
+    }, void 0, false, {
+      fileName: _jsxFileName$4,
+      lineNumber: 53,
+      columnNumber: 9
+    }, this)
+  }, void 0, false, {
     fileName: _jsxFileName$4,
-    lineNumber: 24,
+    lineNumber: 45,
     columnNumber: 5
   }, this);
 }
@@ -44159,7 +46243,7 @@ function CreatePage() {
       columnNumber: 12
     }, this);
   }
-  return /* @__PURE__ */ jsxDEV(NodeManagementForm, {
+  return /* @__PURE__ */ jsxDEV(NodeManagement, {
     formConfig: managementFormConfig,
     onSubmit
   }, void 0, false, {
@@ -44199,7 +46283,7 @@ function UpdatePage() {
       lineNumber: 28,
       columnNumber: 25
     }, this);
-  return /* @__PURE__ */ jsxDEV(NodeManagementForm, {
+  return /* @__PURE__ */ jsxDEV(NodeManagement, {
     isEditMode: true,
     formConfig: managementFormConfig,
     onSubmit
@@ -44260,20 +46344,14 @@ function App() {
 }
 const index = "";
 var _jsxFileName = "C:\\Temp\\alina\\foodtuck\\Foodtuck.Backoffice\\src\\main.tsx";
-client.createRoot(document.getElementById("root")).render(/* @__PURE__ */ jsxDEV(React.StrictMode, {
-  children: /* @__PURE__ */ jsxDEV(BrowserRouter, {
-    children: /* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 7
-    }, globalThis)
-  }, void 0, false, {
+client.createRoot(document.getElementById("root")).render(/* @__PURE__ */ jsxDEV(BrowserRouter, {
+  children: /* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 9,
+    lineNumber: 8,
     columnNumber: 5
   }, globalThis)
 }, void 0, false, {
   fileName: _jsxFileName,
-  lineNumber: 8,
+  lineNumber: 7,
   columnNumber: 3
 }, globalThis));

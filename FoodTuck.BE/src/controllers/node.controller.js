@@ -1,10 +1,11 @@
 const catchAsync = require('../utils/catchAsync');
-const { nodeService } = require('../services');
+const { nodeService, teamMemberService } = require('../services');
 const { allowedChildNodes } = require('../config/node');
+const { ourTeamPanelConfig } = require('../config/team-member');
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  const nodeData = await nodeService.getNodeByUrl(req.params.url);
+  const nodeData = await addAditionalDataByAlias(await nodeService.getNodeByUrl(req.params.url));
   res.send(nodeData);
 });
 
@@ -13,7 +14,9 @@ const createNode = catchAsync(async (req, res) => {
     ...req.body,
   };
   if (req.body.pageAlias !== 'homePage') {
-    data.url = (await nodeService.getNodeById(req.body.parentId)).url + req.body.url + '/';
+    const node = await nodeService.getNodeById(req.body.id);
+    const parentNode = await nodeService.getNodeById(node.parentId)
+    data.url = parentNode.url + req.body.url + '/';
   }
   const node = await nodeService.createNode(data);
   res.send(node);
@@ -29,7 +32,9 @@ const updateNode = catchAsync(async (req, res) => {
     ...req.body,
   };
   if (req.body.pageAlias !== 'homePage') {
-    data.url = (await nodeService.getNodeById(req.body.parentId)).url + req.body.url + '/';
+    const node = await nodeService.getNodeById(req.body.id);
+    const parentNode = await nodeService.getNodeById(node.parentId)
+    data.url = parentNode.url + req.body.url + '/';
   }
   const node = await nodeService.updateNode(data);
   res.send(node);
@@ -52,11 +57,13 @@ const getCreateFormData = catchAsync(async (req, res) => {
 
 const getUpdateFormData = catchAsync(async (req, res) => {
   const node = await nodeService.getNodeById(req.params.id);
+  var urlSegments = node.url.split('/');
+  var lastUrlSegment = (urlSegments.pop() || urlSegments.pop()) ?? "";  // handle potential trailing slash
   const data = {
     availablePageTypes: [node.pageAlias],
     formData: {
       id: node._id,
-      url: node.url.split('/').reverse()[0],
+      url: lastUrlSegment,
       pageAlias: node.pageAlias,
       pageTitle: node.pageTitle,
       addToTopNavigation: node.addToTopNavigation,
@@ -64,6 +71,37 @@ const getUpdateFormData = catchAsync(async (req, res) => {
     }
   };
   res.send(data)
+})
+
+const addAditionalDataByAlias = catchAsync(async (data) => {
+  if (data.pageAlias === "ourTeamPage") {
+    data = await addOurTeamPageData(data);
+  }
+
+  data.panels = data.panels?.map(async (panel) => {
+    if (panel.panelAlias === "ourTeamPanel") {
+      panel = await addOurTeamPanelData();
+    }
+
+    return panel;
+  })
+
+  return data;
+})
+
+const addOurTeamPageData = catchAsync(async (data) => {
+  data.teamMembers = await teamMemberService.getAll();
+  return data;
+})
+
+const addOurTeamPanelData = catchAsync(async (data) => {
+  const [teamMembers, seeMoreLink] = await Promise.all([
+    teamMemberService.getPaged(ourTeamPanelConfig.pagesize),
+    nodeService.getNodeByAlias('ourTeamPage'),
+  ])
+  data.teamMembers = teamMembers;
+  data.seeMoreLink = seeMoreLink?.url;
+  return data;
 })
 
 module.exports = {

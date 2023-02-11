@@ -51,6 +51,19 @@ const getNodeById = async (nodeId) => {
 }
 
 /**
+ * Get node by alias
+ * @param {string} nodeAlias
+ * @returns {Promise<UNode>}
+ */
+const getNodeByAlias = async (nodeAlias) => {
+  const node = await UNode.findOne({ pageAlias: nodeAlias });
+  if (!node) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Node not found');
+  }
+  return node;
+}
+
+/**
  * Delete node by id
  * @param {ObjectId} nodeId
  * @returns {Promise<void>}
@@ -73,6 +86,7 @@ module.exports = {
   createNode,
   getNodeByUrl,
   getNodeById,
+  getNodeByAlias,
   updateNode,
   deleteNodeRecursive,
   getAllNodes,

@@ -52,14 +52,11 @@ function NodesList({nodes}: {nodes: INodeMapped[]}) {
             <ListItemIcon sx={{cursor: 'pointer'}} onClick={(e: any) => deleteNode(e, node.id)}>
               <DeleteIcon />
             </ListItemIcon>
-            {node.childNodes?.length && (
-              <>
-                {node.isOpened 
-                  ? <ExpandLess sx={{cursor: 'pointer'}} onClick={(e: any) => toggleItem(e, node)} /> 
-                  : <ExpandMore sx={{cursor: 'pointer'}} onClick={(e: any) => toggleItem(e, node)} />
-                }
-              </>
-            )}
+            
+            {node.isOpened 
+              ? <ExpandLess sx={{cursor: 'pointer', visibility: node.childNodes?.length ? 'visible' : 'hidden'}} onClick={(e: any) => toggleItem(e, node)} /> 
+              : <ExpandMore sx={{cursor: 'pointer', visibility: node.childNodes?.length ? 'visible' : 'hidden'}} onClick={(e: any) => toggleItem(e, node)} />
+            }
           </ListItem>
           {node.childNodes?.length && (
             <Collapse in={node.isOpened} timeout="auto" unmountOnExit sx={{ pl: 4 }}>
