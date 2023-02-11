@@ -5,7 +5,7 @@ const { ourTeamPanelConfig } = require('../config/team-member');
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  const nodeData = await addAditionalDataByAlias(await nodeService.getNodeByUrl(req.params.url));
+  const nodeData = await addAditionalDataByAlias(await nodeService.getNodeByUrl(req.query.url));
   res.send(nodeData);
 });
 

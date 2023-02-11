@@ -6,7 +6,7 @@ const nodeValidation = require('../validations/node.validation');
 const router = express.Router();
 
 router
-  .get('/getByUrl', validate(nodeValidation.getByUrl), nodeController.getByUrl)
+  .get('/getByUrl', nodeController.getByUrl)
   .get('/getAll', nodeController.getAllNodes)
   .get('/getCreateFormData/', nodeController.getCreateFormData)
   .get('/getCreateFormData/:parentId', nodeController.getCreateFormData)

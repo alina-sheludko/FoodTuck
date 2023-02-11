@@ -1,18 +1,15 @@
 {
-  "Footer": {
-    "Column": {
-      "AboutUs": {
-        "Title": "About Us"
-      },
-      "UsefulLinks": {
-        "Title": "Useful Links"
-      },
-      "Help": {
-        "Title": "Help?"
-      },
-      "Posts": {
-        "Title": "Recent Posts"
-      }
-    }
-  }
+  "Footer.Support.Title": "<span class=highlighted-text>St</span>ill You Need Our Support ?",
+  "Footer.Support.Text": "Don’t wait make a smart & logical quote here. Its pretty easy.",
+  "Footer.Support.Mail.Input.Placeholder": "Enter Your Email",
+  "Footer.Support.Mail.Button": "Subscribe Now",
+
+  "Footer.Column.AboutUs.Title": "About Us",
+  "Footer.Column.UsefulLinks.Title": "Useful Links",
+  "Footer.Column.Help.Title": "Help?",
+  "Footer.Column.Posts.Title": "Recent Posts",
+
+  "NotFoundPage.Name": "404",
+  "NotFoundPage.Title": "Oops! Look likes something going wrong",
+  "NotFoundPage.Info": "Page Cannot be found! we’ll have it figured out in no time"
 }
