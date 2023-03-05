@@ -14,7 +14,7 @@ interface IProps {
 const availablePanelAliases = Object.values(PanelAlias);
 
 function PanelsManagement({ panels: panelsInitial, onSubmit }: IProps) {
-  const [panels, setPanels] = useState(panelsInitial ?? []);
+  const [panels, setPanels] = useState(panelsInitial?.map(p => ({...p, id: crypto.randomUUID()})) ?? []);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function PanelsManagement({ panels: panelsInitial, onSubmit }: IProps) {
   }
 
   function addPanel() {
-    setPanels([...panels, {availablePanelTypes: availablePanelAliases, id: (crypto as any).randomUUID()}])
+    setPanels([...panels, {availablePanelTypes: availablePanelAliases, id: crypto.randomUUID()}])
   }
 
   function onPanelUpdate(panelData: any) {

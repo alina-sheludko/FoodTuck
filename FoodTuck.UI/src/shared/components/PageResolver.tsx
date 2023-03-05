@@ -19,7 +19,7 @@ const PageResolver = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/node/getByUrl?url=${window.location.href}`)
+    axios.get(`/api/node/getByUrl?url=${window.location.href}`)
     .then(({data}) => {
       return setPageData(data)
     })

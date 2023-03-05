@@ -5,7 +5,9 @@ const { ourTeamPanelConfig } = require('../config/team-member');
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  const nodeData = await addAditionalDataByAlias(await nodeService.getNodeByUrl(req.query.url));
+  let data = await nodeService.getNodeByUrl(req.query.url);
+  data = data.toObject();
+  const nodeData = await addAditionalDataByAlias(data);
   res.send(nodeData);
 });
 
@@ -14,8 +16,7 @@ const createNode = catchAsync(async (req, res) => {
     ...req.body,
   };
   if (req.body.pageAlias !== 'homePage') {
-    const node = await nodeService.getNodeById(req.body.id);
-    const parentNode = await nodeService.getNodeById(node.parentId)
+    const parentNode = await nodeService.getNodeById(req.body.parentId)
     data.url = parentNode.url + req.body.url + '/';
   }
   const node = await nodeService.createNode(data);
@@ -58,7 +59,7 @@ const getCreateFormData = catchAsync(async (req, res) => {
 const getUpdateFormData = catchAsync(async (req, res) => {
   const node = await nodeService.getNodeById(req.params.id);
   var urlSegments = node.url.split('/');
-  var lastUrlSegment = (urlSegments.pop() || urlSegments.pop()) ?? "";  // handle potential trailing slash
+  var lastUrlSegment = (urlSegments.pop() || urlSegments.pop()) || "/";  // handle potential trailing slash
   const data = {
     availablePageTypes: [node.pageAlias],
     formData: {
@@ -77,14 +78,15 @@ const addAditionalDataByAlias = async (data) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
   }
+  data.panels = await Promise.all(
+    data.panels?.map(async (panel) => {
+      if (panel.panelAlias === "ourTeamPanel") {
+        panel = await addOurTeamPanelData(panel);
+      }
 
-  data.panels = data.panels?.map(async (panel) => {
-    if (panel.panelAlias === "ourTeamPanel") {
-      panel = await addOurTeamPanelData(panel);
-    }
-
-    return panel;
-  })
+      return panel;
+    })
+  )
 
   return data;
 }

@@ -16,8 +16,17 @@ interface IProps {
 function PanelManagementForm({ data, onPanelUpdate }: IProps) {
   const [panelAlias, setPanelAlias] = useState<PanelAlias | ''>(data?.panelAlias ?? '');
 
+  function onSubmit(formData: any) {
+    if (formData.panelAlias === PanelAlias.FaqPanel) {
+      formData.items = formData.items.map((item: any) => ({question: item.question, answer: item.answer}))
+    }
+
+    onPanelUpdate(formData);
+  }
+
 	const {
 		register,
+    control,
 		handleSubmit,
 		watch,
 		formState,
@@ -25,7 +34,7 @@ function PanelManagementForm({ data, onPanelUpdate }: IProps) {
 
   return (
     <>
-      <form onSubmit={handleSubmit((formData) => onPanelUpdate({...formData, id: data.id, panelAlias}))}>
+      <form onSubmit={handleSubmit((formData) => onSubmit({...formData, id: data.id, panelAlias}))}>
         {data.availablePanelTypes && (
           <FormControl fullWidth sx={{ mb: 1 }} size="small">
             <InputLabel>Panel alias</InputLabel>
@@ -42,7 +51,11 @@ function PanelManagementForm({ data, onPanelUpdate }: IProps) {
           </FormControl>
         )}
 
-        {panelAlias && <PanelFormsResolver formData={{...data, panelAlias}} registerControl={register} />}
+        {panelAlias && <PanelFormsResolver 
+          formData={{...data, panelAlias}} 
+          registerControl={register} 
+          mainFormControl={control}
+        />}
 
         <Button type="submit" variant="contained">Save</Button>
       </form>

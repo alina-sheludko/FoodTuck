@@ -21,7 +21,7 @@ function App() {
   const [localizations, setLocalizations] = useState({});
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/localizations/getAll')
+    axios.get('/api/localizations/getAll')
     .then(({data}) => {
       return setLocalizations(data);
     })
@@ -30,7 +30,7 @@ function App() {
   const [siteSettings, setSiteSettings] = useState<ISetSettings | null>(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/site-settings/get')
+    axios.get('/api/site-settings/get')
       .then(({data}) => {
         return setSiteSettings(data);
       })

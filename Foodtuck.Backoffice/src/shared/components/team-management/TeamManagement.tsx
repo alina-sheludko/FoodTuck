@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import DeleteIcon from '@mui/icons-material/Delete';
 import TeamMemberManagementForm from "../team-member-management-form/TeamMemberManagementForm";
+import { IPicture } from "../../interfaces/picture";
+
 
 export interface ITeamMember {
+  img: IPicture | null, 
   name: string;
   surname: string;
   jobTitle: string;
-  id: string;
+  id?: string;
 }
 
 function TeamManagement() {
@@ -28,7 +31,7 @@ function TeamManagement() {
 
   function submit() {
     if (validate()) {
-      axios.post('/team-member/update', { teamMembers })
+      axios.post('/api/team-member/update', { teamMembers })
     }
   }
 
@@ -39,7 +42,7 @@ function TeamManagement() {
   }
 
   function addMember() {
-    setTeamMembers([...teamMembers, {name: '', surname: '', jobTitle: '', id: (crypto as any).randomUUID()}])
+    setTeamMembers([...teamMembers, {img: null, name: '', surname: '', jobTitle: ''}])
   }
 
   function onMemberUpdate(memberData: any) {
@@ -77,7 +80,7 @@ function TeamManagement() {
       ))}
 
       <Box sx={{mt: 2}}>
-        <Button variant="contained" onClick={submit}>Update</Button>
+        <Button variant="contained" onClick={submit}>Update members</Button>
         <Button variant="outlined" sx={{ml: 2}} onClick={addMember}>+ Add Team Member</Button>
       </Box>
 

@@ -14,6 +14,11 @@ const teamMemberSchema = mongoose.Schema(
     jobTitle: {
       type: String,
       required: true,
+    },
+    img: {
+      type: Object,
+      required: false,
+      default: null
     }
   },
 );

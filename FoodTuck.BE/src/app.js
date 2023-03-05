@@ -14,6 +14,8 @@ const { authLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
+const sharp = require('sharp');
+const fs = require('fs');
 
 const app = express();
 
@@ -39,6 +41,22 @@ app.use(mongoSanitize());
 app.use(compression());
 
 //serve static files
+app.use('/media', async (req, res, next) => {
+  if (!Object.entries(req.query).length) return next();
+
+  const file = fs.readFileSync(path.join(__dirname, '../media', req.url.split('?')[0]));
+  const destfileName = req.url.split('?')[0].replace(/\..+/, `${req.url.split('?')[1]}.${(await sharp(file).metadata()).format}`);
+
+  if (fs.existsSync(path.join(__dirname, '../media', req.url.split('?')[0]))) res.redirect(destfileName.replace(/^\//, ''));
+
+  sharp(file)
+    .extract({ left: +req.query.l, top: +req.query.t, width: +req.query.cw, height: +req.query.ch })
+    .resize(+req.query.rw, +req.query.rh)
+    .toFile(path.join(__dirname, '../media', destfileName), () => {
+      res.redirect(destfileName.replace(/^\//, ''))
+    })
+})
+app.use('/media', express.static(path.join(__dirname, '../media')))
 app.use('/src/api-ui', express.static(path.join(__dirname, './api-ui')))
 
 // enable cors

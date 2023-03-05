@@ -1,7 +1,7 @@
 import axios from 'axios'; 
 
 export function getTopNavigation() {
-  return axios.get('http://localhost:3000/api/navigation/top')
+  return axios.get('/api/navigation/top')
     .then(function ({data}) {
       return data;
     })

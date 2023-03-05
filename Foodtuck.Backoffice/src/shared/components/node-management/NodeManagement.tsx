@@ -16,7 +16,7 @@ interface IProps {
 export function NodeManagement({ formConfig, onSubmit, isEditMode = false }: IProps) {
   const [tab, setTab] = useState(0);
 
-  return (
+  return formConfig && (
     <>
       <Tabs value={tab} onChange={(e, val) => setTab(val)} sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tab label="Page data" sx={{ml: 'auto'}} />
