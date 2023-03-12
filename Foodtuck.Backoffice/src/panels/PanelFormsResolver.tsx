@@ -1,12 +1,15 @@
 import { PanelAlias } from "../shared/interfaces/panel";
 import OurTeamPanel from "./our-team-panel/OurTeamPanel";
 import FaqPanel from "./faq-panel/FaqPanel";
-import { Control, FieldValues, UseFormRegister } from "react-hook-form";
+import HomeHeroPanel from "./home-hero-panel/HomeHeroPanel";
+import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { Box } from "@mui/material";
 
 interface IProps {
   formData: IPanelFormData;
   registerControl: UseFormRegister<FieldValues>;
   mainFormControl: Control<FieldValues, unknown>;
+  setValue: UseFormSetValue<FieldValues>;
 }
 
 export interface IPanelFormData {
@@ -14,14 +17,16 @@ export interface IPanelFormData {
   [key: string]: any;
 }
 
-function PanelFormsResolver({ formData, registerControl, mainFormControl }: IProps) {
+function PanelFormsResolver({ formData, registerControl, mainFormControl, setValue }: IProps) {
   switch(formData.panelAlias) {
     case PanelAlias.OurTeamPanel:
-      return <OurTeamPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} />
+      return <OurTeamPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.FaqPanel:
-      return <FaqPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} />
+      return <FaqPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
+    case PanelAlias.HomeHeroPanel:
+      return <HomeHeroPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     default:
-      return <p>this panel is not avalialable yet</p>
+      return <Box sx={{mb: 1}}>this panel is not avalialable yet</Box>
   }
 }
 
