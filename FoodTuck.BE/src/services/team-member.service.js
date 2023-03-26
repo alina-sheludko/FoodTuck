@@ -44,7 +44,7 @@ const create = async (member) => {
  * @returns {Promise<TeamMember>}
  */
 const update = async (member) => {
-  const updatedMember = await TeamMember.updateOne({id: member.id}, member);
+  const updatedMember = await TeamMember.updateOne({_id: member.id}, member);
   return updatedMember;
 }
 
