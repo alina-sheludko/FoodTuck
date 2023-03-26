@@ -44,10 +44,13 @@ app.use(compression());
 app.use('/media', async (req, res, next) => {
   if (!Object.entries(req.query).length) return next();
 
-  const file = fs.readFileSync(path.join(__dirname, '../media', req.url.split('?')[0]));
-  const destfileName = req.url.split('?')[0].replace(/\..+/, `${req.url.split('?')[1]}.${(await sharp(file).metadata()).format}`);
+  const filePath = decodeURIComponent(req.url.split('?')[0]);
+  const absoluteFilePath = path.join(__dirname, '../media', decodeURIComponent(filePath));
+  const file = fs.readFileSync(absoluteFilePath);
+  const destfileName = filePath.replace(/\..+/, `${req.url.split('?')[1]}.${(await sharp(file).metadata()).format}`);
 
-  if (fs.existsSync(path.join(__dirname, '../media', req.url.split('?')[0]))) res.redirect(destfileName.replace(/^\//, ''));
+  // if (fs.existsSync(absoluteFilePath)) return res.redirect(destfileName.replace(/^\//, ''));
+  if (!fs.existsSync(absoluteFilePath)) return next();
 
   sharp(file)
     .extract({ left: +req.query.l, top: +req.query.t, width: +req.query.cw, height: +req.query.ch })
