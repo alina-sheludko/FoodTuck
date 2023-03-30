@@ -19,6 +19,8 @@ function PanelManagementForm({ data, onPanelUpdate }: IProps) {
   function onSubmit(formData: any) {
     if (formData.panelAlias === PanelAlias.FaqPanel) {
       formData.items = formData.items.map((item: any) => ({question: item.question, answer: item.answer}))
+    } else if (formData.panelAlias === PanelAlias.IconsExtendedPanel) {
+      formData.items = formData.items.map((item: any) => ({title: item.title, subtitle: item.subtitle, description: item.description, icon: item.icon}))
     }
 
     onPanelUpdate(formData);
