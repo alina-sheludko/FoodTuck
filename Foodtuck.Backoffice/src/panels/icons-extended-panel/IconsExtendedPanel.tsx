@@ -35,8 +35,6 @@ function IconsPanel({ formData, registerControl, mainFormControl, setValue }: IP
   useEffect(() => {
     formData?.items?.forEach(item => setTimeout(() => append(item)));
     registerControl('backgroundImg', {value: formData?.backgroundImg ?? ''});
-
-    setTimeout(() => console.log(mainFormControl), 3000)
   }, [])
   
   function updateIcon(iconUrl: string, i: number) {

@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
 import CropperJs from "cropperjs";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IPicture } from "../../interfaces/picture";
 import FileUploader from "../file-uploader/FileUploader";
+import debounce from "lodash.debounce";
 
 interface ICropperProps { 
   settings: ICropSettings[];
@@ -17,12 +18,21 @@ interface ICropSettings {
 }
 
 function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
-  const [currentImg, setCurrentImg] = useState<string>(data?.src!);
+  const [currentImg, setCurrentImg] = useState<IPicture>(data!);
   const [crops, setCrops] = useState<[string, string, string]>(['', '', '']);
+  const isFirstLoad = useRef<boolean>(true);
   const cropRefs = useRef<CropperJs[]>();
 
+  useEffect(() => {
+    if (!isFirstLoad.current) {
+      onCropsChanged(currentImg);
+    } else {
+      isFirstLoad.current = false;
+    }
+  }, [currentImg])
+
   function onImgUploaded(file: File, url?: string) {
-    setCurrentImg(url!);
+    setCurrentImg({src: url!, sources: Array.from({length: settings.length}), alt: ''});
   }
 
   function setCropRef(imgRef: any, i: number) {
@@ -30,25 +40,22 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
       cropRefs.current = [] as any;
     }
     const cropperOptions: CropperJs.Options<HTMLImageElement> = {aspectRatio: settings[i].width! / settings[i].height!};
-    if (data?.src === currentImg) cropperOptions.data = {
+    if (data?.src === currentImg?.src) cropperOptions.data = {
       x: +data!.sources[i].srcSet.match(/l\=[^\&]+/)![0].replace('l=', ''),
       y: +data!.sources[i].srcSet.match(/t\=[^\&]+/)![0].replace('t=', ''),
       width: +data!.sources[i].srcSet.match(/cw\=[^\&]+/)![0].replace('cw=', ''),
       height: +data!.sources[i].srcSet.match(/ch\=[^\&]+/)![0].replace('ch=', ''),
     };
     cropRefs.current![i] = new CropperJs(imgRef, cropperOptions);
-    imgRef.addEventListener('crop', () => {
-      const croppedImagesPaths = cropRefs.current!.map((ref, i) => {
-        const data = ref.getData();
-        return {
+    imgRef.addEventListener('crop', ({detail: data}) => {
+      const croppedImagesPaths = currentImg.sources.map((source, idx) => {
+        return i !== idx ? source : {
           media: settings[i].media,
           srcSet: currentImg+`?l=${Math.floor(data.x)}&t=${Math.floor(data.y)}&cw=${Math.floor(data.width)}&ch=${Math.floor(data.height)}&rw=${Math.floor(settings[i].width!)}&rh=${Math.floor(settings[i].height!)}`,
         }
       })
-      onCropsChanged({
-        sources: croppedImagesPaths,
-        src: currentImg!
-      });
+
+      setCurrentImg({...currentImg, sources: croppedImagesPaths})
     })
   }
 
@@ -63,7 +70,7 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
           {crops.map((el, i) => (
             <Box key={`${currentImg}${i}`} sx={{mb: 1}}>
               <div>
-                <img src={currentImg} ref={r => r && setCropRef(r, i)} />
+                <img src={currentImg.src} ref={r => r && setCropRef(r, i)} />
               </div>
             </Box>
           ))}
