@@ -29,15 +29,19 @@ interface IItem {
 }
 
 function IconsPanel({ formData, registerControl, mainFormControl, setValue }: IProps) {
+  const [rerenderVal, triggerRerender] = useState(false);
   const { fields: items, append, remove, update } = useFieldArray({ name: 'items', control: mainFormControl });
 
   useEffect(() => {
     formData?.items?.forEach(item => setTimeout(() => append(item)));
     registerControl('backgroundImg', {value: formData?.backgroundImg ?? ''});
+
+    setTimeout(() => console.log(mainFormControl), 3000)
   }, [])
   
   function updateIcon(iconUrl: string, i: number) {
-    setValue(`items.${i}.icon`, {value: iconUrl})
+    setValue(`items.${i}.icon`, iconUrl);
+    triggerRerender(!rerenderVal);
   }
 
   return (
@@ -95,7 +99,7 @@ function IconsPanel({ formData, registerControl, mainFormControl, setValue }: IP
             />
 
             <Box sx={{mb: 1}}>
-              <img src={(mainFormControl._fields.items as any)[i].icon} alt="" />
+              <img src={(mainFormControl._formValues.items as any)[i].icon} alt="" />
             </Box>
 
             <Box sx={{mb: 1}}>
