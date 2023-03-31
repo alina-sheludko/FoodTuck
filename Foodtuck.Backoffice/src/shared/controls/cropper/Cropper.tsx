@@ -42,7 +42,7 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
         const data = ref.getData();
         return {
           media: settings[i].media,
-          srcSet: currentImg+`?l=${Math.ceil(data.x)}&t=${Math.ceil(data.y)}&cw=${Math.ceil(data.width)}&ch=${Math.ceil(data.height)}&rw=${Math.ceil(settings[i].width!)}&rh=${Math.ceil(settings[i].height!)}`,
+          srcSet: currentImg+`?l=${Math.floor(data.x)}&t=${Math.floor(data.y)}&cw=${Math.floor(data.width)}&ch=${Math.floor(data.height)}&rw=${Math.floor(settings[i].width!)}&rh=${Math.floor(settings[i].height!)}`,
         }
       })
       onCropsChanged({
