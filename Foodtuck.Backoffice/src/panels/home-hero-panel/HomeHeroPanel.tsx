@@ -73,6 +73,15 @@ function HomeHeroPanel({ formData, registerControl, mainFormControl, setValue }:
         ]} 
         onCropsChanged={setImg}
       />
+
+      <TextField 
+        label="See more link" 
+        variant="outlined" 
+        size="small"
+        sx={{ mb:1 }}
+        {...registerControl("seeMoreLink", {value: formData?.subtitle ?? ''})}
+        fullWidth
+      />
     </>
   )
 }
