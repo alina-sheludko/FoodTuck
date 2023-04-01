@@ -79,7 +79,7 @@ function HomeHeroPanel({ formData, registerControl, mainFormControl, setValue }:
         variant="outlined" 
         size="small"
         sx={{ mb:1 }}
-        {...registerControl("seeMoreLink", {value: formData?.subtitle ?? ''})}
+        {...registerControl("seeMoreLink", {value: formData?.seeMoreLink ?? ''})}
         fullWidth
       />
     </>
