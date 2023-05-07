@@ -1,0 +1,41 @@
+@import '../../styles/mq.scss';
+
+.imagePanel {
+  margin-bottom: 56px;
+
+  &Title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.17;
+    color: var(--text-title-color);
+    text-align: center;
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+
+  &Description {
+    margin-top: 8px;
+    font-family: var(--font-title);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-info-color);
+
+    @media #{$md} {
+      font-size: 16px;
+    }
+  }
+
+  &Image {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 20px;
+    
+    @media #{$sm} {
+      margin-top: 56px;
+    }
+  }
+}
