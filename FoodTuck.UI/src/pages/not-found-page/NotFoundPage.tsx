@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './NotFoundPage.module.scss';
 import { Localizations } from '../../App';
 import HeroPanel from '../../panels/hero/HeroPanel';
-import Title from '../../shared/helpers/Title';
+import Title from '../../shared/components/panels-title/Title';
 
 const NotFoundPage = () => {
   const localizations = useContext(Localizations);

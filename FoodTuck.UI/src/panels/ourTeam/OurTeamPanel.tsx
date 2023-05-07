@@ -3,9 +3,9 @@ import { useContext } from 'react';
 
 import styles from './OurTeamPanel.module.scss';
 import layoutStyles from "../../styles/layout.module.scss";
-import Picture, { IImage } from '../../shared/components/Picture';
+import Picture, { IImage } from '../../shared/components/picture/Picture';
 import { Localizations } from '../../App';
-import Title from '../../shared/helpers/Title';
+import Title from '../../shared/components/panels-title/Title';
 
 interface IProps {
   data: IPanelData

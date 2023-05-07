@@ -11,7 +11,7 @@ import Youtube from '../../assets/images/footer-youtube.svg';
 import Pinterest from '../../assets/images/footer-pinterest.svg';
 import { Localizations, SiteSettings } from '../../App';
 import layoutStyles from '../../styles/layout.module.scss';
-import Title from "../../shared/helpers/Title";
+import Title from "../../shared/components/panels-title/Title";
 
 const year = new Date().getFullYear();
 
