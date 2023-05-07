@@ -1,0 +1,51 @@
+@import '../../styles/mq.scss';
+
+.ourTeamPage {
+  width: 100%;
+  padding: 0 20px 120px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 12px;
+  width: 100%;
+
+  @media #{$xs} {
+    width: 50%;
+  }
+
+  @media #{$sm} {
+    width: 33%;
+  }
+
+  @media #{$md} {
+    width: 25%;
+  }
+
+  &Img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &Name {
+    margin-top: 9px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--text-title-color);
+  }
+
+  &Job {
+    margin-top: 4px;
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.44;
+    color: var(--text-title-color);
+  }
+}
