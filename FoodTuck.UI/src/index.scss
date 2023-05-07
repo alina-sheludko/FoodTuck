@@ -2,8 +2,8 @@
 @import "./styles/variables";
 
 body {
-  background-color: black;
-  overflow-x: hidden;
+  background-color: var(--main-bg-color);
+  overflow-x: hidden;  
 }
 
 #root {
@@ -14,4 +14,5 @@ body {
 
 footer {
   margin-top: auto;
+  background-color: var(--dark-bg-color);
 }
