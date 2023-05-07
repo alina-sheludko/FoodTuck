@@ -119,9 +119,9 @@ function IconsPanel({ formData, registerControl, mainFormControl, setValue }: IP
       <Cropper 
         data={formData?.backgroundImg}
         settings={[
-          {width: 878, height: 670, media: '(min-width: 1024px)'},
-          {width: 878, height: 670, media: '(min-width: 768px)'},
-          {width: 767, height: 585, media: '(max-width: 767px)'},
+          {width: 1920, height: 470, media: '(min-width: 1024px)'},
+          {width: 1024, height: 470, media: '(min-width: 768px)'},
+          {width: 767, height: 470, media: '(max-width: 767px)'},
         ]} 
         onCropsChanged={val => setValue("backgroundImg", val)} 
       />
