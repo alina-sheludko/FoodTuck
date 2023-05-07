@@ -1,0 +1,9 @@
+.title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--text-reverse-color);
+  
+  &HighlightedText {
+    color: var(--primary-color);
+  }
+}
