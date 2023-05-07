@@ -1,0 +1,111 @@
+@import '../../styles/mq.scss';
+
+.faqPanel {
+  margin-bottom: 120px;
+  
+  &Title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.17;
+    color: var(--text-title-color);
+    text-align: center;
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+
+  &Description {
+    margin-top: 8px;
+    margin-bottom: 56px;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-info-color);
+
+    @media #{$md} {
+      font-size: 16px;
+    }
+  }
+
+  &Wrapper {
+
+    @media #{$sm} {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &Questions {
+    width: 100%;
+  }
+}
+
+.faqItem {
+  margin-top: 24px;
+  padding: 24px;;
+  background: var(--faq-bg-color);
+  border-radius: 8px;
+
+  @media #{$sm} {
+    margin: 0 12px 24px 12px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  
+
+  &Question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+     &Text {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 18px;
+      }
+    }
+
+    &Toggle {
+      border-width: 0;
+      background-color: transparent;
+      cursor: pointer;
+
+      &Plus,  &Minus {
+        display: block;
+      }
+    }
+  }
+
+  &Answer {
+    margin-top: 24px;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-info-color);
+    text-align: justify;
+    overflow: hidden;
+    transition: all .3s;
+    max-height: var(--max-height);
+         
+    @media #{$md} {
+      font-size: 16px;
+    }
+  }
+}
+
+.hidden {
+  margin-top: 0;
+  max-height: 0px;
+}
