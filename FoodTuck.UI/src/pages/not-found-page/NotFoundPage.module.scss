@@ -1,7 +1,5 @@
 .wrapper {
-  background-color: var(--main-bg-color);
-  padding: 120px 20px;
-
+  padding: 0  20px 120px 20px;
 }
 
 .notFound {
@@ -20,12 +18,10 @@
 
   &Title {
     margin-top: 32px;
-    font-family: var(--font-title);
-    font-weight: 700;
     font-size: 32px;
     line-height: 1.25;
     text-align: center;
-    color: var(--text-title-not-found-color);
+    color: var(--text-title-color);
   }
   
   &Info {
@@ -34,7 +30,7 @@
     font-size: 18px;
     line-height: 1.44;
     text-align: center;
-    color: var( --text-info-not-found-color);
+    color: var( --text-info-color);
   }
 
   &Button {

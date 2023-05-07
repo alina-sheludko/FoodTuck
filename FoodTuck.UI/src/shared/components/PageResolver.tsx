@@ -6,6 +6,7 @@ import HomePage from "../../pages/home/HomePage";
 import MenuPage from "../../pages/menu/MenuPage";
 import ContentPage from "../../pages/content/ContentPage";
 import NotFoundPage from "../../pages/not-found-page/NotFoundPage";
+import OurTeamPage from "../../pages/ourTeam/OurTeamPage";
 
 interface IPageData {
   pageAlias: string,
@@ -20,32 +21,36 @@ const PageResolver = () => {
 
   useEffect(() => {
     axios.get(`/api/node/getByUrl?url=${window.location.href}`)
-    .then(({data}) => {
-      return setPageData(data)
-    })
-    .catch(() => setPageData(null))
-    .finally(() => setIsLoading(false))
+      .then(({data}) => {
+        return setPageData(data)
+      })
+      .catch(() => setPageData(null))
+      .finally(() => setIsLoading(false))
+    
+    scroll({ top: 0, behavior: 'smooth' })
   }, [location]);
   
   return (
-    <main>
+    <>
       {!isLoading &&
         (() => {
           switch (pageData?.pageAlias){
             case "homePage":
-              return <HomePage/>
+              return <HomePage pageData={pageData}/>
             case 'menuPage':
-              return <MenuPage/>
+              return <MenuPage pageData={pageData}/>
             case 'contentPage':
-              return <ContentPage/>
+              return <ContentPage pageData={pageData}/>
             case 'notFoundPage':
               return <NotFoundPage/>
+            case 'ourTeamPage':
+              return <OurTeamPage pageData={pageData}/>
             default:
               return <NotFoundPage/>
           }
         })()
       }
-    </main>
+    </>
   )
 }
 

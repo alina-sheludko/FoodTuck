@@ -1,7 +1,21 @@
-const MenuPage = () => {
+import HeroPanel from '../../panels/hero/HeroPanel';
+import Panels from '../../panels/Panels';
+
+interface IProps {
+  pageData: IPageData
+}
+interface IPageData {
+  pageAlias: string,
+  pageTitle: string,
+  panels: any[],
+}
+
+const MenuPage = ({pageData}: IProps) => {
   return (
     <div>
-      <p>menu page</p>
+      <HeroPanel/>
+      
+      <Panels panels={pageData.panels}/>
     </div>
   )
 }
