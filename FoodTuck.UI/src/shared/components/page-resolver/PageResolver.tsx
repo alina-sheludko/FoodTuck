@@ -2,11 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import HomePage from "../../pages/home/HomePage";
-import MenuPage from "../../pages/menu/MenuPage";
-import ContentPage from "../../pages/content/ContentPage";
-import NotFoundPage from "../../pages/not-found-page/NotFoundPage";
-import OurTeamPage from "../../pages/ourTeam/OurTeamPage";
+import HomePage from "../../../pages/home/HomePage";
+import MenuPage from "../../../pages/menu/MenuPage";
+import ContentPage from "../../../pages/content/ContentPage";
+import NotFoundPage from "../../../pages/not-found-page/NotFoundPage";
+import OurTeamPage from "../../../pages/ourTeam/OurTeamPage";
 
 interface IPageData {
   pageAlias: string,
