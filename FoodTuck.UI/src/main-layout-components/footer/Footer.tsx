@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
 
 
 import styles from './Footer.module.scss';
@@ -11,6 +10,10 @@ import Instagram from '../../assets/images/footer-instagram.svg';
 import Youtube from '../../assets/images/footer-youtube.svg';
 import Pinterest from '../../assets/images/footer-pinterest.svg';
 import { Localizations, SiteSettings } from '../../App';
+import layoutStyles from '../../styles/layout.module.scss';
+import Title from "../../shared/helpers/Title";
+
+const year = new Date().getFullYear();
 
 const Footer = () => {
   const footer = {
@@ -57,14 +60,16 @@ const Footer = () => {
   } else {
     return (
       <footer>
-        <div className={styles.footer}>
+        <div className={`${styles.footer} ${layoutStyles.container}`}>
           <div className={styles.support}>
             <div>
-              <p className={styles.supportTitle}  dangerouslySetInnerHTML={{__html: localizations["Footer.Support.Title"]}}></p>
+              <Title title={localizations["Footer.Support.Title2"]} className={`${styles.supportTitle}`}/>
+
               <p className={styles.supportText}>{localizations["Footer.Support.Text"]}</p>
             </div>
             <form className={styles.mail}>
               <input className={styles.mailInput} type="text" placeholder={localizations["Footer.Support.Mail.Input.Placeholder"]}/>
+
               <button className={styles.mailButton}>{localizations["Footer.Support.Mail.Button"]}</button>
             </form>
           </div>
@@ -72,12 +77,17 @@ const Footer = () => {
           <div className={styles.info}>
             <div className={styles.aboutUs}>
               <p className={styles.aboutUsTitle}>{localizations["Footer.Column.AboutUs.Title"]}</p>
+
               <p className={styles.aboutUsDescription}>{footer.aboutUs.description}</p>
+
               <div className={styles.openingHours}>
                 <img className={styles.openingHoursImg} src={Watch} alt="watch" />
+
                 <div>
                   <p className={styles.openingHoursTitle}>Opening Hours</p>
+
                   <p className={styles.openingHoursInfo}>{siteSettings.workingHours}</p>
+
                   <p className={styles.openingHoursInfo}>{siteSettings.nonWorkingHours}</p>
                 </div>
               </div>
@@ -90,6 +100,7 @@ const Footer = () => {
               ))
               }
             </nav>
+
             <nav className={styles.moreInfoLinks}>
               <p className={styles.moreInfoLinksTitle}>{localizations["Footer.Column.Help.Title"]}</p>
               {siteSettings.learnMoreLinks.map((el,i) => (
@@ -97,13 +108,17 @@ const Footer = () => {
               ))
               }
             </nav>
+
             <div className={styles.posts}>
               <p className={styles.postsTitle}>{localizations["Footer.Column.Posts.Title"]}</p>
+
               {footer.posts.map((el, i) => (
                 <div className={styles.postsCard} key={i}>
                   <img className={styles.postsCardImg} src={el.url} alt="img" />
+
                   <div className={styles.postsCardInfo}>
                     <p className={styles.postsCardInfoDate}>{el.date}</p>
+
                     <p className={styles.postsCardInfoTitle}>{el.title}</p>
                   </div>
                 </div>
@@ -115,7 +130,8 @@ const Footer = () => {
 
         <div className={styles.footerPanelWrapper}>
           <div className={styles.footerPanel}>
-            <p className={styles.footerPanelCopyright}>Copyright © 2022 by Ayeman. All Rights Reserved.</p>
+            <p className={styles.footerPanelCopyright}>{localizations["Footer.Copyright"].replace('{year}', `${year}`)}</p>
+
             <nav className={styles.socialLinks}>
               {footer.socialLinks.map((el, i) => (
                 <Link className={styles.socialLinksItem} to={el.url} key={i}>
@@ -127,11 +143,7 @@ const Footer = () => {
         </div>
       </footer>
     )
-  }
-
-  
-  
-  
+  }  
 }
 
 export default Footer;
