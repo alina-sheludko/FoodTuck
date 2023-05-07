@@ -1,5 +1,6 @@
 {
   "Footer.Support.Title": "<span class=highlighted-text>St</span>ill You Need Our Support ?",
+  "Footer.Support.Title2": "Still You Need Our Support ?",
   "Footer.Support.Text": "Don’t wait make a smart & logical quote here. Its pretty easy.",
   "Footer.Support.Mail.Input.Placeholder": "Enter Your Email",
   "Footer.Support.Mail.Button": "Subscribe Now",
@@ -9,7 +10,18 @@
   "Footer.Column.Help.Title": "Help?",
   "Footer.Column.Posts.Title": "Recent Posts",
 
+  "Footer.Copyright": "Copyright © {year} by Ayeman. All Rights Reserved.",
+
   "NotFoundPage.Name": "404",
   "NotFoundPage.Title": "Oops! Look likes something going wrong",
-  "NotFoundPage.Info": "Page Cannot be found! we’ll have it figured out in no time"
+  "NotFoundPage.Info": "Page Cannot be found! we’ll have it figured out in no time",
+  "NotFoundPage.Button": "Go to home",
+
+  "HomeHeroPanel.Button": "See Menu",
+
+  "OurTeamPanel.Button": "See More",
+
+  "VideoPanel.Button": "Play Video",
+
+  "SpotPanel.Button": "Read More"
 }
