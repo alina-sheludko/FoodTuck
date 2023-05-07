@@ -1,14 +1,16 @@
 @import "../../styles/mq.scss";
 
+.wrapper {
+  background-color: var(--dark-bg-color);
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1360px;
-  width: 100%;
-  margin: 29px auto;
-  padding: 0 20px;
+  margin-top: 29px;
+  margin-bottom: 29px;
 
   @media #{$md}{
     display: block;
@@ -39,7 +41,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: var(--dark-bg-color);
     border: none;
     
     @media #{$sm} {
@@ -78,6 +80,7 @@
     height: 24px;
     background-color: var(--dark-bg-color);
     cursor: pointer;
+    border-width: 0;
 
     @media #{$md} {
       display: none;
@@ -91,6 +94,7 @@
     height: 24px;
     background-color: var(--dark-bg-color);
     cursor: pointer;
+    border-width: 0;
 
     @media #{$md} {
       display: none;
@@ -148,6 +152,7 @@
     padding: 0;
     cursor: pointer;
     background-color: var(--dark-bg-color);
+    border-width: 0;
 
   }
 
@@ -158,12 +163,13 @@
     height: 24px;
     background-color: var(--dark-bg-color);
     cursor: pointer;
+    border-width: 0;
   }
 }
 
 .menu {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: -100%;
   width: 100%;
