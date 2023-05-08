@@ -1,15 +1,17 @@
 import { Container, Tab, Tabs } from "@mui/material";
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Navigate } from "react-router-dom";
+import { Navigate, useSearchParams } from "react-router-dom";
 import NodesList from "../../shared/components/nodes-list/NodesList"
 import { mapNodesIntoTree } from "../../shared/helpers/map-into-tree"
 import TeamManagement from "../../shared/components/team-management/TeamManagement";
+import ProductsList from "../../shared/components/products-list/ProductsList";
 
 function HomePage() {
   const [nodes, setNodes] = useState<any>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [tab, setTab] = useState(0);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [tab, setTab] = useState(Number(searchParams.get('tab') ?? 0));
 
   useEffect(() => {
     axios.get('/api/node/getAll')
@@ -18,6 +20,17 @@ function HomePage() {
       })
       .finally(() => setIsLoading(false));
   }, [])
+
+  useEffect(() => {
+    const tabFromParams = searchParams.get('tab');
+    if (tabFromParams && Number(tabFromParams) !== tab) {
+      setTab(Number(tabFromParams))
+    }
+  }, [searchParams])
+
+  useEffect(() => {
+    setSearchParams((val) => ({...val, tab}))
+  }, [tab])
 
   if (isLoading) return <p>loading...</p>
 
@@ -29,7 +42,8 @@ function HomePage() {
     <>
       <Tabs value={tab} onChange={(e, val) => setTab(val)} sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tab label="Pages list" sx={{ml: 'auto'}} />
-        <Tab label="Team members" sx={{mr: 'auto'}} />
+        <Tab label="Team members" />
+        <Tab label="Products" sx={{mr: 'auto'}} />
       </Tabs>
       
       {tab === 0 && (
@@ -41,6 +55,12 @@ function HomePage() {
       {tab === 1 && (
         <Container maxWidth="sm" sx={{mt:2}}>
           <TeamManagement />
+        </Container>
+      )}
+
+      {tab === 2 && (
+        <Container maxWidth="sm" sx={{mt:2}}>
+          <ProductsList />
         </Container>
       )}
     </>

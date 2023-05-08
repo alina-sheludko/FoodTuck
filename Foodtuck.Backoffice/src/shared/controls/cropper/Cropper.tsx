@@ -60,7 +60,7 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
   }
 
   return (
-    <>
+    <div>
       <Box sx={{mb: 1}}>
         <FileUploader uploadUrl="/api/media/upload" onFileUploaded={onImgUploaded} />
       </Box>
@@ -76,7 +76,7 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
           ))}
         </>
       )}
-    </>
+    </div>
   )
 }
 
