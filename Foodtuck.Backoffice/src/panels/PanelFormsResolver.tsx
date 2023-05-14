@@ -6,6 +6,7 @@ import IconsPanel from "./icons-panel/IconsPanel";
 import IconsExtendedPanel from "./icons-extended-panel/IconsExtendedPanel";
 import ImagePanel from "./image-panel/ImagePanel";
 import VideoPanel from "./video-panel/VideoPanel";
+import MenuPanel from "./menu-panel/MenuPanel";
 import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
 import { Box } from "@mui/material";
 
@@ -37,6 +38,8 @@ function PanelFormsResolver({ formData, registerControl, mainFormControl, setVal
       return <ImagePanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.VideoPanel:
       return <VideoPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
+    case PanelAlias.MenuPanel:
+      return <MenuPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     default:
       return <Box sx={{mb: 1}}>this panel is not avalialable yet</Box>
   }

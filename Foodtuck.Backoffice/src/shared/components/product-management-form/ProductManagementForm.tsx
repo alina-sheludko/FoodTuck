@@ -109,6 +109,26 @@ function ProductManagementForm({ formConfig, isEditMode = false, onSubmit }: IPr
           fullWidth
         />
 
+        <TextField 
+          label="Ingridients" 
+          type="text"
+          variant="outlined" 
+          size="small"
+          sx={{ mb:1 }}
+          {...register("ingridients", {value: formConfig?.formData?.ingridients})}
+          fullWidth
+        />
+
+        <TextField 
+          label="Calories" 
+          type="number"
+          variant="outlined" 
+          size="small"
+          sx={{ mb:1 }}
+          {...register("calories", {value: formConfig?.formData?.calories})}
+          fullWidth
+        />
+
         <FormControl fullWidth sx={{ mb: 1 }} size="small">
           <InputLabel>Category</InputLabel>
           <Select

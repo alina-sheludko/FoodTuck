@@ -5,5 +5,6 @@ export enum PanelAlias {
   IconsPanel = "iconsPanel",
   IconsExtendedPanel = "iconsExtendedPanel",
   ImagePanel = "imagePanel",
-  VideoPanel = "videoPanel"
+  VideoPanel = "videoPanel",
+  MenuPanel = "menuPanel",
 }

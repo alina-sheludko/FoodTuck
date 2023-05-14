@@ -25,7 +25,7 @@ const getProductById = catchAsync(async (req, res) => {
 
 const getAll = catchAsync(async (req, res) => {
   const data = await productsService.getAllProducts();
-  res.send({items: data});
+  res.send({items: data ?? []});
 });
 
 const getCategories = catchAsync(async (req, res) => {

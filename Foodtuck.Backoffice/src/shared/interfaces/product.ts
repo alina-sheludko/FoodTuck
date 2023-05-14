@@ -1,4 +1,5 @@
 export interface IProduct {
+  id: string;
   name: string;
   price: number;
   discount: number;
@@ -6,6 +7,8 @@ export interface IProduct {
   images: string[];
   shortDescription?: string;
   description?: string;
+  ingridients?: string;
+  calories?: number;
 }
 
 export interface IProductFormConfig {

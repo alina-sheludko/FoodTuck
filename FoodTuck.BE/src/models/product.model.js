@@ -29,6 +29,12 @@ const productSchema = mongoose.Schema(
       type: String,
       enum: productCategories,
     },
+    ingridients: {
+      type: String,
+    },
+    calories: {
+      type: Number
+    }
   },
   {
     timestamps: true,
