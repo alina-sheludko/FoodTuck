@@ -1,7 +1,7 @@
 import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
 import { IPanelFormData } from "../PanelFormsResolver";
 import { useEffect, useState } from "react";
-import { Box, Checkbox, TextField } from "@mui/material";
+import { Box, Checkbox, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import FileUploader from "../../shared/controls/file-uploader/FileUploader";
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from "axios";
@@ -29,14 +29,18 @@ interface IItem {
   isChecked?: boolean;
 }
 
+const sidesForImage = ['left', 'right'];
+
 function MenuPanel({ formData, registerControl, setValue }: IProps) {
   const [items, setItems] = useState<IItem[]>(formData.items ?? []);
   const [topIcon, setTopIcon] = useState<string>(formData.topIcon ?? '');
   const [allItems, setAllItems] = useState<IItem[]>([]);
+  const [sideForImage, setSideForImage] = useState<string>(formData?.sideForImage ?? '');
 
   useEffect(() => {
     registerControl('items', {value: items});
     registerControl('topIcon', {value: topIcon});
+    registerControl('sideForImage', {value: sideForImage});
 
     axios.get('/api/products/getAll')
       .then(({data}) => {
@@ -54,6 +58,10 @@ function MenuPanel({ formData, registerControl, setValue }: IProps) {
   useEffect(() => {
     setValue('topIcon', topIcon)
   }, [topIcon])
+
+  useEffect(() => {
+    setValue('sideForImage', sideForImage)
+  }, [sideForImage])
 
   function toggleItem(val: boolean, item: IProduct) {
     (item as IItem).isChecked = val;
@@ -91,6 +99,20 @@ function MenuPanel({ formData, registerControl, setValue }: IProps) {
         {...registerControl("title", {value: formData?.title ?? ''})}
         fullWidth
       />
+
+      <FormControl fullWidth sx={{ mb: 1 }} size="small">
+        <InputLabel>Side for image</InputLabel>
+        <Select
+          {...registerControl("sideForImage", {value: formData?.sideForImage ?? '', required: true})}
+          label="Side for image"
+          value={sideForImage}
+          onChange={e => setSideForImage(e.target.value)}
+        >
+          {sidesForImage?.map((side) => (
+            <MenuItem value={side} key={side}>{side}</MenuItem>
+          ))}
+        </Select>
+      </FormControl>
 
       {allItems.map(item => (
         <Box key={item.id}>
