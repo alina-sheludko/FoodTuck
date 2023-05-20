@@ -7,6 +7,7 @@ const productSchema = mongoose.Schema(
     name: {
       type: String,
       required: true,
+      index: true,
     },
     shortDescription: {
       type: String,

@@ -44,6 +44,27 @@ const deleteProduct = async (id) => {
 }
 
 /**
+ * Get products by filter
+ * @param {any} filter
+ * @param {Number} page
+ * @param {Number} pageSize
+ * @param {any} sortBy
+ * @returns {Promise<Product[]>}
+ */
+const getProductsByFilter = async (filter, page, pageSize, sortBy) => {
+  const [items, totalCount] = await Promise.all([
+    Product.find(filter)
+      .sort(sortBy)
+      .limit(pageSize)
+      .skip(page * pageSize)
+    ,
+    Product.countDocuments(filter)
+  ]) 
+
+  return {items, totalCount};
+}
+
+/**
  * Get all products
  * @returns {Promise<Product[]>}
  */
@@ -58,4 +79,5 @@ module.exports = {
   deleteProduct,
   getProductById,
   getAllProducts,
+  getProductsByFilter,
 };

@@ -1,5 +1,5 @@
 const catchAsync = require('../utils/catchAsync');
-const { nodeService, teamMemberService } = require('../services');
+const { nodeService, teamMemberService, productsService } = require('../services');
 const { allowedChildNodes } = require('../config/node');
 const { ourTeamPanelConfig } = require('../config/team-member');
 
@@ -78,6 +78,9 @@ const addAditionalDataByAlias = async (data) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
   }
+  if (data.pageAlias === "menuPage") {
+    data = await addMenuPageData(data);
+  }
   data.panels = await Promise.all(
     data.panels?.map(async (panel) => {
       if (panel.panelAlias === "ourTeamPanel") {
@@ -103,6 +106,11 @@ const addOurTeamPanelData = async (data) => {
   ])
   data.teamMembers = teamMembers;
   data.seeMoreLink = seeMoreLink?.url;
+  return data;
+}
+
+const addMenuPageData = async (data) => {
+  data.products = await productsService.getProductsByFilter({}, 0, 12, {updatedAt: -1});
   return data;
 }
 
