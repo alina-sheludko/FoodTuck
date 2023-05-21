@@ -1,13 +1,15 @@
 const catchAsync = require('../utils/catchAsync');
-const { nodeService, teamMemberService, productsService } = require('../services');
+const { nodeService, teamMemberService } = require('../services');
 const { allowedChildNodes } = require('../config/node');
 const { ourTeamPanelConfig } = require('../config/team-member');
+const productsController = require("./products.controller");
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  let data = await nodeService.getNodeByUrl(req.query.url);
+  const urlWithoutQueryParams = req.query.url.split('?')[0];
+  let data = await nodeService.getNodeByUrl(urlWithoutQueryParams + (/\/$/.test(urlWithoutQueryParams) ? '' : '/'));
   data = data.toObject();
-  const nodeData = await addAditionalDataByAlias(data);
+  const nodeData = await addAditionalDataByAlias(data, req);
   res.send(nodeData);
 });
 
@@ -74,12 +76,12 @@ const getUpdateFormData = catchAsync(async (req, res) => {
   res.send(data)
 })
 
-const addAditionalDataByAlias = async (data) => {
+const addAditionalDataByAlias = async (data, req) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
   }
   if (data.pageAlias === "menuPage") {
-    data = await addMenuPageData(data);
+    data = await addMenuPageData(data, req);
   }
   data.panels = await Promise.all(
     data.panels?.map(async (panel) => {
@@ -109,8 +111,8 @@ const addOurTeamPanelData = async (data) => {
   return data;
 }
 
-const addMenuPageData = async (data) => {
-  data.products = await productsService.getProductsByFilter({}, 0, 12, {updatedAt: -1});
+const addMenuPageData = async (data, req) => {
+  data.products = await productsController.getProductsByFilterHandler(productsController.getFilterFromQuery(req));
   return data;
 }
 

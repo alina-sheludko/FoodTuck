@@ -1,13 +1,17 @@
 const catchAsync = require('../utils/catchAsync');
 const { productsService } = require('../services');
-const { productCategories } = require('../config/product');
+const { productCategories, productsSortValueFromKey } = require('../config/product');
+const url = require('url');
+const querystring = require('querystring');
 
 const createProduct = catchAsync(async (req, res) => {
+  req.body.price -= req.body.discount;
   const data = await productsService.createProduct(req.body);
   res.send(data);
 });
 
 const updateProduct = catchAsync(async (req, res) => {
+  req.body.price -= req.body.discount;
   const data = await productsService.updateProduct(req.body);
   res.send(data);
 });
@@ -24,25 +28,29 @@ const getProductById = catchAsync(async (req, res) => {
 });
 
 const getProductsByFilter = catchAsync(async (req, res) => {
-  const filter = {};
-  let sortBy = {updatedAt: -1};
-  if (req.body) {
-    if (req.body.category) {
-      filter.category = req.body.category;
-    }
-    if (req.body.price) {
-      filter.price = {$gt: req.body.price[0], $lt: req.body.price[1]};
-    }
-    if (req.body.name) {
-      filter.name = new RegExp(req.body.name.split(' ').filter(v => !!v).map(v => `(${v})`).join('|'), 'gi');
-    }
-    if (req.body.sortBy) {
-      sortBy = req.body.sortBy;
-    }
-  };
-  const data = await productsService.getProductsByFilter(filter, req.body.page ?? 0, req.body.pageSize ?? 12, sortBy);
+  const data = await getProductsByFilterHandler(req.body);
   res.send(data);
 })
+
+const getProductsByFilterHandler = async (filter) => {
+  const mappedFilter = {};
+  let sortBy = {updatedAt: -1};
+  if (filter) {
+    if (filter.category) {
+      mappedFilter.category = filter.category;
+    }
+    if (filter.price) {
+      mappedFilter.price = {$gt: filter.price[0], $lt: filter.price[1]};
+    }
+    if (filter.name) {
+      mappedFilter.name = new RegExp(filter.name.split(' ').filter(v => !!v).map(v => `(${v})`).join('|'), 'gi');
+    }
+    if (filter.sortBy) {
+      sortBy = productsSortValueFromKey[filter.sortBy];
+    }
+  };
+  return await productsService.getProductsByFilter(mappedFilter, filter.page ?? 0, filter.pageSize ?? 12, sortBy);
+}
 
 const getAll = catchAsync(async (req, res) => {
   const data = await productsService.getAllProducts();
@@ -53,6 +61,35 @@ const getCategories = catchAsync(async (req, res) => {
   res.send(productCategories);
 });
 
+const getFilterFromQuery = (req) => {
+  let parsedUrl = url.parse(req.query.url);
+  let parsedQs = querystring.parse(parsedUrl.query);
+  const filter = {};
+
+  if (parsedQs) {
+    if (parsedQs.category) {
+      filter.category = parsedQs.category;
+    }
+    if (parsedQs.price) {
+      filter.price = parsedQs.price.split('-').map(n => Number(n));
+    }
+    if (parsedQs.name) {
+      filter.name = decodeURIComponent(parsedQs.name);
+    }
+    if (parsedQs.sortBy) {
+      filter.sortBy = Number(parsedQs.sortBy);
+    }
+    if (parsedQs.pageSize) {
+      filter.pageSize = Number(parsedQs.pageSize);
+    }
+    if (parsedQs.page) {
+      filter.page = Number(parsedQs.page);
+    }
+  };
+
+  return filter;
+}
+
 module.exports = {
   createProduct,
   updateProduct,
@@ -61,4 +98,6 @@ module.exports = {
   getAll,
   getCategories,
   getProductsByFilter,
+  getProductsByFilterHandler,
+  getFilterFromQuery,
 };

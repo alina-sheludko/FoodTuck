@@ -95,7 +95,7 @@ function ProductManagementForm({ formConfig, isEditMode = false, onSubmit }: IPr
           variant="outlined" 
           size="small"
           sx={{ mb:1 }}
-          {...register("price", {value: formConfig?.formData?.price, required: true})}
+          {...register("price", {value: formConfig?.formData ? formConfig.formData.price + formConfig.formData.discount : 0, required: true})}
           fullWidth
         />
 
