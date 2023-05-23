@@ -27,6 +27,7 @@ interface IItem {
   ingridients?: string;
   calories?: number;
   isChecked?: boolean;
+  images?: string[];
 }
 
 const sidesForImage = ['left', 'right'];
@@ -73,6 +74,7 @@ function MenuPanel({ formData, registerControl, setValue }: IProps) {
           ingridients: item.ingridients, 
           calories: item.calories, 
           price: item.price - item.discount,
+          images: item.images,
         })
         : items.filter(i => i.id !== item.id)
     )
