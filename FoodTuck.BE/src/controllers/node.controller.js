@@ -81,8 +81,8 @@ const addAditionalDataByAlias = async (data, req) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
   }
-  if (data.pageAlias === "menuPage") {
-    data = await addMenuPageData(data, req);
+  if (data.pageAlias === "shopOverviewPage") {
+    data = await addShopOverviewPageData(data, req);
   }
   data.panels = await Promise.all(
     data.panels?.map(async (panel) => {
@@ -112,7 +112,7 @@ const addOurTeamPanelData = async (data) => {
   return data;
 }
 
-const addMenuPageData = async (data, req) => {
+const addShopOverviewPageData = async (data, req) => {
   data.products = await productsController.getProductsByFilterHandler(productsController.getFilterFromQuery(req));
   data.categories = productCategories;
   const allProducts = await productsService.getAllProducts({price: -1});
