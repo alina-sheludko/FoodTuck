@@ -1,8 +1,9 @@
 const catchAsync = require('../utils/catchAsync');
-const { nodeService, teamMemberService } = require('../services');
+const { nodeService, teamMemberService, productsService } = require('../services');
 const { allowedChildNodes } = require('../config/node');
 const { ourTeamPanelConfig } = require('../config/team-member');
 const productsController = require("./products.controller");
+const { productCategories } = require("../config/product");
 
 
 const getByUrl = catchAsync(async (req, res) => {
@@ -113,6 +114,12 @@ const addOurTeamPanelData = async (data) => {
 
 const addMenuPageData = async (data, req) => {
   data.products = await productsController.getProductsByFilterHandler(productsController.getFilterFromQuery(req));
+  data.categories = productCategories;
+  const allProducts = await productsService.getAllProducts({price: -1});
+  data.prices = {
+    min: allProducts[0].price,
+    max: allProducts[allProducts.length-1].price,
+  }
   return data;
 }
 

@@ -66,10 +66,11 @@ const getProductsByFilter = async (filter, page, pageSize, sortBy) => {
 
 /**
  * Get all products
+ * @param {any} sorting
  * @returns {Promise<Product[]>}
  */
-const getAllProducts = async () => {
-  const products = await Product.find({});
+const getAllProducts = async (sorting = null) => {
+  const products = await sorting ? Product.find({}).sort(sorting) : Product.find({});
   return products;
 }
 
