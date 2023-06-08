@@ -33,6 +33,9 @@ const nodeSchema = mongoose.Schema(
       type: [],
       default: [],
     },
+    product: {
+      type: Object
+    }
   },
   {
     timestamps: true,

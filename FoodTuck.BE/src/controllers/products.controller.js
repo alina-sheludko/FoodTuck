@@ -1,5 +1,5 @@
 const catchAsync = require('../utils/catchAsync');
-const { productsService } = require('../services');
+const { productsService, nodeService } = require('../services');
 const { productCategories, productsSortValueFromKey } = require('../config/product');
 const url = require('url');
 const querystring = require('querystring');
@@ -7,12 +7,28 @@ const querystring = require('querystring');
 const createProduct = catchAsync(async (req, res) => {
   req.body.price -= req.body.discount;
   const data = await productsService.createProduct(req.body);
+  const shopOverviewPage = await nodeService.getNodeByAlias('shopOverviewPage');
+  await nodeService.createOrUpdateNode({
+    pageAlias: 'shopDetailsPage',
+    product: data, 
+    url: `${'http://placeholder.origin'}${shopOverviewPage.url}${data.id}/`, 
+    parentId: shopOverviewPage.id,
+    pageTitle: data.name,
+  });
   res.send(data);
 });
 
 const updateProduct = catchAsync(async (req, res) => {
   req.body.price -= req.body.discount;
   const data = await productsService.updateProduct(req.body);
+  const shopOverviewPage = await nodeService.getNodeByAlias('shopOverviewPage');
+  await nodeService.createOrUpdateNode({
+    pageAlias: 'shopDetailsPage',
+    product: data, 
+    url: `${'http://placeholder.origin'}${shopOverviewPage.url}${data.id}/`, 
+    parentId: shopOverviewPage.id,
+    pageTitle: data.name,
+  });
   res.send(data);
 });
 

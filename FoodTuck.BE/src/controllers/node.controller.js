@@ -8,9 +8,12 @@ const { productCategories, sortingOptions } = require("../config/product");
 
 const getByUrl = catchAsync(async (req, res) => {
   const urlWithoutQueryParams = req.query.url.split('?')[0];
+
   let data = await nodeService.getNodeByUrl(urlWithoutQueryParams + (/\/$/.test(urlWithoutQueryParams) ? '' : '/'));
   data = data.toObject();
+
   const nodeData = await addAditionalDataByAlias(data, req);
+
   res.send(nodeData);
 });
 
@@ -84,6 +87,9 @@ const addAditionalDataByAlias = async (data, req) => {
   if (data.pageAlias === "shopOverviewPage") {
     data = await addShopOverviewPageData(data, req);
   }
+  if (data.pageAlias === "shopDetailsPage") {
+    data = await addShopDetailsPageData(data, req);
+  }
   data.panels = await Promise.all(
     data.panels?.map(async (panel) => {
       if (panel.panelAlias === "ourTeamPanel") {
@@ -121,6 +127,13 @@ const addShopOverviewPageData = async (data, req) => {
     max: allProducts[allProducts.length-1].price,
   }
   data.sortingOptions = sortingOptions;
+  return data;
+}
+
+const addShopDetailsPageData = async (data, req) => {
+  const segments = new URL(req.query.url).pathname.split('/');
+  const id = segments.pop() || segments.pop();
+  data.product = await productsService.getProductById(id);
   return data;
 }
 

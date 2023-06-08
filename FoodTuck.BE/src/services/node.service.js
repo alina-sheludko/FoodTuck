@@ -1,7 +1,7 @@
 const httpStatus = require('http-status');
 const { UNode } = require('../models');
 const ApiError = require('../utils/ApiError');
-const { v4: uuid } = require("uuid")
+const { v4: uuid, v1, } = require("uuid")
 
 /**
  * Create node
@@ -82,6 +82,22 @@ const getAllNodes = async () => {
   return nodes;
 }
 
+/**
+ * Create or update node by id
+ * @param {ObjectId} nodeId
+ * @param {Object} body
+ * @returns {Promise<UNode>}
+ */
+const createOrUpdateNode = async (body) => {
+  try {
+    const node = await getNodeByUrl(body.url);
+    await updateNode({...body, url: new URL(body.url).pathname, id: node.id});
+  } catch {
+    await createNode({...body, url: new URL(body.url).pathname})
+  }
+  return await getNodeByUrl(body.url);
+};
+
 module.exports = {
   createNode,
   getNodeByUrl,
@@ -90,4 +106,5 @@ module.exports = {
   updateNode,
   deleteNodeRecursive,
   getAllNodes,
+  createOrUpdateNode,
 };
