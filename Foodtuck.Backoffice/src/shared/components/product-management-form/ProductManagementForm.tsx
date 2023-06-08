@@ -110,12 +110,12 @@ function ProductManagementForm({ formConfig, isEditMode = false, onSubmit }: IPr
         />
 
         <TextField 
-          label="Ingridients" 
+          label="Ingredients" 
           type="text"
           variant="outlined" 
           size="small"
           sx={{ mb:1 }}
-          {...register("ingridients", {value: formConfig?.formData?.ingridients})}
+          {...register("ingredients", {value: formConfig?.formData?.ingredients})}
           fullWidth
         />
 

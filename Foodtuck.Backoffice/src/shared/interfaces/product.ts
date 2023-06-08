@@ -7,7 +7,7 @@ export interface IProduct {
   images: string[];
   shortDescription?: string;
   description?: string;
-  ingridients?: string;
+  ingredients?: string;
   calories?: number;
 }
 

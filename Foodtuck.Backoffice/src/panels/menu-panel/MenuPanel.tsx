@@ -24,7 +24,7 @@ interface IItem {
   id: string;
   price: number;
   name: string;
-  ingridients?: string;
+  ingredients?: string;
   calories?: number;
   isChecked?: boolean;
   images?: string[];
@@ -71,7 +71,7 @@ function MenuPanel({ formData, registerControl, setValue }: IProps) {
         ? items.concat({
           id: item.id,
           name: item.name, 
-          ingridients: item.ingridients, 
+          ingredients: item.ingredients, 
           calories: item.calories, 
           price: item.price - item.discount,
           images: item.images,

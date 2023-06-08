@@ -20,8 +20,25 @@ const productsSortValueFromKey = {
   [productsSortKey.sortByPriceAsc]: {price: 1},
 }
 
+const sortingOptions = [
+  {
+    label: 'Newest',
+    value: productsSortKey.sortByLastUpdated
+  },
+  {
+    label: 'Price: High to Low',
+    value: productsSortKey.sortByPriceDesc
+  },
+  {
+    label: 'Price: Low to High',
+    value: productsSortKey.sortByPriceAsc
+  },
+];
+
+
 module.exports = {
   productCategories,
   productsSortKey,
   productsSortValueFromKey,
+  sortingOptions,
 };

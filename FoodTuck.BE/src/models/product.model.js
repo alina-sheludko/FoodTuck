@@ -30,7 +30,7 @@ const productSchema = mongoose.Schema(
       type: String,
       enum: productCategories,
     },
-    ingridients: {
+    ingredients: {
       type: String,
     },
     calories: {

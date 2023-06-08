@@ -68,7 +68,7 @@ const getFilterFromQuery = (req) => {
 
   if (parsedQs) {
     if (parsedQs.category) {
-      filter.category = parsedQs.category;
+      filter.category = parsedQs.category.split(',').map(cat => decodeURIComponent(cat));
     }
     if (parsedQs.price) {
       filter.price = parsedQs.price.split('-').map(n => Number(n));
