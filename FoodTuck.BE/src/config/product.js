@@ -4,8 +4,9 @@ const productCategories = [
   'Chicken Chup',
   'Drink',
   'Pizza',
-  'Thi',
-  'Non Veg',
+  'Vegan',
+  'Fish',
+  'Dessert'
 ];
 
 const productsSortKey = {
