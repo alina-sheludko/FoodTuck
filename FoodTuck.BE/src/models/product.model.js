@@ -35,6 +35,10 @@ const productSchema = mongoose.Schema(
     },
     calories: {
       type: Number
+    },
+    url: {
+      type: String,
+      required: true,
     }
   },
   {

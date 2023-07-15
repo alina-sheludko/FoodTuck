@@ -6,12 +6,12 @@ const querystring = require('querystring');
 
 const createProduct = catchAsync(async (req, res) => {
   req.body.price -= req.body.discount;
-  const data = await productsService.createProduct(req.body);
   const shopOverviewPage = await nodeService.getNodeByAlias('shopOverviewPage');
+  const data = await productsService.createProduct({...req.body, url: `${shopOverviewPage.url}${req.body.id}/`});
   await nodeService.createOrUpdateNode({
     pageAlias: 'shopDetailsPage',
     product: data, 
-    url: `${'http://placeholder.origin'}${shopOverviewPage.url}${data.id}/`, 
+    url: `${'http://placeholder.origin'}${data.url}/`, 
     parentId: shopOverviewPage.id,
     pageTitle: data.name,
   });
@@ -20,12 +20,12 @@ const createProduct = catchAsync(async (req, res) => {
 
 const updateProduct = catchAsync(async (req, res) => {
   req.body.price -= req.body.discount;
-  const data = await productsService.updateProduct(req.body);
   const shopOverviewPage = await nodeService.getNodeByAlias('shopOverviewPage');
+  const data = await productsService.updateProduct({...req.body, url: `${shopOverviewPage.url}${req.body.id}/`});
   await nodeService.createOrUpdateNode({
     pageAlias: 'shopDetailsPage',
     product: data, 
-    url: `${'http://placeholder.origin'}${shopOverviewPage.url}${data.id}/`, 
+    url: `${'http://placeholder.origin'}${data.url}`, 
     parentId: shopOverviewPage.id,
     pageTitle: data.name,
   });
@@ -56,7 +56,7 @@ const getProductsByFilterHandler = async (filter) => {
       mappedFilter.category = filter.category;
     }
     if (filter.price) {
-      mappedFilter.price = {$gt: filter.price[0], $lt: filter.price[1]};
+      mappedFilter.price = {$gte: filter.price[0], $lte: filter.price[1]};
     }
     if (filter.name) {
       mappedFilter.name = new RegExp(filter.name.split(' ').filter(v => !!v).map(v => `(${v})`).join('|'), 'gi');
@@ -65,6 +65,7 @@ const getProductsByFilterHandler = async (filter) => {
       sortBy = productsSortValueFromKey[filter.sortBy];
     }
   };
+
   return await productsService.getProductsByFilter(mappedFilter, filter.page ?? 0, filter.pageSize ?? 12, sortBy);
 }
 
