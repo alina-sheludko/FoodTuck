@@ -119,7 +119,8 @@ const addOurTeamPanelData = async (data) => {
 }
 
 const addShopOverviewPageData = async (data, req) => {
-  data.products = await productsController.getProductsByFilterHandler(productsController.getFilterFromQuery(req));
+  const filter = productsController.getFilterFromQuery(req);
+  data.products = await productsController.getProductsByFilterHandler(filter);
   data.categories = productCategories;
   const allProducts = await productsService.getAllProducts({price: 1});
   data.prices = {
@@ -127,6 +128,7 @@ const addShopOverviewPageData = async (data, req) => {
     max: allProducts[allProducts.length-1].price,
   }
   data.sortingOptions = sortingOptions;
+  data.pageSize = filter.pageSize || 12;
   return data;
 }
 
