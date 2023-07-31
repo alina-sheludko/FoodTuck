@@ -7,7 +7,7 @@ const { productCategories, sortingOptions } = require("../config/product");
 
 
 const getByUrl = catchAsync(async (req, res) => {
-  const urlWithoutQueryParams = req.query.url.split('?')[0];
+  const urlWithoutQueryParams = decodeURIComponent(req.query.url).split('?')[0];
 
   let data = await nodeService.getNodeByUrl(urlWithoutQueryParams + (/\/$/.test(urlWithoutQueryParams) ? '' : '/'));
   data = data.toObject();
@@ -133,7 +133,7 @@ const addShopOverviewPageData = async (data, req) => {
 }
 
 const addShopDetailsPageData = async (data, req) => {
-  const segments = new URL(req.query.url).pathname.split('/');
+  const segments = new URL(decodeURIComponent(req.query.url)).pathname.split('/');
   const id = segments.pop() || segments.pop();
   data.product = await productsService.getProductById(id);
   return data;

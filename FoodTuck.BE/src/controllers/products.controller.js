@@ -33,7 +33,6 @@ const updateProduct = catchAsync(async (req, res) => {
 });
 
 const deleteProduct = catchAsync(async (req, res) => {
-  console.log(req.params)
   await productsService.deleteProduct(req.params.id);
   res.sendStatus(200);
 });
@@ -79,7 +78,7 @@ const getCategories = catchAsync(async (req, res) => {
 });
 
 const getFilterFromQuery = (req) => {
-  let parsedUrl = url.parse(req.query.url);
+  let parsedUrl = url.parse(decodeURIComponent(req.query.url));
   let parsedQs = querystring.parse(parsedUrl.query);
   const filter = {};
 
