@@ -6,3 +6,4 @@ module.exports.nodeService = require('./node.service');
 module.exports.navigationService = require('./navigation.service');
 module.exports.teamMemberService = require('./team-member.service');
 module.exports.productsService = require('./products.service');
+module.exports.orderService = require('./order.service');

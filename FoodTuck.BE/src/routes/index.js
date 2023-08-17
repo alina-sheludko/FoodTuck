@@ -7,6 +7,7 @@ const localizationsRoute = require('./localizations.route');
 const siteSettingsRoute = require('./site-settings.route');
 const teamMemberRoute = require('./team-member.route');
 const productsRoute = require('./products.route');
+const orderRoute = require('./order.route');
 const mediaRoute = require('./media.route');
 const apiUiRoute = require('./api-ui.route');
 const docsRoute = require('./docs.route');
@@ -46,6 +47,10 @@ const defaultRoutes = [
   {
     path: '/products',
     route: productsRoute,
+  },
+  {
+    path: '/orders',
+    route: orderRoute,
   },
   {
     path: '/media',
