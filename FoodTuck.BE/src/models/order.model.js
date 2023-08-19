@@ -33,6 +33,11 @@ const orderSchema = mongoose.Schema(
     products: {
       type: Array,
       required: true,
+    },
+    orderNumber: {
+      type: String,
+      required: true,
+      unique: true,
     }
   },
   {

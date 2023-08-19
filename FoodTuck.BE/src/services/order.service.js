@@ -7,8 +7,8 @@ const Order = require('../models/order.model');
  * @param {Order} data
  * @returns {Promise<Order>}
  */
-const createOrder = (data) => {
-  return Order.create(data)
+const createOrder = async (data) => {
+  return Order.create({...data, orderNumber: `${(await Order.countDocuments()) + 1000000}`})
 }
 
 /**

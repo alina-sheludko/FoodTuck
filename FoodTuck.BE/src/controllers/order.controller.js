@@ -6,12 +6,12 @@ const querystring = require('querystring');
 
 const createOrder = catchAsync(async (req, res) => {
   const data = await orderService.createOrder({...req.body, products: await replaceIdsWithProducts(req.body.products)});
-  res.send(data);
+  res.send({orderId: data.id, orderNumber: data.orderNumber});
 });
 
 const updateOrder = catchAsync(async (req, res) => {
   const data = await orderService.updateOrder(req.body);
-  res.send(data);
+  res.send({orderId: data.id, orderNumber: data.orderNumber});
 });
 
 const deleteOrder = catchAsync(async (req, res) => {
