@@ -14,9 +14,6 @@ const addressSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  company: {
-    type: String,
-  },
   city: {
     type: String,
     required: true,
@@ -32,13 +29,6 @@ const orderSchema = mongoose.Schema(
     address: {
       type: addressSchema,
       required: true,
-    },
-    billingAddress: {
-      type: addressSchema,
-    },
-    isBillingAddressSame: {
-      type: Boolean,
-      required: true
     },
     products: {
       type: Array,
