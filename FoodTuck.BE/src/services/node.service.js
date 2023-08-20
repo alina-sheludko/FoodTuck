@@ -19,7 +19,10 @@ const createNode = (data) => {
  * @returns {Promise<UNode>}
  */
 const getNodeByUrl = async (url) => {
-  const nodeData = await UNode.findOne({url: new URL(url).pathname});
+  let nodeData = await UNode.findOne({url: new URL(url).pathname});
+  if (!nodeData) {
+    nodeData = await UNode.findOne({pageAlias: 'notFoundPage'});
+  }
   if (!nodeData) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Page not found');
   }

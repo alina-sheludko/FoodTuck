@@ -10,7 +10,7 @@ const pageAliases = [
 ];
 
 const allowedChildNodes = {
-  homePage: ['menuPage', 'shopOverviewPage', 'ourTeamPage', 'basketPage', 'contentPage'],
+  homePage: ['menuPage', 'shopOverviewPage', 'ourTeamPage', 'basketPage', 'contentPage', 'notFoundPage'],
   menuPage: [],
   shopOverviewPage: ['shopDetailsPage'],
   ourTeamPage: [],
@@ -19,7 +19,16 @@ const allowedChildNodes = {
   notFoundPage: [],
 };
 
+const cities = [
+  'Kiev',
+  'Dnipro',
+  'Kharkiv',
+  'Lviv',
+  'Odessa'
+]
+
 module.exports = {
   pageAliases,
   allowedChildNodes,
+  cities,
 };

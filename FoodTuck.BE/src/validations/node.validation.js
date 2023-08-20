@@ -15,7 +15,7 @@ const createNode = {
       then: Joi.string().required().pattern(new RegExp('/')),
       otherwise: Joi.string().required().custom(isValidNodeUrl),
     }),
-    addToTopNavigation: true,
+    addToTopNavigation: Joi.boolean().optional(),
     pageTitle: Joi.string().required(),
     parentId: Joi.string().optional(),
   }),

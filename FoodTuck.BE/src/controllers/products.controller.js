@@ -13,7 +13,7 @@ const createProduct = catchAsync(async (req, res) => {
     product: data, 
     url: `${'http://placeholder.origin'}${data.url}/`, 
     parentId: shopOverviewPage.id,
-    pageTitle: data.name,
+    pageTitle: 'Product details',
   });
   res.send(data);
 });
@@ -27,7 +27,7 @@ const updateProduct = catchAsync(async (req, res) => {
     product: data, 
     url: `${'http://placeholder.origin'}${data.url}`, 
     parentId: shopOverviewPage.id,
-    pageTitle: data.name,
+    pageTitle: 'Product details',
   });
   res.send(data);
 });

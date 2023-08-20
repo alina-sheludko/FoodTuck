@@ -1,6 +1,6 @@
 const catchAsync = require('../utils/catchAsync');
 const { nodeService, teamMemberService, productsService } = require('../services');
-const { allowedChildNodes } = require('../config/node');
+const { allowedChildNodes, cities } = require('../config/node');
 const { ourTeamPanelConfig } = require('../config/team-member');
 const productsController = require("./products.controller");
 const { productCategories, sortingOptions } = require("../config/product");
@@ -11,6 +11,20 @@ const getByUrl = catchAsync(async (req, res) => {
 
   let data = await nodeService.getNodeByUrl(urlWithoutQueryParams + (/\/$/.test(urlWithoutQueryParams) ? '' : '/'));
   data = data.toObject();
+
+  if (data.url.length > 1) {
+    const segments = data.url.split('?')[0].split('/').filter((el, i) => !!el || i === 0);
+    if (!segments[segments.length-1]) segments.pop();
+    data.breadcrumbs = (await Promise.all(
+        segments
+          .map(async (segment, i) => {
+            return await nodeService.getNodeByUrl("https://placeholder.domain"+segments.slice(0, segments.length-i).join('/')+"/")
+          })
+      ))
+      .map(pageData => pageData ? {name: pageData.pageTitle, url: pageData.url} : null)
+      .filter(el => !!el && el.pageAlias !== "notFoundPage")
+      .reverse();
+  }
 
   const nodeData = await addAditionalDataByAlias(data, req);
 
@@ -83,12 +97,12 @@ const getUpdateFormData = catchAsync(async (req, res) => {
 const addAditionalDataByAlias = async (data, req) => {
   if (data.pageAlias === "ourTeamPage") {
     data = await addOurTeamPageData(data);
-  }
-  if (data.pageAlias === "shopOverviewPage") {
+  } else if (data.pageAlias === "shopOverviewPage") {
     data = await addShopOverviewPageData(data, req);
-  }
-  if (data.pageAlias === "shopDetailsPage") {
+  } else if (data.pageAlias === "shopDetailsPage") {
     data = await addShopDetailsPageData(data, req);
+  } else if (data.pageAlias === "basketPage") {
+    data = addBasketPageData(data);
   }
   data.panels = await Promise.all(
     data.panels?.map(async (panel) => {
@@ -136,6 +150,11 @@ const addShopDetailsPageData = async (data, req) => {
   const segments = new URL(decodeURIComponent(req.query.url)).pathname.split('/');
   const id = segments.pop() || segments.pop();
   data.product = await productsService.getProductById(id);
+  return data;
+}
+
+const addBasketPageData = (data) => {
+  data.cities = cities;
   return data;
 }
 
