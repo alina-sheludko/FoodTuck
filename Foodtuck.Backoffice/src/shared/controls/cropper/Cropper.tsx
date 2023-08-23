@@ -3,12 +3,13 @@ import CropperJs from "cropperjs";
 import { useEffect, useRef, useState } from "react";
 import { IPicture } from "../../interfaces/picture";
 import FileUploader from "../file-uploader/FileUploader";
-import debounce from "lodash.debounce";
 
 interface ICropperProps { 
   settings: ICropSettings[];
   onCropsChanged: (data: IPicture) => void;
-  data: IPicture | null;
+  data?: IPicture | null;
+  dataAsString?: string;
+  isFilePickerHidden?: boolean;
 }
 
 interface ICropSettings {
@@ -17,21 +18,27 @@ interface ICropSettings {
   height?: number;
 }
 
-function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
+function Cropper({ data, settings, onCropsChanged, dataAsString, isFilePickerHidden }: ICropperProps) {
   const [currentImg, setCurrentImg] = useState<IPicture>(data!);
   const [crops, setCrops] = useState<[string, string, string]>(['', '', '']);
   const isFirstLoad = useRef<boolean>(true);
   const cropRefs = useRef<CropperJs[]>();
 
   useEffect(() => {
+    if (dataAsString) {
+      onImgUploaded(dataAsString);
+    }
+  }, [])
+
+  useEffect(() => {
     if (!isFirstLoad.current) {
-      onCropsChanged(currentImg);
+      currentImg && onCropsChanged(currentImg);
     } else {
       isFirstLoad.current = false;
     }
   }, [currentImg])
 
-  function onImgUploaded(file: File, url?: string) {
+  function onImgUploaded(url: string) {
     setCurrentImg({src: url!, sources: Array.from({length: settings.length}), alt: ''});
   }
 
@@ -61,9 +68,11 @@ function Cropper({ data, settings, onCropsChanged }: ICropperProps) {
 
   return (
     <div>
-      <Box sx={{mb: 1}}>
-        <FileUploader uploadUrl="/api/media/upload" onFileUploaded={onImgUploaded} />
-      </Box>
+      {!isFilePickerHidden && (
+        <Box sx={{mb: 1}}>
+          <FileUploader uploadUrl="/api/media/upload" onFileUploaded={(file, url) => onImgUploaded(url!)} />
+        </Box>
+      )}
 
       {currentImg && (
         <>

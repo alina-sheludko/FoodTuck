@@ -9,6 +9,7 @@ import VideoPanel from "./video-panel/VideoPanel";
 import MenuPanel from "./menu-panel/MenuPanel";
 import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
 import { Box } from "@mui/material";
+import QuickPickPanel from "./quick-pick-panel/QuickPickPanel";
 
 interface IProps {
   formData: IPanelFormData;
@@ -40,6 +41,8 @@ function PanelFormsResolver({ formData, registerControl, mainFormControl, setVal
       return <VideoPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.MenuPanel:
       return <MenuPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
+    case PanelAlias.QuickPickPanel:
+      return <QuickPickPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     default:
       return <Box sx={{mb: 1}}>this panel is not avalialable yet</Box>
   }
