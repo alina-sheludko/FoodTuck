@@ -32,7 +32,7 @@ function Cropper({ data, settings, onCropsChanged, dataAsString, isFilePickerHid
 
   useEffect(() => {
     if (!isFirstLoad.current) {
-      currentImg && onCropsChanged(currentImg);
+      onCropsChanged(currentImg);
     } else {
       isFirstLoad.current = false;
     }
