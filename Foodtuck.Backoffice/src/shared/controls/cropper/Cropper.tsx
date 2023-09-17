@@ -3,6 +3,7 @@ import CropperJs from "cropperjs";
 import { useEffect, useRef, useState } from "react";
 import { IPicture } from "../../interfaces/picture";
 import FileUploader from "../file-uploader/FileUploader";
+import { mapSrcToPicture } from "../../helpers/map-src-to-picture";
 
 interface ICropperProps { 
   settings: ICropSettings[];
@@ -18,17 +19,11 @@ interface ICropSettings {
   height?: number;
 }
 
-function Cropper({ data, settings, onCropsChanged, dataAsString, isFilePickerHidden }: ICropperProps) {
+function Cropper({ data, settings, onCropsChanged, isFilePickerHidden }: ICropperProps) {
   const [currentImg, setCurrentImg] = useState<IPicture>(data!);
   const [crops, setCrops] = useState<[string, string, string]>(['', '', '']);
   const isFirstLoad = useRef<boolean>(true);
   const cropRefs = useRef<CropperJs[]>();
-
-  useEffect(() => {
-    if (dataAsString) {
-      onImgUploaded(dataAsString);
-    }
-  }, [])
 
   useEffect(() => {
     if (!isFirstLoad.current) {
@@ -39,7 +34,7 @@ function Cropper({ data, settings, onCropsChanged, dataAsString, isFilePickerHid
   }, [currentImg])
 
   function onImgUploaded(url: string) {
-    setCurrentImg({src: url!, sources: Array.from({length: settings.length}), alt: ''});
+    setCurrentImg(mapSrcToPicture(url, settings.length));
   }
 
   function setCropRef(imgRef: any, i: number) {
@@ -48,17 +43,17 @@ function Cropper({ data, settings, onCropsChanged, dataAsString, isFilePickerHid
     }
     const cropperOptions: CropperJs.Options<HTMLImageElement> = {aspectRatio: settings[i].width! / settings[i].height!};
     if (data?.src === currentImg?.src) cropperOptions.data = {
-      x: +data!.sources[i].srcSet.match(/l\=[^\&]+/)![0].replace('l=', ''),
-      y: +data!.sources[i].srcSet.match(/t\=[^\&]+/)![0].replace('t=', ''),
-      width: +data!.sources[i].srcSet.match(/cw\=[^\&]+/)![0].replace('cw=', ''),
-      height: +data!.sources[i].srcSet.match(/ch\=[^\&]+/)![0].replace('ch=', ''),
+      x: +data!.sources[i]?.srcSet.match(/l\=[^\&]+/)![0].replace('l=', ''),
+      y: +data!.sources[i]?.srcSet.match(/t\=[^\&]+/)![0].replace('t=', ''),
+      width: +data!.sources[i]?.srcSet.match(/cw\=[^\&]+/)![0].replace('cw=', ''),
+      height: +data!.sources[i]?.srcSet.match(/ch\=[^\&]+/)![0].replace('ch=', ''),
     };
     cropRefs.current![i] = new CropperJs(imgRef, cropperOptions);
     imgRef.addEventListener('crop', ({detail: data}) => {
       const croppedImagesPaths = currentImg.sources.map((source, idx) => {
         return i !== idx ? source : {
           media: settings[i].media,
-          srcSet: currentImg+`?l=${Math.floor(data.x)}&t=${Math.floor(data.y)}&cw=${Math.floor(data.width)}&ch=${Math.floor(data.height)}&rw=${Math.floor(settings[i].width!)}&rh=${Math.floor(settings[i].height!)}`,
+          srcSet: currentImg.src+`?l=${Math.floor(data.x)}&t=${Math.floor(data.y)}&cw=${Math.floor(data.width)}&ch=${Math.floor(data.height)}&rw=${Math.floor(settings[i].width!)}&rh=${Math.floor(settings[i].height!)}`,
         }
       })
 

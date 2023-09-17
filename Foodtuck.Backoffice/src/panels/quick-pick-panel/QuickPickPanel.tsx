@@ -8,6 +8,7 @@ import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-ho
 import { IPanelFormData } from "../PanelFormsResolver";
 import { IProduct } from "../../shared/interfaces/product";
 import { IPicture } from "../../shared/interfaces/picture";
+import { mapSrcToPicture } from "../../shared/helpers/map-src-to-picture";
 
 interface IProps {
   formData: IFormData;
@@ -25,7 +26,7 @@ interface IFormData extends IPanelFormData {
 interface IItem {
   id: string;
   category: string;
-  image: string | IPicture;
+  image: IPicture;
   discount?: number;
 }
 
@@ -39,7 +40,7 @@ function QuickPickPanel({ formData, registerControl, setValue }: IProps) {
   const [items, setItems] = useState<IItem[]>(formData.items ?? []);
   const [allItems, setAllItems] = useState<IMappedProduct[]>([]);
   const croppedImgs = useRef<{itemId: String, image: IPicture}[]>(
-    formData.items?.map(item => ({itemId: item.id, image: item.image as IPicture})) ?? []
+    formData.items?.map(item => ({itemId: item.id, image: item.image})) ?? []
   );
 
   useEffect(() => {
@@ -70,7 +71,7 @@ function QuickPickPanel({ formData, registerControl, setValue }: IProps) {
           id: item.id,
           category: item.category, 
           discount: item.discount,
-          image: item.images?.[0],
+          image: mapSrcToPicture(item.images?.[0], 3),
         })
         : items.filter(i => i.id !== item.id)
     )
@@ -117,8 +118,7 @@ function QuickPickPanel({ formData, registerControl, setValue }: IProps) {
       {items.map((item, i) => (
         <Box key={item.id}>
           <Cropper 
-            data={typeof item.image === 'string' ? null : item.image as IPicture}
-            dataAsString={typeof item.image === 'string' ? item.image : ''}
+            data={item.image as IPicture}
             isFilePickerHidden={true}
             settings={[
               {width: 260, height: 260, media: '(min-width: 1024px)'},
