@@ -7,15 +7,17 @@ import IconsExtendedPanel from "./icons-extended-panel/IconsExtendedPanel";
 import ImagePanel from "./image-panel/ImagePanel";
 import VideoPanel from "./video-panel/VideoPanel";
 import MenuPanel from "./menu-panel/MenuPanel";
-import { Control, FieldValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { Control, FieldValues, FormState, UseFormGetValues, UseFormRegister, UseFormSetValue } from "react-hook-form";
 import { Box } from "@mui/material";
 import QuickPickPanel from "./quick-pick-panel/QuickPickPanel";
+import SpotWithMultipleImagesPanel from "./spot-with-multiple-images-panel/SpotWithMultipleImagesPanel";
 
 interface IProps {
   formData: IPanelFormData;
   registerControl: UseFormRegister<FieldValues>;
   mainFormControl: Control<FieldValues, unknown>;
   setValue: UseFormSetValue<FieldValues>;
+  getValues: UseFormGetValues<FieldValues>;
 }
 
 export interface IPanelFormData {
@@ -23,7 +25,7 @@ export interface IPanelFormData {
   [key: string]: any;
 }
 
-function PanelFormsResolver({ formData, registerControl, mainFormControl, setValue }: IProps) {
+function PanelFormsResolver({ formData, registerControl, mainFormControl, setValue, getValues }: IProps) {
   switch(formData.panelAlias) {
     case PanelAlias.OurTeamPanel:
       return <OurTeamPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
@@ -43,6 +45,8 @@ function PanelFormsResolver({ formData, registerControl, mainFormControl, setVal
       return <MenuPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.QuickPickPanel:
       return <QuickPickPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
+    case PanelAlias.SpotWithMultipleImagesPanel:
+      return <SpotWithMultipleImagesPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} getValues={getValues} />
     default:
       return <Box sx={{mb: 1}}>this panel is not avalialable yet</Box>
   }

@@ -31,7 +31,7 @@ function PanelManagementForm({ data, onPanelUpdate }: IProps) {
     control,
 		handleSubmit,
 		watch,
-		formState,
+		getValues,
     setValue,
 	} = useForm();
 
@@ -59,6 +59,7 @@ function PanelManagementForm({ data, onPanelUpdate }: IProps) {
           registerControl={register} 
           mainFormControl={control}
           setValue={setValue}
+          getValues={getValues}
         />}
 
         <Button type="submit" variant="contained">Save</Button>
