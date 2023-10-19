@@ -1,0 +1,157 @@
+@import '../../styles/mq.scss';
+
+.wrapper {
+  position: relative;
+  
+  &Background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.videoPanel {
+  padding-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+
+  @media #{$sm} {
+    padding-bottom: 70px;
+  }
+
+  @media #{$md} {
+    padding-bottom: 113px;
+  }
+
+  &SubTitle {
+    margin-top: 30px;
+    font-family: var(--font-section-title);
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--primary-color);
+
+    @media #{$sm} {
+      margin-top: 70px;
+    }
+
+    @media #{$md} {
+      margin-top: 112px;
+      font-size: 32px;
+    }
+  }
+
+  &Title {
+    margin-top: 30px;
+    max-width: 705px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.17;
+
+    @media #{$sm} {
+      margin-top: 14px;
+    }
+
+    @media #{$md} {
+      margin-top: 8px;
+      font-size: 48px;
+    }   
+  }
+
+  &Description {
+    margin-top: 15px;
+    max-width: 651px;
+    width: 100%;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-reverse-color);
+
+    @media #{$sm} {
+      margin-top: 23px;
+    }
+
+    @media #{$md} {
+      margin-top: 32px;
+      font-size: 16px;
+    }
+  }
+
+  &Button {
+    margin-top: 20px;
+    background: none;
+    border-width: 0;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-reverse-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media #{$sm} {
+      margin-top: 26px;
+    }
+    
+    @media #{$md} {
+      margin-top: 33px;
+      font-size: 16px;
+    }
+
+    &Img {
+      width: 50px;
+      margin-right: 12px;
+
+      @media #{$md} {
+        width: max-content;
+      }
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  top: 0;
+  right: 0;
+  bottom: -1000px;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  padding-top: 0;
+  
+  &Active {
+    position: fixed;
+    bottom: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+  }
+
+  &Content {
+    position: relative;
+    margin: auto 0;
+    padding-top: 56.25%;
+    width: 100%;
+    background: var(--dark-bg-color);
+    border-radius: 3px;
+    box-shadow: 0 5px 15px var(--dark-bg-color);
+
+   &Video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+   }
+  }
+}
