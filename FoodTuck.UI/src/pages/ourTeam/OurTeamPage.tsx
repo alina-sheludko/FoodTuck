@@ -1,5 +1,4 @@
 import styles from './OurTeamPage.module.scss';
-import HeroPanel from '../../panels/hero/HeroPanel';
 import layoutStyles from '../../styles/layout.module.scss';
 import Picture, { IImage } from '../../shared/components/picture/Picture';
 
@@ -20,9 +19,7 @@ interface ITeamMembers {
 
 const OurTeamPage = ({pageData}: IProps) => {
   return (
-    <> 
-      <HeroPanel/>
-      
+    <>       
       <div className={`${styles.ourTeamPage} ${layoutStyles.container}`}>
         {pageData.teamMembers.map((el, i) => (
           <div className={styles.memberCard} key={i}>

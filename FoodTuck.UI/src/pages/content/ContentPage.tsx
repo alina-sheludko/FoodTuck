@@ -1,4 +1,3 @@
-import HeroPanel from '../../panels/hero/HeroPanel';
 import Panels from '../../panels/Panels';
 
 interface IProps {
@@ -12,8 +11,6 @@ interface IPageData {
 const ContentPage = ({pageData}: IProps) => {
   return (
     <div>
-      <HeroPanel/>
-      
       <Panels panels={pageData.panels}/>
     </div>
   )

@@ -1,5 +1,4 @@
 import styles from './HomePage.module.scss';
-import FoodCategory from '../../panels/food-category/FoodCategory';
 import Panels from '../../panels/Panels';
 
 interface IProps { 

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import styles from './NotFoundPage.module.scss';
 import { Localizations } from '../../App';
-import HeroPanel from '../../panels/hero/HeroPanel';
 import Title from '../../shared/components/panels-title/Title';
 
 const NotFoundPage = () => {
@@ -11,7 +10,6 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <HeroPanel/>
       <div className={styles.wrapper}>
         <div className={styles.notFound}>
           <p className={styles.notFoundName}>{localizations["NotFoundPage.Name"]}</p>
