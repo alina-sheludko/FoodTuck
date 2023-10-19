@@ -88,6 +88,7 @@
   }
 
   &Basket {
+    position: relative;
     margin-left: 8px;
     padding: 0;
     width: 24px;
@@ -95,6 +96,21 @@
     background-color: var(--dark-bg-color);
     cursor: pointer;
     border-width: 0;
+
+    &Counter {
+      position: absolute;
+      top: -7px;
+      right: -6px;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      justify-content: center;
+      color: var(--text-reverse-color);
+      font-size: 10px;
+      line-height: 1.8;
+      border-radius: 50%;
+      background: var(--primary-color);
+    }
 
     @media #{$md} {
       display: none;
@@ -157,6 +173,7 @@
   }
 
   &Basket {
+    position: relative;
     margin-left: 16px;
     padding: 0;
     width: 24px;
@@ -164,6 +181,21 @@
     background-color: var(--dark-bg-color);
     cursor: pointer;
     border-width: 0;
+
+    &Counter {
+      position: absolute;
+      top: -7px;
+      right: -6px;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      justify-content: center;
+      color: var(--text-reverse-color);
+      font-size: 10px;
+      line-height: 1.8;
+      border-radius: 50%;
+      background: var(--primary-color);
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 import { NavLink, useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Transition } from "react-transition-group";
+import {useSelector} from 'react-redux';
 
 import styles from "./Header.module.scss";
 import Logo from "../../assets/images/logo.svg";
@@ -9,6 +10,7 @@ import Handbag from "../../assets/images/handbag.svg";
 import CloseIcon from "../../assets/images/icon_close.svg";
 import { getTopNavigation } from "../../shared/services/navigation";
 import layoutStyles from '../../styles/layout.module.scss';
+
 
 interface IProps {
   navigation: INavigationLink[];
@@ -33,10 +35,11 @@ const transitionStyles: any = {
   exited: { left: "-100%" },
 };
 
-const Header = (props: IProps): JSX.Element => {
+const Header = ({props}: IProps): JSX.Element => {
   const [isBurgerMenuOpened, setIsBurgerMenuOpened] = useState(false);
   const [linksList, setLinksList] = useState<INavigationLink[]>([]);
   const [activeUrl, setActiveUrl] = useState<string>();
+  const store = useSelector(state => state);
 
   useEffect(() => {
     getTopNavigation().then(links => {
@@ -114,9 +117,14 @@ const Header = (props: IProps): JSX.Element => {
               <img src={User} alt="user" />
             </button>
 
-            <button className={styles.headerBasket}>
+            <Link className={styles.headerBasket} to='/basket/'>
               <img src={Handbag} alt="basket" />
-            </button>
+              {store.productsInBasket.length !== 0 && 
+                <span className={styles.headerBasketCounter}>
+                  {store.productsInBasket.reduce((sum, current) => sum + current.value, 0)}
+                </span>
+              }
+            </Link>
           </div>
           
           <div className={styles.navbar}>
@@ -139,9 +147,14 @@ const Header = (props: IProps): JSX.Element => {
                 <img src={User} alt="user" />
               </button>
               
-              <button className={styles.navbarBasket}>
+              <Link className={styles.navbarBasket} to='/basket/'>
                 <img src={Handbag} alt="basket" />
-              </button>
+                {store.productsInBasket.length !== 0 && 
+                  <span className={styles.navbarBasketCounter}>
+                    {store.productsInBasket.reduce((sum, current) => sum + current.value, 0)}
+                  </span>
+                }
+              </Link>
             </div>
           </div>
         </header>
@@ -151,3 +164,4 @@ const Header = (props: IProps): JSX.Element => {
 };
 
 export default Header;
+

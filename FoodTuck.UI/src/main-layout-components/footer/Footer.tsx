@@ -63,7 +63,7 @@ const Footer = () => {
         <div className={`${styles.footer} ${layoutStyles.container}`}>
           <div className={styles.support}>
             <div>
-              <Title title={localizations["Footer.Support.Title2"]} className={`${styles.supportTitle}`}/>
+              <Title title={localizations["Footer.Support.Title"]} className={`${styles.supportTitle}`}/>
 
               <p className={styles.supportText}>{localizations["Footer.Support.Text"]}</p>
             </div>
@@ -95,7 +95,7 @@ const Footer = () => {
 
             <nav className={styles.links}>
               <p className={styles.linksTitle}>{localizations["Footer.Column.UsefulLinks.Title"]}</p>
-              {siteSettings.footerLinks.map((el, i) => (
+              {siteSettings.footerLinks && siteSettings.footerLinks.map((el, i) => (
                 <Link className={styles.linksItem} key={i} to={el.url}>{el.name}</Link>
               ))
               }
@@ -130,13 +130,13 @@ const Footer = () => {
 
         <div className={styles.footerPanelWrapper}>
           <div className={styles.footerPanel}>
-            <p className={styles.footerPanelCopyright}>{localizations["Footer.Copyright"].replace('{year}', `${year}`)}</p>
+            {localizations["Footer.Copyright"] && <p className={styles.footerPanelCopyright}>{localizations["Footer.Copyright"].replace('{year}', `${year}`)}</p>}
 
             <nav className={styles.socialLinks}>
               {footer.socialLinks.map((el, i) => (
-                <Link className={styles.socialLinksItem} to={el.url} key={i}>
+                <a className={styles.socialLinksItem} href={el.url} key={i}>
                   <img className={styles.socialLinksImg} src={el.icon} alt={el.name} />
-                </Link>
+                </a>
               ))}
             </nav>
           </div>

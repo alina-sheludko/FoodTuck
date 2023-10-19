@@ -2,7 +2,6 @@ import { useState, useEffect} from 'react';
 
 import styles from './FAQPanel.module.scss';
 import layoutStyles from '../../styles/layout.module.scss';
-
 import FAQItem from './FAQItem';
 
 interface IProps {
@@ -23,7 +22,6 @@ interface IItem {
 const FAQPanel = ({data}: IProps) => {
   const [questionsCol1, setQuestionsCol1] = useState<IItem[]>([]);
   const [questionsCol2, setQuestionsCol2] = useState<IItem[]>([]);
-
 
   useEffect(() => {
     setQuestionsCol1(data.items.slice(0, data.items.length/2));
