@@ -1,15 +1,14 @@
 {
-  "Footer.Support.Title": "<span class=highlighted-text>St</span>ill You Need Our Support ?",
-  "Footer.Support.Title2": "Still You Need Our Support ?",
+  "General.DollarSign": "${price}",
+
+  "Footer.Support.Title": "Still You Need Our Support ?",
   "Footer.Support.Text": "Don’t wait make a smart & logical quote here. Its pretty easy.",
   "Footer.Support.Mail.Input.Placeholder": "Enter Your Email",
   "Footer.Support.Mail.Button": "Subscribe Now",
-
   "Footer.Column.AboutUs.Title": "About Us",
   "Footer.Column.UsefulLinks.Title": "Useful Links",
   "Footer.Column.Help.Title": "Help?",
   "Footer.Column.Posts.Title": "Recent Posts",
-
   "Footer.Copyright": "Copyright © {year} by Ayeman. All Rights Reserved.",
 
   "NotFoundPage.Name": "404",
@@ -19,9 +18,61 @@
 
   "HomeHeroPanel.Button": "See Menu",
 
+  "FoodCategory.Info.Text": "Save 30%",
+  "FoodCategory.Info.Title": "Fast Food Dish",
+
   "OurTeamPanel.Button": "See More",
 
   "VideoPanel.Button": "Play Video",
 
-  "SpotPanel.Button": "Read More"
+  "SpotPanel.Button": "Read More",
+
+  "ShopList.Info": "Unfortunately, we couldn't find anything matching your filters",
+
+  "ShopPage.Info": "According to the parameters found {count} goods",
+  "ShopPage.InfoOneGood": "According to the parameters found {count} good",
+  "ShopPage.LabelSortBy": "Sort By:",
+
+  "ShopSidebar.Button.Search": "Search Product",
+  "ShopSidebar.TitleCategory": "Category",
+  "ShopSidebar.TitlePrice": "Filter By Price",
+  "ShopSidebar.TitleLatestProducts": "Latest Products",
+
+  "ShopDetails.Button": "Add to cart",
+  "ShopDetails.Category": "Category:",
+  "ShopDetails.Ingredient": "Ingredients:",
+  "ShopDetails.Calories": "Calories:",
+
+  "CheekoutStep.Product": "Product",
+  "CheekoutStep.Price": "Price",
+  "CheekoutStep.Quantity": "Quantity",
+  "CheekoutStep.Total": "Total",
+  "CheekoutStep.Remove": "Remove",
+  "CheekoutStep.CouponCode": "Coupon Code",
+  "CheekoutStep.CouponCodeInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non",
+  "CheekoutStep.Button.Apply": "Apply",
+  "CheekoutStep.Button.ApplyPlaceholder": "Enter here code",
+  "CheekoutStep.TotalBill": "Total Bill",
+  "CheekoutStep.CartSubtotal": "Cart Subtotal",
+  "CheekoutStep.ShippingCharge": "Shipping Charge",
+  "CheekoutStep.TotalAmount": "Total Amount",
+  "CheekoutStep.Button.Shipping": "Proceed to shipping",
+  "CheekoutStep.NotFoundItems": "You don't have any items in the basket yet.",
+
+  "ShippingStep.Title": "Shipping Address",
+  "ShippingStep.FullName": "Full name",
+  "ShippingStep.PhoneNumber": "Phone number",
+  "ShippingStep.Email": "Email",
+  "ShippingStep.City": "City",
+  "ShippingStep.Address": "Address",
+  "ShippingStep.Button.Back": "Back to cart",
+  "ShippingStep.Button.Order": "Order",
+  "ShippingStep.SubTotal": "Sub-total",
+  "ShippingStep.Shipping": "Shipping",
+  "ShippingStep.Discount": "Discount",
+  "ShippingStep.Total": "Total",
+  "ShippingStep.ShippingValue": "Free",
+
+  "SuccessStep.Title": "Your order №{number} accepted!",
+  "SuccessStep.Text": "Our manager will contact you soon."
 }
