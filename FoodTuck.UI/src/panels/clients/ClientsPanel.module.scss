@@ -1,0 +1,186 @@
+@import '../../styles/mq.scss';
+
+.clientsPanel {
+  margin-bottom: 120px;
+  position: relative;
+  
+  &Wrapper {
+    position: absolute;
+    height: 100%;
+    
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(13, 13, 13, 0.85);
+    }
+  }
+  
+  &Background {
+    width: 100%;
+    min-height: 469px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.pictureWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapperIconBox {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 55px;
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media #{$sm} {
+    padding-top: 112px;
+    padding-bottom: 110px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  @media #{$md} {
+    flex-wrap: nowrap;
+  }
+}
+
+.wrapperIconBoxNotBackground {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+  @media #{$sm} {
+    margin-left: -20px;
+    margin-right: -20px;
+    flex-wrap: nowrap;
+  }
+
+  @media #{$md} {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+
+.iconBox {
+  width: 50%;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media #{$sm} {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media #{$md} {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  &NotBackground {
+    width: 100%;
+
+    @media #{$sm} {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media #{$md} {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &Img {
+    max-width: 80px;
+    height: 80px;
+
+    @media #{$sm} {
+      max-width: 100px;
+      height: 100px;
+    }
+
+    @media #{$md} {
+      max-width: 120px;
+      height: 120px;
+    }
+  }
+
+  &SubTitle {
+    margin-top: 16px;
+    font-family: var( --font-title);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    color: var(--text-reverse-color);
+    text-align: center;
+
+    @media #{$sm} {
+      font-size: 24px;
+    }
+
+    @media #{$md} {
+      margin-top: 24px;
+    }
+  }
+
+  &Title {
+    margin-top: 16px;
+    font-family: var( --font-title);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--text-reverse-color);
+    text-align: center;
+
+    @media #{$md} {
+      margin-top: 23px;
+      font-size: 40px;
+    }
+
+    &Dark {
+      margin-top: 24px;
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.33;
+      color: var(--text-title-color);
+      text-align: center;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &Description {
+    margin-top: 16px;
+    font-family: var(--font-title);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--text-info-color);
+
+    @media #{$md} {
+      font-size: 16px;
+    }
+  }
+}
