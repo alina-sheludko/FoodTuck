@@ -9,13 +9,13 @@ interface IProps {
 const Title = ({title, className}: IProps) => {
   const [highlightedTitle, setHighlightedTitle] = useState('');
   const [mainTitle, setMainTitle] = useState('');
-
-  if(title) {
-    useEffect(() => {
-    setHighlightedTitle(title.slice(0, 2));
-    setMainTitle(title.slice(2));
-    }, [title]);
-  }
+  
+  useEffect(() => {
+    if (title) {
+      setHighlightedTitle(title.slice(0, 2));
+      setMainTitle(title.slice(2));
+    }
+  }, [title]);
 
   return (
     <>
