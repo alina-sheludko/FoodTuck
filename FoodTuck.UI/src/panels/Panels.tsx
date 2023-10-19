@@ -5,6 +5,9 @@ import IconsPanel from "./icons/IconsPanel";
 import ClientsPanel from "./clients/ClientsPanel";
 import ImagePanel from "./image/ImagePanel";
 import VideoPanel from './video/VideoPanel';
+import MenuPanel from "./menu/MenuPanel";
+import FoodCategory from "./food-category/FoodCategory";
+import SpotPanel from "./spot/SpotPanel";
 
 interface IProps {
   panels: IPanel[]
@@ -13,7 +16,6 @@ interface IProps {
 interface IPanel {
   panelAlias: string;
 }
-
 const Panels = ({panels}: IProps) => {
   return (
     <main>
@@ -33,7 +35,13 @@ const Panels = ({panels}: IProps) => {
             case 'imagePanel':
               return <ImagePanel data={el} key={el.id}/>
             case 'videoPanel':
-            return <VideoPanel data={el} key={el.id}/>
+              return <VideoPanel data={el} key={el.id}/>
+            case 'menuPanel':
+              return <MenuPanel data={el} key={el.id} />
+            case 'quickPickPanel':
+              return <FoodCategory data={el} key={el.id} />
+            case 'spotWithMultipleImagesPanel': 
+            return <SpotPanel data={el} key={el.id} />
           }
         })        
       }

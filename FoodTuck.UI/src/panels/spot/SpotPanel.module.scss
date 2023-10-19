@@ -5,10 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 1360px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-bottom: 120px;
 
   @media #{$md} {
     flex-direction: row;
@@ -23,7 +20,7 @@
     padding-right: 30px;
   }
 
-  &SectionTitle {
+  &SubTitle {
     font-family: var(--font-section-title);
     font-size: 24px;
     line-height: 1.25;
@@ -39,21 +36,14 @@
   &Title {
     width: 100%;
     margin-top: 8px;
-    font-family: var(--font-title);
-    font-weight: 700;
     font-size: 30px;
     line-height: 1.17;
-    color: var(--text-reverse-color);
     text-align: center;
     
     @media #{$md} {
       max-width: 446px;
       font-size: 48px;
       text-align: left;
-    }
-
-    &HighlightedText {
-      color: var(--primary-color);
     }
   }
 
@@ -87,7 +77,6 @@
   }
 
   &Info {
-    margin-top: 24px;
     font-family: var(--font);
     font-size: 16px;
     line-height: 1.44;
@@ -100,6 +89,7 @@
 
   &Check {
     margin-right: 10px;
+    margin-top: 24px;
   }
 
   &Button {
@@ -131,9 +121,7 @@
   display: none;
    
   @media #{$md} {
-    display: block;
-    // max-width: 660px;
-    // width: 100%;    
+    display: block; 
     width: 50%;
   }
 

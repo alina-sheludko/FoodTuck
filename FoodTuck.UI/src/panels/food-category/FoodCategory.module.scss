@@ -1,0 +1,144 @@
+@import '../../styles/mq.scss';
+
+.foodCategory {
+  margin-bottom: 120px;
+
+  &SectionTitle {
+    font-family: var(--font-section-title);
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--primary-color);
+    text-align: center;
+
+    @media #{$md} {
+      font-size: 32px;
+    }
+  }
+  
+  &Title {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 30px;
+    line-height: 1.17;
+    text-align: center;
+    
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: -8px -8px;
+  margin-top: 56px;
+  flex-wrap: wrap;
+
+  @media #{$sm} {
+    margin: 0 -8px;
+    flex-wrap: nowrap;
+    margin-top: 56px;
+  }
+  
+  @media #{$md} {
+    margin: 0 -16px;
+    margin-top: 56px;
+  }
+}
+
+.foodCards {
+  position: relative;
+  width: 100%;
+  padding: 8px 8px;
+
+  @media #{$xs} {
+    width: 50%;
+  }
+  
+  @media #{$sm} {
+    padding: 0 8px;
+    width: 100%;
+  }
+  
+  @media #{$md} {
+    padding: 0 16px;
+  }
+
+  &:hover {
+    .foodCardsInfo {
+      display: flex;
+    }
+  }
+
+  &:last-child {
+    @media #{$sm} {
+      display: none;
+    }
+
+    @media #{$md} {
+      display: block;
+    }
+  }
+
+  &Info{
+    display: none;
+    position: absolute;
+    top: 37%;
+    max-width: 67%;
+    flex-direction: column;
+    align-items: end;
+
+    @media #{$xs} {
+      max-width: 70%;
+    }
+
+    @media #{$sm} {
+      max-width: 67%;
+    }
+
+    &Text {
+      max-width: 125px;
+      width: 100%;
+      height: 40px;
+      padding-top: 7px;
+      background: var(--main-bg-color);
+      border-radius: 6px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--primary-color);
+      text-align: center;
+
+      @media #{$sm} {
+        font-size: 18px;
+      }
+    }
+
+    &Title {
+      margin-top: 11px;
+      width: 200px;
+      max-width: 100%;
+      height: 46px;
+      padding-top: 9px;
+      background:  var(--primary-color);
+      border-radius: 6px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--text-reverse-color);
+      text-align: center;
+
+      @media #{$sm} {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &Item {
+    width: 100%;
+    height: 100%;
+  }
+}

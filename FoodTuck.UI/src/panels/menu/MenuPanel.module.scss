@@ -1,0 +1,113 @@
+@import '../../styles/mq.scss';
+
+.menuPanel {
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media #{$sm} {
+    flex-direction: row;
+  }
+
+  &Dish {
+    object-fit: cover;
+    width: 100%;
+    margin-top: 24px;
+    
+    @media #{$sm} {
+      width: 40%;
+      margin-top: 0;
+      margin-left: 56px;
+
+      @media #{$md} {
+        margin-left: 112px;
+      }
+    }
+    
+    &Right {
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom: 24px;
+      
+      @media #{$sm} {
+        margin-right: 56px;
+        margin-bottom: 0;
+      }
+
+      @media #{$md} {
+        margin-right: 112px;
+      }
+    }
+  }
+}
+
+.menu {
+  max-width: 760px;
+  width: 100%;     
+
+  &Logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  &Title {
+    margin-top: 8px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.17;
+    color: var(--text-title-color);
+
+    @media #{$md} {
+      font-size: 48px;
+    }
+  }
+
+  &Item {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &Name, &Price {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.33;
+      color:  var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+
+    &Ingredients, &Cal {
+      margin-top: 7px;
+      font-family: var(--font-title);
+      font-size: 14px;
+      line-height: 1.5;
+      color:  var(--text-info-color);
+
+      @media #{$md} {
+        font-size: 16px;
+      }
+    }
+
+    &Cal {
+      margin-top: 8px;
+      color: var(--text-more-info-color);
+    }
+
+    &Price {
+      color: var(--primary-color);
+    }
+
+    &Line {
+      margin-top: 16px;
+      max-width: 760px;
+      width: 100%;
+      border-bottom: 1px dashed var(--line-main-color);
+    }
+  }
+}
