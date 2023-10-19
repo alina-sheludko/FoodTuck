@@ -1,0 +1,263 @@
+@import '../../../styles/mq.module.scss';
+
+.shipping {
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column-reverse;
+  
+  @media #{$md} {
+    flex-direction: row;
+  }
+
+  &Container {
+    width: 100%;
+
+    @media #{$md} {
+      width: 65%;
+    }
+    
+    &Title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--text-title-color);
+    }
+  }
+}
+
+.shippingAddress {
+  display: flex;
+  flex-direction: row;
+
+  &Form {
+    margin-top: 24px;
+    margin-right: 24px;
+    width: 100%;
+    
+    &:last-child {
+      margin-top: 16px;
+      margin-right: 0;
+
+      @media #{$md} {
+        margin-right: 24px;
+      }
+    }
+    
+    &Wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0 -12px;
+
+      @media #{$sm} {
+        flex-direction: row;
+      }
+    }
+
+    &Label, &Input {
+      font-family: var(--font-title);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-title-color);
+    }
+
+    &Label {
+      width: 100%;
+      padding: 0 12px;
+    }
+
+    &LabelHighlighted {
+      padding: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    
+    &Input {
+      padding: 0;
+      padding-left: 15px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      width: 100%;
+      height: 56px;
+      border: 1px solid var(--line-main-color);
+
+      &:focus-visible {
+        outline-color: var(--primary-color);
+      }
+    }
+
+    &Check {
+      margin-top: 5px;
+      font-family: var(--font-title);
+      font-size: 14px;
+      line-height: 1.57;
+      color: var(--text-info-color);
+  
+      &Input {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    &Container {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      &Button {
+        margin-right: 24px;
+        width: 100%;
+        height: 56px;
+        background-color: var(--main-bg-color);
+        border: 1px solid var(--line-main-color);
+        font-family: var(--font-title);
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text-info-color);
+        cursor: pointer;
+        
+        &:hover {
+          border-color: var(--primary-color);
+          border-width: 2px;
+          border-radius: 4px;
+        }
+  
+        &Img {
+          padding-right: 8px;
+          vertical-align: middle;
+        }
+      }
+  
+      &Btn {
+        width: 100%;
+        height: 56px;
+        background-color: var(--primary-color);
+        border-width: 0;
+        font-family: var(--font-title);
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text-reverse-color);
+        cursor: pointer;
+        
+        @media #{$md} {
+          margin-right: 24px;          
+        }
+  
+        &Img {
+          padding-left: 8px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.sideBar {
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  border: 1px solid var(--line-main-color);
+  
+  @media #{$md} {
+    margin-top: 0;
+    width: 35%;
+  }
+
+  &Product {
+    display: flex;
+    flex-direction: row;
+
+    &Info {
+      margin-left: 15px;
+
+      &Name {
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text-title-color);
+      }
+      
+      &Weight, &Price {
+        margin-top: 8px;
+        font-family: var(--font-title);
+        font-size: 14px;
+        line-height: 1.57;
+        color: var(--text-info-color);
+      }
+      
+      &Price {
+        color: var(--primary-color);
+      }
+      
+      &FullPrice {
+        padding-left: 8px;
+        font-family: var(--font-title);
+        font-size: 14px;
+        line-height: 1.57;
+        color: var(--text-info-color);
+      }
+    }
+
+    &Line {
+      margin: 16px 0;
+      width: 100%;
+      height: 1px;
+      border: 1px solid var(--line-main-color);
+    }
+  }
+
+  &Container {
+    display: flex;
+    flex-direction: column;
+    
+    &Row {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+      &:nth-last-child(3) {
+        margin-bottom: 0;
+      }
+
+      &:nth-last-child(1){
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &Title, &Info {
+        font-family: var(--font-title);
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text-info-color);
+
+      }
+      
+      &TitleHighlighted, &InfoHighlighted {
+        font-family: var(--font-title);
+        font-size: 18px;
+        line-height: 1.44;
+        color: var(--text-title-color);
+      }
+
+      &Info {
+        color: var(--text-title-color);
+
+        &Highlighted {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.error{
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}

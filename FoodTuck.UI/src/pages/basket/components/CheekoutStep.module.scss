@@ -1,0 +1,515 @@
+@import '../../../styles/mq.module.scss';
+
+.cheekout {
+  padding-bottom: 120px;
+
+  &NotFound {
+    text-align: center;
+
+    &Title {
+      margin-top: 16px;
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-title-color);
+    }
+  }
+
+  
+  &List {
+    width: 100%;
+    margin-bottom: 120px;
+   
+    &Block {
+      display: none;
+      
+      @media #{$sm} {
+        display: table-row;
+      }
+
+      &Title {
+        height: 30px;
+        font-family: var(--font);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.44;
+        color: var(--text-title-color);
+        text-align: start;
+
+        @media #{$sm} {
+          font-size: 18px;
+        }
+
+        &:first-child {
+          width: 448px;
+        }
+      }
+    }
+  }
+
+  &Wrapper {
+    margin: -12px auto;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$sm} {
+      flex-direction: row;
+      margin: 0 -12px;
+    }
+  }
+}
+
+.cheekoutTable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$sm} {
+    display: table-row;
+    height: 115px;
+  }
+
+  &Product {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+    padding-top: 32px;
+    vertical-align: top;
+    
+    @media #{$sm} {
+      padding-right: 40px; 
+    }
+
+    &Img {
+      display: none;
+
+      @media #{$sm} {
+        display: block;
+      }
+    }
+
+    &BigImg {
+      max-width: 50%;
+      height: auto;
+      object-fit: cover;
+
+      @media #{$sm} {
+        display: none;
+      }
+    }
+
+    &Wrapper {
+      width: 100%;
+      margin-left: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    
+      &Title {
+        font-family:  var(--font);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--text-title-color);
+      }
+      
+      &Button {
+        display: flex;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        @media #{$sm} {
+          display: none;
+        }   
+      }
+    }    
+  }
+
+  &Price {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+    padding-bottom: 18px;
+    
+    @media #{$sm} {
+      display: table-cell;
+      font-size: 16px;
+      padding-top: 32px;
+      padding-right: 40px;
+      padding-bottom: 0;
+    }
+
+
+    &Title {
+      height: 30px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-title-color);
+
+      @media #{$sm} {
+       font-size: 18px;
+       display: none; 
+      }
+    }
+
+    &Value {
+      font-family: var(--font-title);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--primary-color);
+      
+      @media #{$sm} {
+        font-size: 16px;
+      }
+    }
+    
+    &FullValue {
+      padding-left: 8px;
+      font-family: var(--font-title);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-title-color);
+
+      @media #{$sm} {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  &Count {
+    text-align: center;
+    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    
+    @media #{$sm} {
+      display: table-cell; 
+      padding-top: 32px;
+      padding-right: 40px;
+      padding-bottom: 0;
+     }
+
+    &Title {
+      height: 30px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-title-color);
+      text-align: start;
+
+      @media #{$sm} {
+        font-size: 18px;
+        display: none; 
+      }
+    }
+    
+    &Form {
+      width: 110px;
+      height: 32px;
+      border: 1px solid var(--line-main-color);
+      border-radius: 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &Minus, &Plus {
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+      }
+
+      &Number {
+        padding: 0 20px; 
+        font-family: var(--font);
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-title-color);
+
+        @media #{$sm} {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &Total {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+    padding-bottom: 18px;
+    
+    @media #{$sm} {
+      display: table-cell;
+      padding-top: 32px;
+      padding-right: 40px;
+      padding-bottom: 0;
+    }
+
+    &Title {
+      height: 30px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-title-color);
+      text-align: start;
+
+      @media #{$sm} {
+        display: none; 
+      }
+    }
+
+    &Value {
+      font-family: var( --font);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var( --text-title-color);
+
+      @media #{$sm} {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &Remove {
+    display: none;
+    vertical-align: top;
+    padding-top: 32px;
+    padding-left: 20px;
+
+    @media #{$sm} {
+      display: table-cell;
+    }
+
+    &Button {
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  &Line {
+    width: 100%;
+    height: 1px;
+    border: 1px solid var(--line-main-color);
+
+  }
+}
+
+.couponCode {
+  width: 100%;
+  padding: 12px 0;
+
+  @media #{$sm} {
+    padding: 0 12px;
+  }
+
+  &Title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--text-title-color);
+
+    @media #{$sm} {
+      font-size: 32px;
+    }
+  }
+
+  &Block {
+    margin-top: 24px;
+    border: 1px solid var(--line-main-color);
+    border-radius: 6px;
+  
+    &Info {
+      margin-top: 24px;
+      margin-left: 20px;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-more-info-color);
+
+      @media #{$sm} {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.codeForm {
+  margin: 24px 30px 24px 20px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--line-main-color);
+  border-radius: 6px;   
+  height: 62px;
+  
+  &Input {
+    width: 76%;
+    padding: 0 0 0 20px;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-more-info-color);
+    border: none;
+
+    @media #{$sm} {
+      font-size: 16px;
+      width: 81%;
+    }
+
+    &:focus-visible {
+      outline-width: 0;
+    }
+  }
+
+  &Button {
+    width: 25%;
+    padding: 0;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border-width: 0;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.44;
+    color: var(--text-reverse-color);
+    text-align: center;
+    cursor: pointer;
+
+    @media #{$sm} {
+      font-size: 18px;
+      width: 20%;
+    }
+
+    &:focus-visible {
+      outline-width: 0;
+    }
+  }
+}
+
+.TotalBill {
+  width: 100%;
+  padding: 12px 0;
+
+  @media #{$sm} {
+    padding: 0 12px;
+  }
+
+  &Title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--text-title-color);
+
+    @media #{$sm} {
+      font-size: 32px;
+    }
+  }
+
+  &Block {
+    margin-top: 24px;
+    border: 1px solid var(--line-color);
+    border-radius: 6px;
+
+    &Item {
+      margin: 15px 20px 0 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &:first-child {
+        margin-top: 24px;
+      }
+
+      &:last-child {
+        margin-bottom: 24px;
+      }
+
+      &TitleBold {
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.4;
+        color: var(--text-title-color);
+
+        @media #{$sm} {
+          font-size: 20px;
+        }
+      }
+
+      &CostBold {
+        font-family: var(--font);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.44;
+        color: var(--text-title-color);
+
+        @media #{$sm} {
+          font-size: 18px;
+        }
+      }
+
+      &Title, &Cost {
+        font-family: var(--font);
+        font-size: 16px;
+        line-height: 1.44;
+        color: var(--text-info-color);
+
+        @media #{$sm} {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &Line {
+      margin-top: 24px;
+      border: 1px solid var(--line-color);
+    }
+  }
+
+  &Button {
+    margin-top: 24px;
+    width: 100%;
+    height: 64px;
+    border: none;
+    background: var(--primary-color);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.44;
+    color: var(--text-reverse-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @media #{$sm} {
+      font-size: 18px;
+    }
+
+    &:focus-visible {
+      outline-width: 0;
+    }
+
+    &Img {
+      margin-left: 8px;
+    }
+  }
+}

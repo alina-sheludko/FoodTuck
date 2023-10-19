@@ -1,0 +1,22 @@
+.successStep {
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  &Title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--text-title-color);
+  }
+
+  &Text {
+    margin-top: 24px;
+    font-family: var(--font);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4%; 
+    color: var(--text-info-color);
+  }
+}
