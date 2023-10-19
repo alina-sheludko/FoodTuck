@@ -1,0 +1,134 @@
+@import '../../styles/mq.scss';
+
+.homeHeroPanel {
+  padding-top: 37px;
+  margin-bottom: 82px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  @media #{$sm} {
+    position: initial;
+  }
+  
+  &Info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgb(0,0,0,0.5);
+    height: 100%;
+    padding: 0 20px;  
+
+    @media #{$sm} {
+      max-width: 472px;
+      width: 100%;
+      position: inherit;
+      align-items: initial;
+      height: auto;
+      z-index: 0;
+      background: none;
+      padding: 0;
+    }
+
+    &SubTitle {
+      font-family: var(--font-section-title);
+      font-size: 24px;
+      line-height: 1.25;
+      color: var(--primary-color);
+      text-align: center;
+
+      @media #{$sm} {
+        text-align: left;
+      }
+
+      @media #{$md} {
+        font-size: 32px;
+      }
+    }
+
+    &Title {
+      margin-top: 8px;
+      font-size: 30px;
+      line-height: 1.13;
+      text-align: center;
+
+      @media #{$xs} {
+        font-size: 38px;
+      }
+
+      @media #{$sm} {
+        text-align: left;
+      }
+
+      @media #{$md} {
+        font-size: 60px;
+      }
+    }
+
+    &Description {
+      margin-top: 15px;
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-reverse-color);
+      text-align: center;
+
+      @media #{$xs} {
+        margin-top: 32px;
+      }
+      
+      @media #{$sm} {
+        max-width: 418px;
+        width: 100%;
+        text-align: left;
+      }
+
+      @media #{$md} {
+        font-size: 16px;
+      }
+    }
+
+    &Button {
+      max-width: 155px;
+      width: 100%;
+      padding: 19px 0;
+      margin-top: 32px;
+      background: var(--primary-color);
+      border-radius: 30px;   
+      border-width: 0; 
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-reverse-color);
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media #{$xs} {
+        padding: 20px 0;
+      }
+
+      @media #{$sm} {
+        max-width: 190px;
+      }
+
+      @media #{$md} {
+        font-size: 16px;
+      }
+    }
+  } 
+
+  &Picture {
+    width: 100%;
+
+    &Img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

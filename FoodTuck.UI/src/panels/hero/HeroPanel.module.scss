@@ -1,0 +1,57 @@
+@import '../../styles/mq.scss';
+
+.heroPanel {
+  height: 320px;
+  position: relative;
+  margin-bottom: 120px;
+
+  &Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Info {
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.17;
+      color: var(--text-reverse-color);
+
+      @media #{$md} {
+        font-size: 48px;
+      }
+    }
+  }
+  
+  .routes {
+    margin-top: 20px;
+
+    &Item, &ItemHighlightedText  {
+      margin: 0 7px;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.4;
+      color:  var(--text-reverse-color);
+
+      @media #{$sm} {
+        font-size: 20px;
+      }
+
+      &HighlightedText {
+        margin-right: 0;
+        margin-left: 7px;
+        color: var(--primary-color);
+      }
+    }
+  }
+}
