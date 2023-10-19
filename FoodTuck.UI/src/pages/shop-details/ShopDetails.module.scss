@@ -1,0 +1,275 @@
+@import '../../styles/mq.scss';
+
+.shopDetails {
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  &Description {
+    margin-top: 56px;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-more-info-color);
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$md} {
+    flex-direction: row;
+  }
+
+  &ImagesContent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 24px;
+    
+    @media #{$sm} {
+      flex-direction: row;
+      margin-bottom: 56px;
+    }
+    
+    @media #{$md} {
+      margin-right: 55px;
+      margin-bottom: 0;
+      max-width: 53%;
+      flex-direction: column-reverse;
+    }
+
+    @media #{$lg} {
+      flex-direction: row;
+    }
+
+    &Minor {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      
+      @media #{$sm} {
+        margin-right: 24px;
+        flex-direction: column;
+        overflow-x: initial;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: initial;
+      }
+
+      @media #{$lg} {
+        flex-direction: column;
+        margin-right: 24px;
+        overflow-x: initial;
+      }
+
+      &Img {
+        margin-bottom: 24px;
+        margin-right: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        flex: 0 0 auto;
+
+        @media #{$sm} {
+          margin-right: 0;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        @media #{$md} {
+          margin-right: 24px;
+          flex: 0 0 auto;
+        }
+
+        @media #{$lg} {
+          margin-right: 0;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }   
+        
+        &Active  {
+          border: 2px solid var(--primary-color);  
+        }
+      }
+    }
+
+    &MainImg {
+      width: 100%;
+      max-height: 596px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 24px;
+
+      @media #{$sm} {
+        margin-bottom: 0;
+      }
+      
+      @media #{$md} {
+        margin-bottom: 24px;
+      }
+
+      @media #{$lg} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &TextContent {
+    width: 100%;
+    
+    @media #{$md} {
+      max-width: 47%;
+    }
+
+    &Title {
+      font-family: var(--font-title);
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.17;
+      color: var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 48px;
+      }
+    }
+
+    &ShortDescription {
+      margin-top: 24px;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-info-color);
+
+      @media #{$md} {
+        font-size: 18px;
+      }
+    }
+
+    &Line {
+      margin-top: 32px;
+      width: 100%;
+      height: 1px;
+      background: var(--line-main-color);
+
+      &Last {
+        display: block;
+        margin-top: 32px;
+        width: 100%;
+        height: 1px;
+        background: var(--line-main-color);
+      
+        @media #{$md} {
+          display: none;
+        }
+      }
+    }
+
+    &Price {
+      margin-top: 32px;
+      font-family: var(--font-title);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 32px;
+      }
+    }
+
+    &Info {
+      margin-top: 8px;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.44;
+      color: var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 18px;
+      }
+      
+      &:first-child{
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.purchaseProduct {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-bottom: 2px;
+
+  &Count {
+    display: flex;
+    flex-direction: row;
+    max-width: 181px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--text-more-info-color);
+    background-color: var(--main-bg-color);
+    
+    &Button {
+      width: 33.3%;
+      height: 100%;
+      border-width: 0;
+      background-color: var(--main-bg-color);
+      cursor: pointer;
+    }
+
+    &Text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 33.3%;
+      height: 100%;
+      border-left: 1px solid var(--text-more-info-color);
+      border-right: 1px solid var(--text-more-info-color);
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text-title-color);
+
+      @media #{$md} {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &Handbag {
+    margin-left: 16px;
+    padding-left: 20px;
+    max-width: 191px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-width: 0;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.44;
+    text-align: left;
+    color: var(--text-reverse-color); 
+    cursor: pointer;
+
+    @media #{$md} {
+      font-size: 18px;
+    }
+
+    &Img {
+      margin-right: 8px;
+      vertical-align: text-top;
+    }
+  }
+}
