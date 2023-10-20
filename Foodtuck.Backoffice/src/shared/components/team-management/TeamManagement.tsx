@@ -71,7 +71,7 @@ function TeamManagement() {
               {teamMember.surname && teamMember.name ? `${teamMember.surname} ${teamMember.name}` : 'New team member'}
             </Typography>
 
-            <DeleteIcon sx={{ml: 'auto'}} onClick={(e) => onMemberDelete(e as any, teamMember.id)} />
+            <DeleteIcon sx={{ml: 'auto'}} onClick={(e) => onMemberDelete(e as any, teamMember.id!)} />
           </AccordionSummary>
           <AccordionDetails>
             <TeamMemberManagementForm member={teamMember} onMemberUpdate={onMemberUpdate} />

@@ -15,7 +15,7 @@ interface IProps {
 interface IFormData extends IPanelFormData {
   title?: string;
   subtitle?: string;
-  items: string[];
+  items?: string[];
 }
 
 function ImagePanel({ formData, registerControl, setValue }: IProps) {

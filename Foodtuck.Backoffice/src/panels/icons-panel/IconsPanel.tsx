@@ -19,7 +19,7 @@ interface IProps {
 interface IFormData extends IPanelFormData {
   title?: string;
   subtitle?: string;
-  items: string[];
+  items?: string[];
 }
 
 function IconsPanel({ formData, registerControl, setValue }: IProps) {

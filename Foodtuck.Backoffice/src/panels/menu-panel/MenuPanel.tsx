@@ -118,7 +118,7 @@ function MenuPanel({ formData, registerControl, setValue }: IProps) {
 
       {allItems.map(item => (
         <Box key={item.id}>
-          <Checkbox checked={item.isChecked} onChange={(e) => toggleItem(e.target.checked, item)} />
+          <Checkbox checked={item.isChecked} onChange={(e) => toggleItem(e.target.checked, item as any)} />
           {item.name}
         </Box>
       ))}

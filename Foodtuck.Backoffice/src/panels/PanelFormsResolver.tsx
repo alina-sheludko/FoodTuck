@@ -30,7 +30,7 @@ function PanelFormsResolver({ formData, registerControl, mainFormControl, setVal
     case PanelAlias.OurTeamPanel:
       return <OurTeamPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.FaqPanel:
-      return <FaqPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
+      return <FaqPanel formData={formData as any} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.HomeHeroPanel:
       return <HomeHeroPanel formData={formData} registerControl={registerControl} mainFormControl={mainFormControl} setValue={setValue} />
     case PanelAlias.IconsPanel:
