@@ -27,7 +27,7 @@ const updateProduct = async (updateBody) => {
  * @returns {Promise<Product>}
  */
 const getProductById = async (id) => {
-  const product = await Product.findOne({ _id: id });
+  const product = await Product.findOne({ id: id });
   if (!product) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Product not found');
   }
