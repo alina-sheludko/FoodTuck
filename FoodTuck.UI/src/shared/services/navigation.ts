@@ -1,7 +1,7 @@
 import axios from 'axios'; 
 
 export function getTopNavigation() {
-  return axios.get('/api/navigation/top')
+  return axios.get(import.meta.env.VITE_API + '/api/navigation/top')
     .then(function ({data}) {
       return data;
     })

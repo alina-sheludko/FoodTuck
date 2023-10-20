@@ -27,7 +27,7 @@ const PageResolver = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    axios.get(`/api/node/getByUrl?url=${encodeURIComponent(window.location.href)}`)
+    axios.get(import.meta.env.VITE_API + `/api/node/getByUrl?url=${encodeURIComponent(window.location.href)}`)
       .then(({data}) => {
         return setPageData(data)
       })
