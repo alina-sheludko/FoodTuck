@@ -47,14 +47,15 @@ app.use('/media', async (req, res, next) => {
   const filePath = decodeURIComponent(req.url.split('?')[0]);
   const absoluteFilePath = path.join(__dirname, '../media', decodeURIComponent(filePath));
   const file = fs.readFileSync(absoluteFilePath);
-  const destfileName = filePath.replace(/\..+/, `${req.url.split('?')[1]}.${(await sharp(file).metadata()).format}`);
-
+  const fileMetaData = await sharp(file).metadata();
+  const destfileName = filePath.replace(/\..+/, `${req.url.split('?')[1]}.${fileMetaData.format}`);
   // if (fs.existsSync(absoluteFilePath)) return res.redirect(destfileName.replace(/^\//, ''));
   if (!fs.existsSync(absoluteFilePath)) return next();
-
+  const cropWidth = +req.query.cw || fileMetaData.width;
+  const cropHeight = +req.query.ch || fileMetaData.height;
   sharp(file)
-    .extract({ left: +req.query.l, top: +req.query.t, width: +req.query.cw, height: +req.query.ch })
-    .resize(+req.query.rw, +req.query.rh)
+    .extract({ left: +req.query.l || 0, top: +req.query.t || 0, width: cropWidth, height: cropHeight })
+    .resize(+req.query.rw || cropWidth, +req.query.rh || cropHeight)
     .toFile(path.join(__dirname, '../media', destfileName), () => {
       res.redirect(destfileName.replace(/^\//, ''))
     })
