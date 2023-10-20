@@ -106,7 +106,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
         const productId = {
           id: el.id
         }
-        return axios.post('/api/products/getById', productId).then(res => res.data);
+        return axios.post(import.meta.env.VITE_API + '/api/products/getById', productId).then(res => res.data);
       })
     ).then((data) => {
       setProducts(data)
@@ -178,7 +178,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
                 }
                 onChangeState('successStep');
                 dispatch(deleteAllItems())
-                axios.post('/api/orders/create', order)
+                axios.post(import.meta.env.VITE_API + '/api/orders/create', order)
                 .then(({data}) => {
                   return onChangeOrderNumber(data.orderNumber);
                 })

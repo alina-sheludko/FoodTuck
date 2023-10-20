@@ -21,7 +21,7 @@ function App() {
   const [localizations, setLocalizations] = useState({});
 
   useEffect(() => {
-    axios.get('/api/localizations/getAll')
+    axios.get(import.meta.env.VITE_API + '/api/localizations/getAll')
       .then(({data}) => {
         return setLocalizations(data);
       })
@@ -30,7 +30,7 @@ function App() {
   const [siteSettings, setSiteSettings] = useState<ISetSettings | null>(null);
   
   useEffect(() => {
-    axios.get('/api/site-settings/get')
+    axios.get(import.meta.env.VITE_API + '/api/site-settings/get')
       .then(({data}) => {
         return setSiteSettings(data);
       })

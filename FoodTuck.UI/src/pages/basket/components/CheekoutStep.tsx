@@ -24,7 +24,7 @@ const CheekoutStep = ({onChangeState}) => {
         const productId = {
           id: el.id
         }
-        return axios.post('/api/products/getById', productId).then(res => res.data);
+        return axios.post(import.meta.env.VITE_API + '/api/products/getById', productId).then(res => res.data);
       })
     ).then((data) => {
       setProducts(data)
