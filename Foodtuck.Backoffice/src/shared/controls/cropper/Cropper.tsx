@@ -49,7 +49,7 @@ function Cropper({ data, settings, onCropsChanged, isFilePickerHidden }: ICroppe
       height: +data!.sources[i]?.srcSet.match(/ch\=[^\&]+/)![0].replace('ch=', ''),
     };
     cropRefs.current![i] = new CropperJs(imgRef, cropperOptions);
-    imgRef.addEventListener('crop', ({detail: data}) => {
+    imgRef.addEventListener('crop', ({detail: data} : any) => {
       const croppedImagesPaths = currentImg.sources.map((source, idx) => {
         return i !== idx ? source : {
           media: settings[i].media,

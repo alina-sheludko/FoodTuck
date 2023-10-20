@@ -51,7 +51,7 @@ function PanelsManagement({ panels: panelsInitial, onSubmit }: IProps) {
     setPanels(newPanels);
   }
 
-  function changeOrder(e: MouseEvent, panelId: string, diffWithCurrentIndex: number) {
+  function changeOrder(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, panelId: string, diffWithCurrentIndex: number) {
     e.preventDefault();
     e.stopPropagation();
 

@@ -1,10 +1,12 @@
 import { TextField } from "@mui/material";
-import { useForm } from "react-hook-form";
+import { Control, FieldValues, UseFormSetValue, useForm } from "react-hook-form";
 import { IPanelFormData } from "../PanelFormsResolver";
 
 interface IProps {
   formData: IFormData;
   registerControl: Function;
+  mainFormControl: Control<FieldValues, unknown>;
+  setValue: UseFormSetValue<FieldValues>;
 }
 
 interface IFormData extends IPanelFormData {

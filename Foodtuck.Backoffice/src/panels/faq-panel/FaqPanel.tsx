@@ -1,19 +1,20 @@
 import { Box, Button, TextareaAutosize, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Control, FieldValues, useFieldArray, useForm, UseFormRegister } from "react-hook-form";
+import { Control, FieldValues, useFieldArray, useForm, UseFormRegister, UseFormSetValue } from "react-hook-form";
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
 interface IProps {
   formData: IFormData;
   registerControl: UseFormRegister<FieldValues>;
-  mainFormControl: Control<FieldValues, unknown>;
+  mainFormControl?: Control<FieldValues, unknown>;
+  setValue: UseFormSetValue<FieldValues>;
 }
 
 interface IFormData {
-  title: string;
-  description: string;
-  items: IItem[];
+  title?: string;
+  description?: string;
+  items?: IItem[];
 }
 
 interface IItem {

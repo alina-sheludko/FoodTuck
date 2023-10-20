@@ -4,7 +4,7 @@ import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui
 import DeleteIcon from '@mui/icons-material/Delete';
 
 interface IProps {
-  products: IProduct[];
+  products?: IProduct[];
 }
 
 interface IProduct {

@@ -17,8 +17,8 @@ interface IProps {
 }
 
 interface IFormData extends IPanelFormData {
-  items: IItem[];
-  backgroundImg: IPicture;
+  items?: IItem[];
+  backgroundImg?: IPicture;
 }
 
 interface IItem {
