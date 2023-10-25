@@ -17,38 +17,17 @@ const year = new Date().getFullYear();
 
 const Footer = () => {
   const footer = {
-    footerLinks: [
-      { url: "https://google.com", name: "About" },
-      { url: "https://google.com", name: "News" },
-      { url: "https://google.com", name: "Partners" },
-      { url: "https://google.com", name: "Team" },
-      { url: "https://google.com", name: "Menu" },
-      { url: "https://google.com", name: "Contacts" }
-    ],
-    moreInfoLinks: [
-      { url: "https://google.com", name: "FAQ" },
-      { url: "https://google.com", name: "Term & conditions" },
-      { url: "https://google.com", name: "Reporting" },
-      { url: "https://google.com", name: "Documentation" },
-      { url: "https://google.com", name: "Support Policy" },
-      { url: "https://google.com", name: "Privacy" }
-    ],
     posts: [
-      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2022' },
-      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2022' },
-      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2022' },
+      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2023' },
+      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2023' },
+      { url: "https://picsum.photos/50/50", title: "Keep Your Business", date: '20 Feb 2023' },
     ],
-    aboutUs: {
-      description: 'orporate clients and leisure travelers has been relying on Groundlink for dependab safe, and professional chauffeured car service in major cities across World.',
-      openingHours: 'Mon - Sat(8.00 - 6.00)',
-      closed: 'Sunday - Closed'
-    },
     socialLinks: [
-      { url: "https://google.com", icon: `${Facebook}`, name: 'Facebook'},
-      { url: "https://google.com", icon: `${Twitter}`, name: 'Twitter'},
-      { url: "https://google.com", icon: `${Instagram}`, name: 'Instagram'},
-      { url: "https://google.com", icon: `${Youtube}`, name: 'Youtube'},
-      { url: "https://google.com", icon: `${Pinterest}`, name: 'Pinterest'},
+      { url: "https://facebook.com", icon: `${Facebook}`, name: 'Facebook'},
+      { url: "https://twitter.com", icon: `${Twitter}`, name: 'Twitter'},
+      { url: "https://instagram.com", icon: `${Instagram}`, name: 'Instagram'},
+      { url: "https://youtube.com", icon: `${Youtube}`, name: 'Youtube'},
+      { url: "https://pinterest.com", icon: `${Pinterest}`, name: 'Pinterest'},
     ]
   }
 
@@ -78,7 +57,7 @@ const Footer = () => {
             <div className={styles.aboutUs}>
               <p className={styles.aboutUsTitle}>{localizations["Footer.Column.AboutUs.Title"]}</p>
 
-              <p className={styles.aboutUsDescription}>{footer.aboutUs.description}</p>
+              <p className={styles.aboutUsDescription}>{siteSettings.aboutUs.description}</p>
 
               <div className={styles.openingHours}>
                 <img className={styles.openingHoursImg} src={Watch} alt="watch" />

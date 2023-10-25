@@ -23,10 +23,6 @@
     @media #{$sm} {
       font-size: 32px;
     }
-
-    // & :global(.highlighted-text) {
-    //   color: var(--primary-color);
-    // }
   }
 
   &Text {
@@ -57,7 +53,6 @@
     }
 
     &Input {
-      // max-width: 296px;
       width: 65%;
       height: 42px;
       padding: 0;
@@ -263,6 +258,7 @@
   }
 
   &Item {
+    max-width: fit-content;
     margin-top: 18px;
     font-family: var(--font);
     font-size: 16px;

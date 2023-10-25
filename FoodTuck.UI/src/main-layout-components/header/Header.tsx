@@ -143,9 +143,10 @@ const Header = ({props}: IProps): JSX.Element => {
             </nav>
 
             <div className={styles.navbarRight}>
-              <button className={styles.navbarUser}>
+              {/*DO NOT DELETE!!! This is user button */}
+              {/* <button className={styles.navbarUser}>
                 <img src={User} alt="user" />
-              </button>
+              </button> */}
               
               <Link className={styles.navbarBasket} to='/basket/'>
                 <img src={Handbag} alt="basket" />

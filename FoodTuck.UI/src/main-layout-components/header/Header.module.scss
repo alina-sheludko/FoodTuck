@@ -26,14 +26,6 @@
     }
   }
   
-  // @media
-
-  // &:hover
-
-  // &::before
-
-  // &__line
-  
   &Menu {
     width: 18px;
     height: 12px;
@@ -129,8 +121,6 @@
   }
 
   &Logo {
-    // display: none;
-
     @media #{$md} {
       height: 32px;
       max-width: 109px;

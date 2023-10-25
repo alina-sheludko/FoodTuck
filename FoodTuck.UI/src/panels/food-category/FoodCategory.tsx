@@ -1,4 +1,5 @@
 import {useContext} from 'react';
+import { Link } from 'react-router-dom'; 
 
 import styles from './FoodCategory.module.scss';
 import layoutStyles from '../../styles/layout.module.scss';
@@ -30,7 +31,7 @@ const FoodCategory = ({data}: IProps) => {
 
       <div className={styles.wrapper}>
         {data.items.map((el, i) => (
-          <div className={styles.foodCards} key={i}>
+          <Link className={styles.foodCards} to={el.url} key={i}>
             {el.image &&
               <Picture data={{...el.image, alt: `${el.category}` }} classForImg={`${styles.foodCardsItem}`}/>
             }
@@ -40,7 +41,7 @@ const FoodCategory = ({data}: IProps) => {
               
               <p className={styles.foodCardsInfoTitle}>{localizations["FoodCategory.Info.Title"]}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

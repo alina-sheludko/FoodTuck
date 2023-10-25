@@ -90,7 +90,7 @@ const ShopDetails = ({ pageData}: IProps) => {
         </div>
 
         <div className={styles.productTextContent}>
-          <h2 className={styles.productTextContentTitle}>{pageData.pageTitle}</h2>
+          <h2 className={styles.productTextContentTitle}>{pageData.product.name}</h2>
 
           <p className={styles.productTextContentShortDescription}>{pageData.product.shortDescription}</p>
           
