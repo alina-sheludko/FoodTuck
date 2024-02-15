@@ -56,10 +56,10 @@ const ShopList = ({filters, onChangeFilters, data}: IProps) => {
                 <p className={styles.productName}>{el.name}</p>
 
                 {el.discount ? 
-                  <p className={styles.productPrice}>{localizations["General.DollarSign"].replace(`{price}`, `${el.price.toFixed(2)}`)} 
-                    <s className={styles.productFullPrice}>{localizations["General.DollarSign"].replace(`{price}`, `${(el.price+el.discount).toFixed(2)}`)}</s>
+                  <p className={styles.productPrice}>{localizations["General.DollarSign"]?.replace(`{price}`, `${el.price.toFixed(2)}`)} 
+                    <s className={styles.productFullPrice}>{localizations["General.DollarSign"]?.replace(`{price}`, `${(el.price+el.discount).toFixed(2)}`)}</s>
                   </p> 
-                  : <p className={styles.productPrice}>{localizations["General.DollarSign"].replace(`{price}`, `${el.price.toFixed(2)}`)}</p>
+                  : <p className={styles.productPrice}>{localizations["General.DollarSign"]?.replace(`{price}`, `${el.price.toFixed(2)}`)}</p>
                 }
               </Link>
               ))

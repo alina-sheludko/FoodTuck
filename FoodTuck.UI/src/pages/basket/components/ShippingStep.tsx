@@ -287,15 +287,15 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
                   
                   {el.discount ?
                     <p className={styles.sideBarProductInfoPrice}>
-                      {localizations["General.DollarSign"].replace('${price}', `${el.price.toFixed(2)}$`)}
+                      {localizations["General.DollarSign"]?.replace('${price}', `${el.price.toFixed(2)}$`)}
 
                       <s className={styles.sideBarProductInfoFullPrice}>
-                        {localizations["General.DollarSign"].replace('${price}', `${(el.price+el.discount).toFixed(2)}$`)}
+                        {localizations["General.DollarSign"]?.replace('${price}', `${(el.price+el.discount).toFixed(2)}$`)}
                       </s>
                     </p>
                       :
                     <p className={styles.sideBarProductInfoPrice}>
-                       {localizations["General.DollarSign"].replace('${price}', `${el.price.toFixed(2)}$`)}
+                       {localizations["General.DollarSign"]?.replace('${price}', `${el.price.toFixed(2)}$`)}
                     </p>
                   }
                 </div>
@@ -310,7 +310,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
               <p className={styles.sideBarContainerRowTitle}>{localizations["ShippingStep.SubTotal"]}</p>
 
               <p className={styles.sideBarContainerRowInfo}>
-                {localizations["General.DollarSign"].replace('${price}', `${subTotal.toFixed(2)}$`)}
+                {localizations["General.DollarSign"]?.replace('${price}', `${subTotal.toFixed(2)}$`)}
               </p>
             </div>
 
@@ -324,7 +324,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
               <p className={styles.sideBarContainerRowTitle}>{localizations["ShippingStep.Discount"]}</p>
 
               <p className={styles.sideBarContainerRowInfo}>
-                {localizations["General.DollarSign"].replace('${price}', `${discount.toFixed(2)}$`)}
+                {localizations["General.DollarSign"]?.replace('${price}', `${discount.toFixed(2)}$`)}
               </p>
             </div>
 
@@ -334,7 +334,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
               <p className={styles.sideBarContainerRowTitleHighlighted}>{localizations["ShippingStep.Total"]}</p>
               
               <p className={styles.sideBarContainerRowInfoHighlighted}>
-                {localizations["General.DollarSign"].replace('${price}', `${(subTotal-discount).toFixed(2)}$`)}
+                {localizations["General.DollarSign"]?.replace('${price}', `${(subTotal-discount).toFixed(2)}$`)}
               </p>
             </div>
           </div>          

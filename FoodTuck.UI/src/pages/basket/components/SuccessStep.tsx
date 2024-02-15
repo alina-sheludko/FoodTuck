@@ -9,7 +9,7 @@ const SuccessStep = ({orderNumber}) => {
 
   return (
     <div className={`${styles.successStep} ${layoutStyles.container}`}>
-      <Title title={localizations["SuccessStep.Title"].replace('{number}', `${orderNumber}`)} className={`${styles.successStepTitle}`}/>
+      <Title title={localizations["SuccessStep.Title"]?.replace('{number}', `${orderNumber}`)} className={`${styles.successStepTitle}`}/>
       
       <p className={styles.successStepText}>{localizations["SuccessStep.Text"]}</p>
     </div>

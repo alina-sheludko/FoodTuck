@@ -128,7 +128,9 @@ const Header = ({props}: IProps): JSX.Element => {
           </div>
           
           <div className={styles.navbar}>
-            <img className={styles.navbarLogo} src={Logo} alt="logo" /> 
+            <Link to='/'>
+              <img className={styles.navbarLogo} src={Logo} alt="logo" /> 
+            </Link>
 
             <nav className={styles.navbarLinks}>
               {linksList.map((el, i) => (

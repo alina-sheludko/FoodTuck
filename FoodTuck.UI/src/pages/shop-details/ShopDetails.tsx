@@ -97,7 +97,7 @@ const ShopDetails = ({ pageData}: IProps) => {
           <div className={styles.productTextContentLine}></div>
 
           <p className={styles.productTextContentPrice}>
-            {localizations["General.DollarSign"].replace('${price}', `${pageData.product.price.toFixed(2)}$`)}
+            {localizations["General.DollarSign"]?.replace('${price}', `${pageData.product.price.toFixed(2)}$`)}
           </p>
 
           <div className={styles.purchaseProduct}>

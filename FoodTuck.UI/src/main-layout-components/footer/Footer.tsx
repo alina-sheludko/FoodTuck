@@ -109,7 +109,7 @@ const Footer = () => {
 
         <div className={styles.footerPanelWrapper}>
           <div className={styles.footerPanel}>
-            {localizations["Footer.Copyright"] && <p className={styles.footerPanelCopyright}>{localizations["Footer.Copyright"].replace('{year}', `${year}`)}</p>}
+            {<p className={styles.footerPanelCopyright}>{localizations["Footer.Copyright"]?.replace('{year}', `${year}`)}</p>}
 
             <nav className={styles.socialLinks}>
               {footer.socialLinks.map((el, i) => (

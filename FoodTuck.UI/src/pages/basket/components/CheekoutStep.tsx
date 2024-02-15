@@ -95,15 +95,15 @@ const CheekoutStep = ({onChangeState}) => {
 
                           {el.discount ?
                             <span className={styles.cheekoutTablePriceValue}>
-                              {localizations["General.DollarSign"].replace(`{price}`, `${el.price.toFixed(2)}`)}
+                              {localizations["General.DollarSign"]?.replace(`{price}`, `${el.price.toFixed(2)}`)}
 
                               <s className={styles.cheekoutTablePriceFullValue}>
-                                {localizations["General.DollarSign"].replace(`{price}`, `${(el.price+el.discount).toFixed(2)}`)}
+                                {localizations["General.DollarSign"]?.replace(`{price}`, `${(el.price+el.discount).toFixed(2)}`)}
                               </s>
                             </span>
                               :
                             <span className={styles.cheekoutTablePriceValue}>
-                              {localizations["General.DollarSign"].replace(`{price}`, `${el.price.toFixed(2)}`)}
+                              {localizations["General.DollarSign"]?.replace(`{price}`, `${el.price.toFixed(2)}`)}
                             </span>
                           }
                         </td>
@@ -144,7 +144,7 @@ const CheekoutStep = ({onChangeState}) => {
                           </span> 
                         
                           <span className={styles.cheekoutTableTotalValue}>
-                            {localizations["General.DollarSign"].replace(`{price}`, `${productsInBasket.length !== 0 && (el.price * productsInBasket[i].value).toFixed(2)}`)}
+                            {localizations["General.DollarSign"]?.replace(`{price}`, `${productsInBasket.length !== 0 && (el.price * productsInBasket[i].value).toFixed(2)}`)}
                           </span>
                         </td>
 
@@ -191,7 +191,7 @@ const CheekoutStep = ({onChangeState}) => {
                     <p className={styles.TotalBillBlockItemTitleBold}>{localizations['CheekoutStep.CartSubtotal']}</p>
                     
                     <p className={styles.TotalBillBlockItemCostBold}>
-                      {localizations["General.DollarSign"].replace(`{price}`, `${cartSubtotal.toFixed(2)}`)}
+                      {localizations["General.DollarSign"]?.replace(`{price}`, `${cartSubtotal.toFixed(2)}`)}
                     </p>
                   </div>
                   
@@ -199,7 +199,7 @@ const CheekoutStep = ({onChangeState}) => {
                     <p className={styles.TotalBillBlockItemTitle}>{localizations['CheekoutStep.ShippingCharge']}</p>
                     
                     <p className={styles.TotalBillBlockItemCost}>
-                      {localizations["General.DollarSign"].replace(`{price}`, `${shippingCharge.toFixed(2)}`)}
+                      {localizations["General.DollarSign"]?.replace(`{price}`, `${shippingCharge.toFixed(2)}`)}
                     </p>
                   </div>
                   
@@ -209,7 +209,7 @@ const CheekoutStep = ({onChangeState}) => {
                     <p className={styles.TotalBillBlockItemTitleBold}>{localizations['CheekoutStep.TotalAmount']}</p>
                   
                     <p className={styles.TotalBillBlockItemCostBold}>
-                      {localizations["General.DollarSign"].replace(`{price}`, `${(cartSubtotal - shippingCharge).toFixed(2)}`)}
+                      {localizations["General.DollarSign"]?.replace(`{price}`, `${(cartSubtotal - shippingCharge).toFixed(2)}`)}
                     </p>
                   </div>
                 </div>

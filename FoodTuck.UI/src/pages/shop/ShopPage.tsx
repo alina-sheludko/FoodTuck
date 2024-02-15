@@ -215,8 +215,8 @@ const ShopPage = ({ pageData}: IProps) => {
               <ShopSidebar data={pageData} isSidebarOpen={isSidebarOpen}  filters={filters} onChangeFilters={setFilters}/>
               <h2 className={styles.sidebarFiltersWrapperInfo}>
                 {pageData.products.totalCount < 2 ? 
-                localizations["ShopPage.InfoOneGood"].replace('{count}', `${pageData.products.totalCount}`) :
-                localizations["ShopPage.Info"].replace('{count}', `${pageData.products.totalCount}`) }
+                localizations["ShopPage.InfoOneGood"]?.replace('{count}', `${pageData.products.totalCount}`) :
+                localizations["ShopPage.Info"]?.replace('{count}', `${pageData.products.totalCount}`) }
               </h2>
             </div>
             

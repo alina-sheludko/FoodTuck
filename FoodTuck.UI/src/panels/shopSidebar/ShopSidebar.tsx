@@ -188,7 +188,7 @@ const ShopSidebar = ({data, isSidebarOpen, filters, onChangeFilters}: IProps) =>
             <div>
               <p className={styles.latestProductsItemsInfo}>{el.name}</p>
 
-              <p className={styles.latestProductsItemsInfo}>{localizations["General.DollarSign"].replace(`{price}`, `${el.price.toFixed(2)}`)}</p>
+              <p className={styles.latestProductsItemsInfo}>{localizations["General.DollarSign"]?.replace(`{price}`, `${el.price.toFixed(2)}`)}</p>
             </div>
           </Link>
         ))}
