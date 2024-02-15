@@ -19,7 +19,7 @@ interface IItem {
 const MenuPanel = ({data}: IProps) => {
   return (
     <>
-      <div className={`${styles.menuPanel} ${layoutStyles.container}`}>
+      <div className={`${styles.menuPanel} ${layoutStyles.container} ${data.sideForImage === 'right' ? `${styles.menuPanelReverse}` : ``}` }>
         {
           data.sideForImage === 'left' &&
           <img className={`${styles.menuPanelDish} ${styles.menuPanelDishRight}`} src={data.items[0].images[0]} alt="dish from the menu" />

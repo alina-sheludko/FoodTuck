@@ -6,19 +6,24 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &Reverse {
+    flex-direction: column-reverse;
+  }
+
   @media #{$sm} {
     flex-direction: row;
   }
 
+
   &Dish {
     object-fit: cover;
     width: 100%;
-    margin-top: 24px;
+    margin-bottom: 24px;
     
     @media #{$sm} {
       width: 40%;
-      margin-top: 0;
       margin-left: 56px;
+      margin-bottom: 0;
 
       @media #{$md} {
         margin-left: 112px;
