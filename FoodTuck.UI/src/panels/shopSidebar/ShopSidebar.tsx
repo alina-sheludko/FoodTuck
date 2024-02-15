@@ -181,7 +181,7 @@ const ShopSidebar = ({data, isSidebarOpen, filters, onChangeFilters}: IProps) =>
           <Link className={styles.latestProductsItems} to={el.url} key={i}>
             <img 
               className={styles.latestProductsItemsImg} 
-              src={el.images[0].concat('?rw=72&rh=65')} 
+              src={el.images[0].replace(/\..+$/, (val) => `rw=72&rh=65${val}`)} 
               alt={el.name}
             />
 

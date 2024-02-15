@@ -71,9 +71,9 @@ const CheekoutStep = ({onChangeState}) => {
                     <>
                       <tr className={styles.cheekoutTable} key={i}>
                         <td className={styles.cheekoutTableProduct}>
-                          <img className={styles.cheekoutTableProductImg} src={el.images[0].concat('?rw=93&rh=97')} alt={el.product}/>
+                          <img className={styles.cheekoutTableProductImg} src={el.images[0].replace(/\..+$/, (val) => `rw=93&rh=97${val}`)} alt={el.product}/>
 
-                          <img className={styles.cheekoutTableProductBigImg} src={el.images[0].concat('?rw=300&rh=300')} alt={el.product}/>
+                          <img className={styles.cheekoutTableProductBigImg} src={el.images[0].replace(/\..+$/, (val) => `rw=300&rh=300${val}`)} alt={el.product}/>
 
                           <div className={styles.cheekoutTableProductWrapper}>
                             <p className={styles.cheekoutTableProductWrapperTitle}>{el.name}</p>

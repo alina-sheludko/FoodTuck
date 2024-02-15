@@ -276,7 +276,7 @@ const ShippingStep = ({onChangeState, onChangeOrderNumber, cities}) => {
           {products.map((el, i) => (
             <>
               <div className={styles.sideBarProduct} key={i}>
-                <img className={styles.sideBarProductImg} src={el.images[0].concat('?rw=84&rh=88')} alt={el.name}/>
+                <img className={styles.sideBarProductImg} src={el.images[0].replace(/\..+$/, (val) => `rw=84&rh=88${val}`)} alt={el.name}/>
 
                 <div className={styles.sideBarProductInfo}>
                   <p className={styles.sideBarProductInfoName}>{el.name}</p>

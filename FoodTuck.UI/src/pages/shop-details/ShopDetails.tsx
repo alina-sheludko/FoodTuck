@@ -74,7 +74,7 @@ const ShopDetails = ({ pageData}: IProps) => {
                 <img 
                   className={`${styles.productImagesContentMinorImg} ${activeImage === i ? `${styles.productImagesContentMinorImgActive}` : ''}`} 
                   onClick={() => setActiveImage(i)} 
-                  src={el.concat('?rw=132&rh=129')} 
+                  src={el.replace(/\..+$/, (val) => `rw=132&rh=129${val}`)} 
                   alt={pageData.product.name} 
                   key={i}
                 />
