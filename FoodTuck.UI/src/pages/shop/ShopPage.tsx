@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext} from 'react';
+import { useState, useEffect, useContext, useRef} from 'react';
 import { useNavigate, useSearchParams} from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import Select from 'react-select';
@@ -177,6 +177,7 @@ const ShopPage = ({ pageData}: IProps) => {
       : [pageData.prices.min, pageData.prices.max],
     page: queryParams[0].get('page') ? Number(queryParams[0].get('page')) : 0
   })
+  const myRef = useRef(null);
 
   useEffect(() => {
     let allFilters = {...filters, price: `${filters.price[0]}-${filters.price[1]}`}
@@ -185,6 +186,13 @@ const ShopPage = ({ pageData}: IProps) => {
       search: `?${getQueryStringFromObject(Object.fromEntries(Object.entries(allFilters).filter(el => el[1].length !== 0)))}`,
     }, { replace: true });
   }, [filters])
+
+  useEffect(() => {
+    if(location.search !== '') {
+      myRef.current.scrollIntoView({behavior: "smooth"});
+    }
+  }, [filters.page])
+  
 
   const navigate = useNavigate();
   
@@ -219,7 +227,7 @@ const ShopPage = ({ pageData}: IProps) => {
         )}
       </Transition>
         
-      <div className={`${styles.shopPage} ${layoutStyles.container}`}>
+      <div className={`${styles.shopPage} ${layoutStyles.container}`} ref={myRef}>
         <div className={styles.filters}> 
             <label className={styles.filtersLabel}>{localizations["ShopPage.LabelSortBy"]}
               {filters.sortBy && <Select
