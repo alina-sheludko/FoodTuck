@@ -63,7 +63,7 @@ const Footer = () => {
                 <img className={styles.openingHoursImg} src={Watch} alt="watch" />
 
                 <div>
-                  <p className={styles.openingHoursTitle}>Opening Hours</p>
+                  <p className={styles.openingHoursTitle}>{localizations["Footer.OpenClosed.Title"]}</p>
 
                   <p className={styles.openingHoursInfo}>{siteSettings.workingHours}</p>
 
